@@ -93,7 +93,7 @@ return array(
 
         // local database
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=khach2_amma_r',
+            'connectionString' => 'mysql:host=localhost;dbname=classies',
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '',
