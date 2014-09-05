@@ -8,17 +8,6 @@
 $lmanager = Yii::app()->urlManager;
 $langs = $lmanager->getLanguageLinks();
 
-$criteria = new CDbCriteria();
-//$criteria->condition  = "id=:id";
-$criteria->order = "id DESC";
-$criteria->limit = 4;
-
-$news = News::model()->findAll($criteria, array());
-
-$categories = Categories::model()->findAll();
-
-$interior = Interiers::model()->findAll();
-
 ?>
 
 <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/unslider.js"></script>

@@ -21,6 +21,8 @@ function openBrand(id) {
 function correctPhoto() {
     var contentheight = $(".container_grid_content_item").height();
     var imgheight = $(".container_grid_content_img_block").height();
-    $(".container_grid_content_img_block").css("margin-top",((contentheight-imgheight)-10)/2);
+    console.log(contentheight + " - " + imgheight);
+    setTimeout(function(){
+        $(".container_grid_content_img_block").css("margin-top",((contentheight-imgheight)-10)/2);
+    }, 500);
 }
-

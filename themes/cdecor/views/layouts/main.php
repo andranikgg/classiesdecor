@@ -32,6 +32,7 @@
 
     <!--    Scripts    -->
     <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/header_menu.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/cdecor.js"></script>
     <script src="<?= Yii::app()->request->baseUrl ?>/highslide/highslide-full.js" type="text/javascript"></script>
     <script type="text/javascript">var lang = "<?=Yii::app()->language?>";</script>
 
@@ -72,6 +73,9 @@
         <?php echo $content; ?>
     </div>
     <?php $this->renderPartial('footer', false); ?>
+    <div id="inspiration_popup" class="popup">
+        <?php $this->renderPartial('inspiration', false); ?>
+    </div>
 </div>
 
 </body>

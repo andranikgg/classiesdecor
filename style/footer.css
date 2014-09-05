@@ -118,14 +118,6 @@
     line-height: 2.07692;
     margin: 50px 100px 50px 0px;
     min-width: 200px;
-    -webkit-transition: background 1s;
-    -moz-transition: background 1s;
-    -o-transition: background 1s;
-    transition: background 1s;
-}
-
-.footer_container .section:hover *{
-    color: #525252;
 }
 
 .footer_container .section a {

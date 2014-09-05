@@ -1,6 +1,6 @@
 <?php
 /* @var $this SiteController */
-/* @var $interior Products[] */
+/* @var $product Products[] */
 
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');

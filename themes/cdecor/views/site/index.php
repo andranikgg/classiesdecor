@@ -1,5 +1,6 @@
 <?php
 /* @var $this SiteController */
+/* @var $products Banner_Images[] */
 /* @var $products Product[] */
 
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');

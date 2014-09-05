@@ -215,107 +215,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -328,107 +229,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -441,107 +243,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -554,107 +257,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -687,107 +291,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -800,107 +305,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -913,107 +319,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1026,107 +333,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1159,107 +367,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1272,107 +381,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1385,107 +395,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1498,107 +409,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1631,107 +443,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1744,107 +457,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1857,107 +471,8 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
-    </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
     <div class="clear"></div>
 </div>
@@ -1970,108 +485,108 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-    <div class="container_cust_content_item_block block_20per left" style="padding: 0 0 0 20px;">
-        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png" style="width: 100%;"/>
+    <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
+        <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
-    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust2.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust5.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust6.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust3.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="container_cust_content_item left">
-            <div class="container_cust_content_item_im_block">
-                <img src="<?= Yii::app()->baseUrl ?>/images/cust4.png"/>
-            </div>
-            <div class="container_cust_content_item_text_block">
-                #1
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
+<!--    <div class="container_cust_content_item_block block_60per left" style="padding: 0 0 0 50px;">-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust2.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust3.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust4.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust5.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust6.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust2.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust3.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust4.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust5.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust6.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust3.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container_cust_content_item left">-->
+<!--            <div class="container_cust_content_item_im_block">-->
+<!--                <img src="--><?//= Yii::app()->baseUrl ?><!--/images/cust4.png"/>-->
+<!--            </div>-->
+<!--            <div class="container_cust_content_item_text_block">-->
+<!--                #1-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="clear"></div>-->
+<!--    </div>-->
     <div class="clear"></div>
 </div>
 </div>

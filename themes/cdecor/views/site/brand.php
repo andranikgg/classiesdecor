@@ -7,7 +7,7 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'descrip
 Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/brand.css"/>
+<!--<link rel="stylesheet" type="text/css" href="--><?php //echo Yii::app()->request->baseUrl; ?><!--/style/brands.css"/>-->
 
 
 <div class="container_grid_content_item">
