@@ -34,9 +34,10 @@ class Brand extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name_ru, name_en, desc_ru, desc_en, image, status', 'required'),
+			array('status', 'required'),
 			array('status', 'numerical', 'integerOnly'=>true),
 			array('name_ru, name_en, image', 'length', 'max'=>250),
+            array('desc_ru, desc_en', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name_ru, name_en, desc_ru, desc_en, image, status', 'safe', 'on'=>'search'),
@@ -51,7 +52,6 @@ class Brand extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'brandCategoryXrefs' => array(self::HAS_MANY, 'BrandCategoryXref', 'brand_id'),
 			'products' => array(self::HAS_MANY, 'Product', 'brand_id'),
 		);
 	}
