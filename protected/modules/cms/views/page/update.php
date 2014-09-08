@@ -2,21 +2,15 @@
 /* @var $this PageController */
 /* @var $model Page */
 
-$this->breadcrumbs=array(
-	'Pages'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
-);
+    $this->layout = "column1";
 
-$this->menu=array(
-	array('label'=>'List Page', 'url'=>array('index')),
-	array('label'=>'Create Page', 'url'=>array('create')),
-	array('label'=>'View Page', 'url'=>array('view', 'id'=>$model->id)),
-);
-
-      $pages = Page::model()->findAll();
+    $pages = Page::model()->findAll();
 
 ?>
+
+<script>
+    var pageid = <?=$id?>;
+</script>
 
 <h1>Update Page <?php echo $model->id; ?></h1>
 
@@ -32,4 +26,4 @@ $this->menu=array(
 <center>
     <h2><?=$model->ctitle?></h2>
 </center>
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'id'=>$id)); ?>

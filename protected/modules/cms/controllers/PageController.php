@@ -22,7 +22,7 @@ class PageController extends SecureController
         }
 
         $this->render('update',array(
-            'model'=>$model,
+            'model'=>$model, 'id'=>$id
         ));
 
 
@@ -112,35 +112,56 @@ class PageController extends SecureController
             $url = $_POST['imageUrl'];
             $image = $id = substr( $url, strrpos( $url, '/' )+1 );
 
+            $banner = new BannerImages;
 
-            Yii::import('ext.jcrop.EJCropper');
-            $jcropper = new EJCropper();
-            $jcropper->thumbPath = '/images/items';
+            $banner->page_id = $_POST['pageid'];
+            $banner->link = $_POST['link'];
 
-            // some settings ...
-            $jcropper->jpeg_quality = 100;
-            $jcropper->png_compression = 0;
+            if($banner->save()) {
 
-            // get the image cropping coordinates (or implement your own method)
-            $coords = $jcropper->getCoordsFromPost('imageId');
 
-            Yii::app()->ih
-                ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/page/temp/'.$image)
-                ->crop($coords['w'],$coords['h'],$coords['x'],$coords['y'])
-                ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/page/temp/c_'.$image);
 
-            if(file_exists($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/page/temp/' . $image))
-            {
-                unlink($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/page/temp/' . $image);
+                Yii::import('ext.jcrop.EJCropper');
+                $jcropper = new EJCropper();
+                $jcropper->thumbPath = '/images/items';
+
+                // some settings ...
+                $jcropper->jpeg_quality = 100;
+                $jcropper->png_compression = 0;
+
+                // get the image cropping coordinates (or implement your own method)
+                $coords = $jcropper->getCoordsFromPost('imageId');
+
+                Yii::app()->ih
+                    ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/page/temp/'.$image)
+                    ->crop($coords['w'],$coords['h'],$coords['x'],$coords['y'])
+                    ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/page/' . $banner->id .'.png');
+
+                $banner->image = $banner->id . ".png";
+                $banner->save();
+
+                $dir=Yii::app()->basePath.'/../images/page/temp/';
+
+                foreach(glob($dir.'*.*') as $files){
+                    unlink($files);
+                }
+
             }
+           Yii::app()->end();
+        }
+    }
 
-            $returnPath = 'c_' . $image;
 
-            echo $returnPath;
+    public function actionDeletebanner() {
+        if(Yii::app()->request->isAjaxRequest) {
+
+                $model = BannerImages::model()->findByPk($_POST['bannerid']);
+
+                $model->delete();
+
+                echo "deleted";
 
             Yii::app()->end();
-            // returns the path of the cropped image, source must be an absolute path.
-            //$thumbnail = $jcropper->crop('images/up/uploaded.png', $coords);
         }
     }
 
