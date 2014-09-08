@@ -12,7 +12,7 @@
     var pageid = <?=$id?>;
 </script>
 
-<h1>Update Page <?php echo $model->id; ?></h1>
+<h1>Update Page <?php echo $model->ctitle; ?></h1>
 
 <div id="page_menu">
     <ul>

@@ -17,18 +17,11 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 <div class="container_slider_block_content">
     <div class="banner">
         <ul id="banner_ul">
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg1.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg2.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg3.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg4.jpg" class="content_slid_img"/>
-            </li>
+            <?php foreach($page->bannerImages as $banner): ?>
+                <li>
+                    <img src="<?= Yii::app()->baseUrl ?>/images/page/<?=$banner->image?>" class="content_slid_img"/>
+                </li>
+            <?php endforeach ?>
         </ul>
         <ol class="dots">
             <li class="dot" onclick="toslide(1)">1</li>

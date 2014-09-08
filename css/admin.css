@@ -41,7 +41,7 @@
 
 .banner-content {
     margin:20px;
-    border: 1px solid #0c1309;
+    border: 1px solid #f1ad25;
     background: #f2f9fe; /* Old browsers */
     background: -moz-linear-gradient(45deg,  #f2f9fe 0%, #d6f0fd 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f2f9fe), color-stop(100%,#d6f0fd)); /* Chrome,Safari4+ */
@@ -55,19 +55,19 @@
 
 .baneer-image {
     float: left;
-    margin-left: 20px;
-    margin-top: 20px;
-    border: 1px solid #0c1309;
+    margin: 5px 5px 5px 5px ;
+    border: 1px solid #f1ad25;
 }
 
 .banner-link-wrap {
-    margin: 40px 35px 20px 20px;
+
     float: left;
+    margin : 10px 0px 0px 25px ;
 
 }
 
 .banner-link {
-    border: 1px solid #0c1309;
+    border: 1px solid #f1ad25;
     height: 20px;
 
 
@@ -75,11 +75,11 @@
     padding-left: 10px;
 }
 
-.delete {
-    margin-top: 10px;
+.del {
+    margin-top: 1px;
     float: right;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     background-image: url(del_ico.png);
     background-size: contain;
     cursor: pointer;

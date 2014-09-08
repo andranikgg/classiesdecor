@@ -19,6 +19,15 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 <div class="container_slider_block_content">
     <div class="banner">
         <ul id="banner_ul">
+            <?php foreach($page->bannerImages as $banner): ?>
+                <li>
+                    <img src="<?= Yii::app()->baseUrl ?>/images/page/<?=$banner->image?>" class="content_slid_img"/>
+                </li>
+            <?php endforeach ?>
+
+
+
+
             <li>
                 <img src="<?= Yii::app()->baseUrl ?>/images/bg1.jpg" class="content_slid_img"/>
             </li>
