@@ -45,6 +45,7 @@ class Contacts extends CActiveRecord
 			array('feedback_email', 'required'),
 			array('address_coord_x, address_coord_y, worktime, contact_email, fb_link, in_link, pin_link, feedback_email', 'length', 'max'=>250),
 			array('address_ru, address_en, phone', 'safe'),
+			array('fb_link, in_link, pin_link', 'url'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, address_ru, address_en, address_coord_x, address_coord_y, worktime, phone, contact_email, fb_link, in_link, pin_link, feedback_email', 'safe', 'on'=>'search'),
