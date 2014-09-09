@@ -38,3 +38,32 @@
     background-color:#EFF4FA;
     text-decoration:none;
 }
+
+.banner-content {
+    margin:20px;
+    border: 1px solid #ccc;
+    background: #F1E2E2;;
+}
+
+.baneer-image {
+    float: left;
+
+}
+
+.banner-link-wrap {
+    margin: 40px 35px 20px 20px;
+    float: left;
+}
+
+.delete {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url(del_ico.png);
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+
+

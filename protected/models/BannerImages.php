@@ -30,10 +30,9 @@ class BannerImages extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('page_id, image', 'required'),
+			array('page_id', 'required'),
 			array('page_id', 'numerical', 'integerOnly'=>true),
 			array('image, link', 'length', 'max'=>250),
-            array('link', 'url'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, page_id, image, link', 'safe', 'on'=>'search'),

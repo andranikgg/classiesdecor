@@ -2,6 +2,9 @@
 /* @var $this PageController */
 /* @var $model Page */
 /* @var $form CActiveForm */
+
+    $banners = $model->bannerImages;
+
 ?>
 
 <?php if(Yii::app()->user->hasFlash('success')):?>
@@ -139,8 +142,21 @@
 
 <hr>
 
-<div class="images-container">
 
+<div id="banners" class="images-container">
+    <?php foreach($banners as $banner): ?>
+    <div class="banner-content">
+        <div class="baneer-image">
+            <img src="<?=Yii::app()->baseUrl?>/images/page/<?=$banner->image?>" width="100px" />
+        </div>
+        <div class="banner-link-wrap">
+            <input type="text" class="banner-link" value="<?=$banner->link?>" data-value="<?=$banner->id?>" size="100" >
+        </div>
+        <div class="delete" data-value="<?=$banner->id?>"></div>
+        <div class="clear"></div>
+    </div>
+
+    <?php endforeach ?>
 
 </div>
 
@@ -155,7 +171,7 @@
             'minSizeLimit'=>0*1024*1024,// minimum file size in bytes
             'onComplete'=>"js:function(id, fileName, responseJSON){
 
-                                                                $('#cropImg').load('". $this->createUrl('cropImg') ."?fileName='+responseJSON.filename);
+                                                                $('#cropImg').load('". $this->createUrl('cropImg') ."?fileName='+responseJSON.filename+'&pageid=". $id ."');
                                                                 $('#cropDialog').dialog('open');
                                                         }",
             'messages'=>array(
@@ -201,6 +217,8 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 
 <script>
     $(document).ready(function() {
+
+
         $( "#cropDialog" ).dialog({
             autoOpen:false,
             close: function(event, ui) {
@@ -212,6 +230,24 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
             }
 
         });
+
+
+        $(".delete").click(function(){
+
+            var bannerid = $(this).attr("data-value");
+
+            $.ajax({
+                type: "post",
+                url: '<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/module/cms/page/deletebanner',
+                data: {'bannerid':bannerid},
+                success: function(res) {
+                    location.reload();
+                }
+            });
+
+        });
+
+
     });
 </script>
 

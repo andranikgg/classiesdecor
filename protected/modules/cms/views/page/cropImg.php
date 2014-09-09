@@ -1,10 +1,10 @@
 <?php
 /* @var $this ItemsController */
 
-
 ?>
 
-<input type="text" id="link" name="link" />
+<input type="text" id="link" name="link" size="60" placeholder="Image link" value="url" />
+
 
 <?php
 $this->widget('ext.jcrop.EJcrop', array(
@@ -43,7 +43,7 @@ $this->widget('ext.jcrop.EJcrop', array(
     'ajaxUrl' => $this->createUrl("ajaxcrop"),
     //
     // Additional parameters to send to the AJAX call (unused if no buttons)
-    'ajaxParams' => array('someParam' => 'someValue', 'imageUrl'=>$imageUrl),
+    'ajaxParams' => array('someParam' => 'someValue', 'imageUrl'=>$imageUrl, 'link'=>'js:$("#link").val()', 'pageid'=>'js:pageid'),
 ));
 
 
