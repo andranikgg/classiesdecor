@@ -8,12 +8,7 @@
 $lmanager = Yii::app()->urlManager;
 $langs = $lmanager->getLanguageLinks();
 
-$criteria = new CDbCriteria();
-//$criteria->condition  = "id=:id";
-$criteria->order = "id DESC";
-$criteria->limit = 4;
-
-
+$brands = Brand::model()->findAllByAttributes(array('status'=>1));
 
 ?>
 
@@ -90,34 +85,28 @@ $criteria->limit = 4;
                 <ul>
                     <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/brands'><span><?=Yii::t("menu", "brands")?></span></a>
                         <ul>
-                            <li><a href='#'><span>brand 1</span></a>
-                                <ul>
-                                    <li><a href='#'><span>Sub brand</span></a></li>
-                                    <li class='last'><a href='#'><span>Sub brand</span></a></li>
-                                </ul>
-                            </li>
-                            <li class='has-sub'><a href='#'><span>brand 2</span></a>
-                                <ul>
-                                    <li><a href='#'><span>Sub brand</span></a></li>
-                                    <li class='last'><a href='#'><span>Sub brand</span></a></li>
-                                </ul>
-                            </li>
+                            <?php foreach ($brands as $brand):?>
+                                <li><a href='<?=Yii::app()->baseUrl?>/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a></li>
+                            <?php endforeach ?>
+
+                            <li class='has-sub'><a href='#'><span>brand 2</span></a></li>
                         </ul>
                     </li>
                     <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/products'><span><?=Yii::t("menu", "products")?></span></a>
                         <ul>
-                            <li class='has-sub'><a href='#'><span>Product 1</span></a>
-                                <ul>
-                                    <li><a href='#'><span>Sub Product</span></a></li>
-                                    <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                                </ul>
-                            </li>
-                            <li class='has-sub'><a href='#'><span>Product 2</span></a>
-                                <ul>
-                                    <li><a href='#'><span>Sub Product</span></a></li>
-                                    <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                                </ul>
-                            </li>
+                            <?php foreach ($brands as $brand):?>
+                                <?php if($brand->brandCategoryXrefs != null):?>
+                                    <li class='has-sub'><a href='<?=Yii::app()->baseUrl?>/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a>
+                                        <ul>
+                                        <?php foreach($brand->brandCategoryXrefs as $category):?>
+                                            <li><a href='<?=Yii::app()->baseUrl?>/category/<?=$category->id?>'><span><?=$category->cname?></span></a></li>
+                                        <?php endforeach ?>
+                                        </ul>
+                                <?php else: ?>
+                                    <li><a href='<?=Yii::app()->baseUrl?>/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a>
+                                <?php endif ?>
+                                    </li>
+                            <?php endforeach ?>
                         </ul>
                     </li>
                     <li class='last'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/customization'><span><?=Yii::t("menu", "customization")?></span></a></li>

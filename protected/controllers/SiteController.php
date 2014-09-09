@@ -18,13 +18,13 @@ class SiteController extends Controller
 
     public function actionGetBrand()
     {
-//        $id = $_POST['id'];
-//        $brand = Brand::model()->findAll();
-//
-//        if (empty($brand)) {
-//            Yii::app()->user->setFlash('brand', 'There is no available brand');
-//        }
-//        $this->render('brand', array('brand' => $brand));
+       /* $id = $_POST['id'];
+        $brand = Brand::model()->findAll();
+
+        if (empty($brand)) {
+            Yii::app()->user->setFlash('brand', 'There is no available brand');
+        }
+        $this->render('brand', array('brand' => $brand));*/
 
         $this->renderPartial('brand');
     }

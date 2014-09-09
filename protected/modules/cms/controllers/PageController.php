@@ -102,7 +102,7 @@ class PageController extends SecureController
             (YII_DEBUG ?  'jquery.js':'jquery.min.js')=>false,
         );
         $imageUrl = Yii::app()->request->baseUrl . '/images/page/temp/'. $_GET['fileName'];
-        $this->renderPartial('cropImg', array('imageUrl'=>$imageUrl), false, true);
+        $this->renderPartial('cropImg', array('imageUrl'=>$imageUrl, 'pageid'=>$_GET['pageid']), false, true);
     }
 
     public function actionAjaxcrop()

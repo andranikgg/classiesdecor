@@ -20,7 +20,7 @@ $this->widget('ext.jcrop.EJcrop', array(
     // Jcrop options (see Jcrop documentation)
     'options' => array(
         'minSize' => array(50, 50),
-        'aspectRatio' => 1,
+        'aspectRatio' => ($pageid == 8)? 1 : 10/20,
         'onRelease' => "js:function() {ejcrop_cancelCrop(this);}",
     ),
     // if this array is empty, buttons will not be added

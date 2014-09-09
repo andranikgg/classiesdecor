@@ -26,6 +26,20 @@ class Brand extends CActiveRecord
 		return 'brand';
 	}
 
+    public function getcname() {
+        if(Yii::app()->language == "en")
+            return $this->name_en;
+        elseif(Yii::app()->language == "ru")
+            return $this->name_ru;
+    }
+
+    public function getcdesc() {
+        if(Yii::app()->language == "en")
+            return $this->$desc_en;
+        elseif(Yii::app()->language == "ru")
+            return $this->$desc_ru;
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -53,8 +67,9 @@ class Brand extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'products' => array(self::HAS_MANY, 'Product', 'brand_id'),
-            'brandCategoryXrefs' => array(self::HAS_MANY, 'Product', 'brand_id'),
+            'brandCategoryXrefs' => array(self::MANY_MANY, 'Category', 'Product(brand_id, category_id)'),
 		);
+
 	}
 
 	/**

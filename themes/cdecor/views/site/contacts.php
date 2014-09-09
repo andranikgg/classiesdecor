@@ -90,7 +90,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </ul>
             </div>
         <?php endforeach ?>
-           
+
         </div>
         <div class="container_contacts_block block_60per left">
             <div class="container_contacts_map_container">
