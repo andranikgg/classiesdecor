@@ -253,7 +253,7 @@ class SiteController extends Controller
     {
         $partners = Partner::model()->findAll();
 
-        $page  = Page::model()->findByPk(Page::Partner);
+        $page  = Page::model()->findByPk(3);
 
 //        if (empty($partners)) {
 //            Yii::app()->user->setFlash('partners', 'There is no available partners');

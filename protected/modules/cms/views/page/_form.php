@@ -146,8 +146,10 @@
 <div id="banners" class="images-container">
     <?php foreach($banners as $banner): ?>
     <div class="banner-content">
+
         <div class="baneer-image">
-            <img src="<?=Yii::app()->baseUrl?>/images/page/<?=$banner->image?>" width="100px" />
+
+            <img src="<?=Yii::app()->baseUrl?>/images/page/<?=$banner->image?>" width="120px" />
         </div>
         <div class="banner-link-wrap">
             <label for="link" value="<?=$banner->link?>">Link</label>
