@@ -74,6 +74,7 @@ class Page extends CActiveRecord
 		return array(
 			array('title_ru, title_en', 'required'),
 			array('title_ru, title_en', 'length', 'max'=>250),
+            array('desc1_ru, desc2_ru, desc3_ru, desc1_en, desc2_en, desc3_en', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, title_ru, title_en, desc_ru, desc_en', 'safe', 'on'=>'search'),
