@@ -19,6 +19,12 @@
  */
 class Page extends CActiveRecord
 {
+    const MAIN = 1;
+    const PARTNER = 3;
+    const CUSTOMIZATION = 4;
+    const INSPIRATION = 5;
+    const PRODUCT = 6;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -34,11 +40,28 @@ class Page extends CActiveRecord
             return $this->title_ru;
     }
 
-    public function getcdesc() {
+    public function getcdesc1() {
         if(Yii::app()->language == "en")
-            return $this->desc_en;
+            return $this->desc1_en;
         elseif(Yii::app()->language == "ru")
-            return $this->desc_ru;
+            return $this->desc1_ru;
+
+    }
+
+    public function getcdesc2() {
+        if(Yii::app()->language == "en")
+            return $this->desc2_en;
+        elseif(Yii::app()->language == "ru")
+            return $this->desc2_ru;
+
+    }
+
+    public function getcdesc3() {
+        if(Yii::app()->language == "en")
+            return $this->desc3_en;
+        elseif(Yii::app()->language == "ru")
+            return $this->desc3_ru;
+
     }
 
 	/**

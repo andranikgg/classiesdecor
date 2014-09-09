@@ -9,6 +9,11 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 //$page = 'interiers_text';
 //$freetext = FreeText::model()->findByAttributes(array('page' => $page));
 
+/*echo "<pre>";
+print_r($partners);
+exit;*/
+
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/partners.css"/>
@@ -51,48 +56,48 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 <div class="container_wrapper">
     <div class="container_block">
         <div class="container_block_content">
-            <div class="hdr">partners</div>
-            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="hdr"><?=$page->ctitle ?></div>
+            <div>
+                <?=$page->cdesc1 ?>
             </div>
         </div>
     </div>
     <div class="container_block">
         <div class="container_block_content">
             <div class="hdr">&nbsp;</div>
-            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div>
+                <?=$page->cdesc2 ?>
             </div>
         </div>
     </div>
     <div class="container_block">
         <div class="container_block_content">
             <div class="hdr">&nbsp;</div>
-            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div>
+                <?=$page->cdesc3 ?>
             </div>
         </div>
     </div>
     <div class="clear"></div>
 
     <div class="container_row">
+
+                    <?php foreach ( $partners as $partners):  ?>
+
         <div class="container_grid">
+
             <div class="container_grid_item_block left">
-                <div class="container_grid_item"
-                     style="background-image: url('<?= Yii::app()->baseUrl ?>/images/partner1.png')"></div>
+                <a href="<?=$partners->link ?>" target="_blank">
+                    <div class="container_grid_item"
+                                style="background-image: url('<?= Yii::app()->baseUrl ?>/images/partner/<?=$partners->image ?>')">
+
+                    </div>
+                </a>
             </div>
+        </div>
+                    <?php endforeach ?>
+
+
             <div class="container_grid_item_block left">
                 <div class="container_grid_item"
                      style="background-image: url('<?= Yii::app()->baseUrl ?>/images/partner2.png')"></div>

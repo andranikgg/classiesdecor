@@ -18,6 +18,7 @@ class Partner extends CActiveRecord
 		return 'partner';
 	}
 
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */

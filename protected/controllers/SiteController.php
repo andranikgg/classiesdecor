@@ -251,13 +251,14 @@ class SiteController extends Controller
 
     public function actionPartners()
     {
-//        $partners = Partners::model()->findAll();
-//
+        $partners = Partner::model()->findAll();
+
+        $page  = Page::model()->findByPk(Page::Partner);
+
 //        if (empty($partners)) {
 //            Yii::app()->user->setFlash('partners', 'There is no available partners');
 //        }
-//        $this->render('partners', array('partners' => $partners));
-        $this->render('partners');
+        $this->render('partners', array('partners' => $partners, 'page'=>$page));
     }
 
     public function actionCustomization()
