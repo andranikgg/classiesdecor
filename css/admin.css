@@ -1,0 +1,92 @@
+
+.info {
+    background: #5cb85c;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+#page_menu
+{
+
+}
+
+#page_menu ul
+{
+    padding:6px 20px 5px 20px;
+    margin:0px;
+}
+
+#page_menu ul li
+{
+    display: inline;
+}
+
+#page_menu ul li a
+{
+    color:#ccc;
+    background-color:transparent;
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:none;
+    padding:5px 8px;
+}
+
+#page_menu ul li a:hover, #page_menu ul li.active a
+{
+    color: #6399cd;
+    background-color:#EFF4FA;
+    text-decoration:none;
+}
+
+.banner-content {
+    margin:20px;
+    border: 1px solid #f1ad25;
+    background: #f2f9fe; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #f2f9fe 0%, #d6f0fd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f2f9fe), color-stop(100%,#d6f0fd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #f2f9fe 0%,#d6f0fd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #f2f9fe 0%,#d6f0fd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #f2f9fe 0%,#d6f0fd 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #f2f9fe 0%,#d6f0fd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f9fe', endColorstr='#d6f0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.baneer-image {
+    float: left;
+    margin: 5px 5px 5px 5px ;
+    border: 1px solid #f1ad25;
+}
+
+.banner-link-wrap {
+
+    float: left;
+    margin : 10px 0px 0px 25px ;
+
+}
+
+.banner-link {
+    border: 1px solid #f1ad25;
+    height: 20px;
+
+
+    padding: 3px;
+    padding-left: 10px;
+}
+
+.del {
+    margin-top: 1px;
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-image: url(del_ico.png);
+    background-size: contain;
+    cursor: pointer;
+
+
+}
+
+
+
+

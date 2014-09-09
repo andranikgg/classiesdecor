@@ -14,8 +14,6 @@ return array (
     'order'=>'заказать',
     'en'=>'ан',
     'ru'=>'ру',
-    'de'=>'не',
-    'it'=>'ит',
     'body'=>'Текст заказа',
     'firstname'=>'имя',
     'lastname'=>'фамилия',
@@ -25,5 +23,16 @@ return array (
     'subject'=>'тема',
     'restaurants_bars_cafes'=>'рестораны, кафе, бары',
     'private_houses'=>'частные дома',
-    'garden_houses_and_landscapes'=>'Беседки и ландшафты'
+    'garden_houses_and_landscapes'=>'Беседки и ландшафты',
+
+    'brands'=>'БРЕНДИ',
+    'products'=>'Продукты',
+    'contacts'=>'КОНТАКТЫ',
+    'customization'=>'ЗАКАЗ',
+    'main'=>'ГЛАВНОЕ',
+    'partners'=>'ПАРТНЕРЫ',
+    'inspiration'=>'ИНСПИРАЦИЯ',
+
+
+
 );

@@ -35,8 +35,15 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/cms/main/index'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Categories', 'url'=>array('/cms/categories'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Products', 'url'=>array('/cms/product'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Pages', 'url'=>array('/cms/page'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Brands', 'url'=>array('/cms/brand'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Products', 'url'=>array('/cms/product'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Customization', 'url'=>array('/cms/customization'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'CustomizationType', 'url'=>array('/cms/customizationtype'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Partners', 'url'=>array('/cms/partner'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Category', 'url'=>array('/cms/category'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Contacts', 'url'=>array('/cms/contacts'), 'visible'=>!Yii::app()->user->isGuest),
+
 				array('label'=>'Login', 'url'=>array('/cms/main/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/cms/main/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

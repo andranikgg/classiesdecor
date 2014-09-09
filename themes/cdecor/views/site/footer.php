@@ -18,7 +18,7 @@ $langs = $lmanager->getLanguageLinksFooter();
         <div class="footer_container">
             <div class="block">
                 <div class="section">
-                <h3 class="hdr">Partners</h3>
+                <h3 class="hdr"><?=Yii::t("menu", "partners")?></h3>
                 <ul>
                     <li>
                         <a href="<?php echo Yii::app()->request->baseUrl . "/" . Yii::app()->language; ?>/site/#">Swarovski Lighting
@@ -45,7 +45,7 @@ $langs = $lmanager->getLanguageLinksFooter();
             </div>
                 <div class="block">
             <div class="section">
-                <h3 class="hdr">Products</h3>
+                <h3 class="hdr"><?=Yii::t("menu", "products")?></h3>
                 <ul>
                     <li>
                         <a href="<?php echo Yii::app()->request->baseUrl . "/" . Yii::app()->language; ?>/site/#">Swarovski Lighting
@@ -72,7 +72,7 @@ $langs = $lmanager->getLanguageLinksFooter();
                 </div>
                     <div class="block">
             <div class="section">
-                <h3 class="hdr">Contacts</h3>
+                <h3 class="hdr"><?=Yii::t("menu", "contacts")?></h3>
                 <ul>
                     <li>
                         <p>

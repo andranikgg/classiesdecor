@@ -8,6 +8,13 @@
 $lmanager = Yii::app()->urlManager;
 $langs = $lmanager->getLanguageLinks();
 
+$criteria = new CDbCriteria();
+//$criteria->condition  = "id=:id";
+$criteria->order = "id DESC";
+$criteria->limit = 4;
+
+
+
 ?>
 
 <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/unslider.js"></script>
@@ -30,21 +37,21 @@ $langs = $lmanager->getLanguageLinks();
         <div class="header_left_block">
             <div id="header_menu_home" class="header_top_menu_item">
                 <a href="<?= Yii::app()->baseUrl ?>">
-                    <?=Yii::t("menu", "HOME")?>
+                    <?=Yii::t("menu", "main")?>
                 </a>
             </div>
             <div class="vertical_line">
             </div>
             <div id="header_menu_home" class="header_top_menu_item">
                 <a href="<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/partners">
-                    <?=Yii::t("menu", "PARTNERS")?>
+                    <?=Yii::t("menu", "partners")?>
                 </a>
             </div>
             <div class="vertical_line">
             </div>
             <div id="header_menu_contacts" class="header_top_menu_item">
                 <a href="<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/contacts">
-                    <?=Yii::t("menu", "CONTACTS")?>
+                    <?=Yii::t("menu", "contacts")?>
                 </a>
             </div>
         </div>
@@ -81,7 +88,7 @@ $langs = $lmanager->getLanguageLinks();
 
             <div id='header_menu'>
                 <ul>
-                    <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/brands'><span>brands</span></a>
+                    <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/brands'><span><?=Yii::t("menu", "brands")?></span></a>
                         <ul>
                             <li><a href='#'><span>brand 1</span></a>
                                 <ul>
@@ -97,7 +104,7 @@ $langs = $lmanager->getLanguageLinks();
                             </li>
                         </ul>
                     </li>
-                    <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/products'><span>products</span></a>
+                    <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/products'><span><?=Yii::t("menu", "products")?></span></a>
                         <ul>
                             <li class='has-sub'><a href='#'><span>Product 1</span></a>
                                 <ul>
@@ -113,7 +120,7 @@ $langs = $lmanager->getLanguageLinks();
                             </li>
                         </ul>
                     </li>
-                    <li class='last'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/customization'><span>customization</span></a></li>
+                    <li class='last'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/customization'><span><?=Yii::t("menu", "customization")?></span></a></li>
                 </ul>
             </div>
             <div class="clear">
@@ -122,7 +129,7 @@ $langs = $lmanager->getLanguageLinks();
         <a href="<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/inspiration">
             <div class="header_menu_right">
                 <div class="header_menu_right_item">
-                    <?=Yii::t("menu", "INSPIRATION")?>
+                    <?=Yii::t("menu", "inspiration")?>
                 </div>
             </div>
         </a>

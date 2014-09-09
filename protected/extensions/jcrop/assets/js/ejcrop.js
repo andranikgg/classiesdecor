@@ -70,15 +70,17 @@ function ejcrop_initWithButtons(id, options) {
 			url: options.ajaxUrl,
 			data: ajaxData,
 			success: function(msg) {
+               // alert(msg);
 				if (msg != 'error') {
 					// change the image source
 					$('#thumb_' + id + '> img').attr('src', msg);
 					ejcrop_reinitThumb(id);
+                    crop_url = msg
 				}
                 isCropped = true;
-
                 $('#cropDialog').dialog('close');
-            }
+
+			}
 		});
 	}
 

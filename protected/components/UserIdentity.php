@@ -18,7 +18,7 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$users=array(
-			'cdecor'=>'admin',
+			'admin'=>'admin',
 		);
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;

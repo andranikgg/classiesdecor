@@ -46,18 +46,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="container_slider_block_content">
     <div class="banner">
         <ul id="banner_ul">
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg1.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg2.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg3.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg4.jpg" class="content_slid_img"/>
-            </li>
+            <?php foreach($page->bannerImages as $banner): ?>
+                <li>
+                    <img src="<?= Yii::app()->baseUrl ?>/images/page/<?=$banner->image?>" class="content_slid_img"/>
+                </li>
+            <?php endforeach ?>
         </ul>
         <ol class="dots">
             <li class="dot" onclick="toslide(1)">1</li>
@@ -80,7 +73,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="container_wrapper">
     <div class="container_row">
         <div class="container_contacts_block block_30per left">
-            <div class="hdr">contacts</div>
+            <div class="hdr"><?=Yii::t("menu", "contacts")?></div>
             <div class="container_contacts_item">
                 <ul>
                     <li>
