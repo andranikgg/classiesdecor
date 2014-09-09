@@ -215,6 +215,7 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
+
     <div class="container_cust_content_item_block block_80per left" style="padding: 0 0 0 20px;">
         <img src="<?= Yii::app()->baseUrl ?>/images/cust1.png"/>
     </div>
