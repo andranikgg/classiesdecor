@@ -12,7 +12,7 @@
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -21,15 +21,34 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'title_ru'); ?>
-		<?php echo $form->textField($model,'title_ru',array('size'=>80,'maxlength'=>0)); ?>
+		<?php echo $form->textField($model,'title_ru',array('size'=>80,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'title_ru'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'title_en'); ?>
-		<?php echo $form->textField($model,'title_en',array('size'=>80,'maxlength'=>0)); ?>
+		<?php echo $form->textField($model,'title_en',array('size'=>80,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'title_en'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'brand_id'); ?>
+        <?php echo $form->dropDownList($model,'brand_id',CHtml::listData(Brand::model()->findAllByAttributes(array('status'=>1)), 'id', 'name_ru')); ?>
+        <?php echo $form->error($model,'brand_id'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'category_id'); ?>
+        <?php echo $form->dropDownList($model,'category_id',CHtml::listData(Category::model()->findAll(), 'id', 'name_ru')); ?>
+        <?php echo $form->error($model,'category_id'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'status', array('style'=>'float:left;')); ?>
+        <?php echo $form->checkBox($model,'status', array('style'=>'float:left;margin-left:10px;', 'checked'=>true)); ?>
+        <?php echo $form->error($model,'status'); ?>
+    </div>
+    <div class="clear"></div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'desc_ru'); ?>
@@ -43,23 +62,9 @@
 		<?php echo $form->error($model,'desc_en'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'brand_id'); ?>
-		<?php echo $form->textField($model,'brand_id'); ?>
-		<?php echo $form->error($model,'brand_id'); ?>
-	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'category_id'); ?>
-		<?php echo $form->textField($model,'category_id'); ?>
-		<?php echo $form->error($model,'category_id'); ?>
-	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>
+
 
 
     <div class="row">
@@ -68,7 +73,7 @@
     </div>
 
     <?php if(!$model->isNewRecord): ?>
-        <img class="image_container" src ='<?=Yii::app()->baseUrl?>/images/brand/<?=$model->image?>'  style="width:100px"/>
+        <img class="image_container" src ='<?=Yii::app()->baseUrl?>/images/product/<?=$model->image?>'  style="width:100px"/>
     <?php else: ?>
         <img class="image_container" src =''  style="width:100px"/>
     <?php endif ?>
@@ -99,7 +104,7 @@
         array(
             'id'=>'uploadFile',
             'config'=>array(
-                'action'=>Yii::app()->createUrl('/cms/brand/upload'),
+                'action'=>Yii::app()->createUrl('/cms/product/upload'),
                 'allowedExtensions'=>array("jpg", "jpeg", "png"),//array("jpg","jpeg","gif","exe","mov" and etc...
                 'sizeLimit'=>2*1024*1024,// maximum file size in bytes
                 'minSizeLimit'=>0*1024*1024,// minimum file size in bytes
@@ -158,7 +163,7 @@
             autoOpen:false,
             close: function(event, ui) {
                 if(isCropped) {
-                    $(".image_container").attr('src', '<?=Yii::app()->baseUrl?>/images/brand/temp/'+crop_url);
+                    $(".image_container").attr('src', '<?=Yii::app()->baseUrl?>/images/product/temp/'+crop_url);
                     $("#Product_image").val(crop_url);
                 }
             }

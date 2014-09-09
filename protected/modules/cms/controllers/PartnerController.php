@@ -90,7 +90,7 @@ class PartnerController extends SecureController
 		{
             $image =  $_POST['Partner']['image'];
 
-            if($model->image != $image) {
+            if($image != "") {
 
                 $model->attributes=$_POST['Partner'];
 
@@ -110,12 +110,6 @@ class PartnerController extends SecureController
             if($model->save()) {
                 $this->redirect(array('view','id'=>$model->id));
             }
-
-
-
-			$model->attributes=$_POST['Partner'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(

@@ -41,8 +41,6 @@ class BrandController extends SecureController
 		{
             $image =  $_POST['Brand']['image'];
 
-
-
             if(isset($image) && $image != "") {
                 $model->attributes=$_POST['Brand'];
 
@@ -66,11 +64,6 @@ class BrandController extends SecureController
                 }
             }
 
-
-
-			$model->attributes=$_POST['Brand'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -92,9 +85,29 @@ class BrandController extends SecureController
 
 		if(isset($_POST['Brand']))
 		{
-			$model->attributes=$_POST['Brand'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+            $image =  $_POST['Brand']['image'];
+
+            if($image != "") {
+
+                $model->attributes=$_POST['Brand'];
+
+                Yii::app()->ih
+                    ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/brand/temp/'.$image)
+                    ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/brand/' . $model->id . '.png');
+
+                $model->image = $model->id . '.png';
+
+                $dir=Yii::app()->basePath.'/../images/brand/temp/';
+
+                foreach(glob($dir.'*.*') as $files){
+                    unlink($files);
+                }
+
+            }
+
+            if($model->save()) {
+                $this->redirect(array('view','id'=>$model->id));
+            }
 		}
 
 		$this->render('update',array(
