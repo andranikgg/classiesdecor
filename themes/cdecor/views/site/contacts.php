@@ -13,10 +13,9 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 </script>
 
 <script>
-var langitut = 40.1867732132;
-var longitut = 44.5151568619;
-var myLatlng1 = new google.maps.LatLng(40.181938, 44.515196);
-var myLatlng2 = new google.maps.LatLng(40.195407, 44.487915);
+var langitut = <?=$contacts[0]->address_coord_x?>;
+var longitut = <?=$contacts[0]->address_coord_y?>;
+
 function initialize() {
     var latlng = new google.maps.LatLng(langitut, longitut);
 
@@ -28,15 +27,12 @@ function initialize() {
     var map = new google.maps.Map(document.getElementById("googleMap")
         , mapProp);
 
-    var marker1 = new google.maps.Marker({
-        position: myLatlng1,
-        map: map
-    });
-
-    var marker2 = new google.maps.Marker({
-        position: myLatlng2,
-        map: map
-    });
+    <?php foreach ($contacts as $contact):?>
+        var marker<?=$contact->id?> = new google.maps.Marker({
+            position:new google.maps.LatLng(<?=$contact->address_coord_x?>, <?=$contact->address_coord_y?>),
+            map: map
+        });
+    <?php endforeach ?>
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -60,86 +56,41 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div class="container_row">
         <div class="container_contacts_block block_30per left">
             <div class="hdr"><?=Yii::t("menu", "contacts")?></div>
+
+        <?php foreach($contacts as $contact): ?>
             <div class="container_contacts_item">
                 <ul>
                     <li>
                         <p>
-                            Northern Avenue Hin Yerevantsi 2/9
+                            <?=$contact->caddress ?>
                         </p>
                     </li>
                     <li>
                         <p>
-                            Yerevan, Armenia
+                            <?=$contact->worktime ?>
                         </p>
                     </li>
                     <li>
                         <p>
-                            Today 11:00am - 8:00pm
+                            <?=$contact->phone ?>
                         </p>
                     </li>
+
                     <li>
                         <p>
-                            Phone +374 60 44 61 64,
-                        </p>
-                    </li>
-                    <li>
-                        <p style="padding-left: 43px">
-                            +374 94 25 31 69
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Email hamlet@classiesdecor.com
+                           Email <?=$contact->contact_email ?>
                         </p>
                     </li>
                     <li class="contacts_social_block">
-                        <div class="pointer contacts_social_fb left">f</div>
-                        <div class="pointer contacts_social_in left">IN</div>
-                        <div class="pointer contacts_social_pin left">pin</div>
+                        <a href="<?=$contact->fb_link?>" target="_blank"><div class="pointer contacts_social_fb left">f</div></a>
+                        <a href="<?=$contact->in_link?>" target="_blank"><div class="pointer contacts_social_in left">IN</div></a>
+                        <a href="<?=$contact->pin_link?>" target="_blank"><div class="pointer contacts_social_pin left">pin</div></a>
                         <div class="clear"></div>
                     </li>
                 </ul>
             </div>
-            <div class="container_contacts_item">
-                <ul>
-                    <li>
-                        <p>
-                            Northern Avenue Hin Yerevantsi 2/9
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Yerevan, Armenia
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Today 11:00am - 8:00pm
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Phone +374 60 44 61 64,
-                        </p>
-                    </li>
-                    <li>
-                        <p style="padding-left: 43px">
-                            +374 94 25 31 69
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Email hamlet@classiesdecor.com
-                        </p>
-                    </li>
-                    <li class="contacts_social_block">
-                        <div class="pointer contacts_social_fb left">f</div>
-                        <div class="pointer contacts_social_in left">IN</div>
-                        <div class="pointer contacts_social_pin left">pin</div>
-                        <div class="clear"></div>
-                    </li>
-                </ul>
-            </div>
+        <?php endforeach ?>
+           
         </div>
         <div class="container_contacts_block block_60per left">
             <div class="container_contacts_map_container">

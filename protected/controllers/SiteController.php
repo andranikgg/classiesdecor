@@ -280,13 +280,9 @@ class SiteController extends Controller
     public function actionContacts()
     {
         $page  = Page::model()->findByPk(9);
-//        $customization = Customization::model()->findAll();
-//
-//        if (empty($customization)) {
-//            Yii::app()->user->setFlash('customization', 'There is no available customization');
-//        }
-//        $this->render('customization', array('customization' => $customization));
-        $this->render('contacts', array('page'=>$page));
+        $contacts = Contacts::model()->findAll();
+
+        $this->render('contacts', array('page'=>$page, 'contacts'=>$contacts));
     }
 
     public function actionInspiration()
