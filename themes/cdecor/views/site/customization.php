@@ -110,6 +110,7 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
                 <span class="leftpaddind_20 left">3D design of your customized item</span>
 
                 <div class="clear"></div>
+                
             </li>
         </ul>
     </div>
