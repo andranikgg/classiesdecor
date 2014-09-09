@@ -37,6 +37,7 @@
 				array('label'=>'Home', 'url'=>array('/cms/main/index'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Pages', 'url'=>array('/cms/page'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Brands', 'url'=>array('/cms/brand'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Products', 'url'=>array('/cms/product'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Customization', 'url'=>array('/cms/customization'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'CustomizationType', 'url'=>array('/cms/customizationtype'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Partners', 'url'=>array('/cms/partner'), 'visible'=>!Yii::app()->user->isGuest),

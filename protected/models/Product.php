@@ -12,6 +12,7 @@
  * @property integer $brand_id
  * @property integer $category_id
  * @property integer $status
+ * @property string $image
  *
  * The followings are the available model relations:
  * @property Category $category
@@ -53,6 +54,7 @@ class Product extends CActiveRecord
 		return array(
 			array('title_ru, title_en, desc_ru, desc_en, brand_id, category_id, status', 'required'),
 			array('brand_id, category_id, status', 'numerical', 'integerOnly'=>true),
+            array('image', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, title_ru, title_en, desc_ru, desc_en, brand_id, category_id, status', 'safe', 'on'=>'search'),
@@ -87,6 +89,7 @@ class Product extends CActiveRecord
 			'brand_id' => 'Brand',
 			'category_id' => 'Category',
 			'status' => 'Status',
+            'image' => 'Image',
 		);
 	}
 
