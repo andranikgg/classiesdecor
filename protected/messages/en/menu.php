@@ -14,8 +14,6 @@ return array (
     'order'=>'order',
     'en'=>'en',
     'ru'=>'ru',
-    'de'=>'de',
-    'it'=>'it',
     'body'=>'body',
     'firstname'=>'first name',
     'lastname'=>'last name',
@@ -25,5 +23,17 @@ return array (
     'subject'=>'subject',
     'restaurants_bars_cafes'=>'restaurants, bars, cafes',
     'private_houses'=>'private houses',
-    'garden_houses_and_landscapes'=>'garden houses and landscapes'
+    'garden_houses_and_landscapes'=>'garden houses and landscapes',
+
+    'brands'=>'BRANDS',
+    'products'=>'PRODUCTS',
+    'contacts'=>'CONTACTS',
+    'customization'=>'CUSTOMIZATION',
+    'main'=>'HOME',
+    'partners'=>'PARTNERS',
+    'inspiration'=>'INSPIRATION',
+
+
+
+
 );

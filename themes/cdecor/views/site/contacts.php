@@ -73,7 +73,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="container_wrapper">
     <div class="container_row">
         <div class="container_contacts_block block_30per left">
-            <div class="hdr">contacts</div>
+            <div class="hdr"><?=Yii::t("menu", "contacts")?></div>
             <div class="container_contacts_item">
                 <ul>
                     <li>

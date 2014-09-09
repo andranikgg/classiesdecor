@@ -273,7 +273,7 @@ class SiteController extends Controller
 //        if (empty($customization)) {
 //            Yii::app()->user->setFlash('customization', 'There is no available customization');
 //        }
-        $this->render('customization', array('customization' => $customization, 'page'=>$page));
+        $this->render('customization', array('customizations' => $customization, 'page'=>$page));
 
     }
 
@@ -291,13 +291,13 @@ class SiteController extends Controller
 
     public function actionInspiration()
     {
-        $customization = Customization::model()->findAll();
+       // $customization = Customization::model()->findAll();
         $page  = Page::model()->findByPk(7);
 //
 //        if (empty($customization)) {
 //            Yii::app()->user->setFlash('customization', 'There is no available customization');
 //        }
-        $this->render('customization', array('customization' => $customization, 'page'=>$page ));
+        $this->render('customization', array('page'=>$page ));
 
     }
 
