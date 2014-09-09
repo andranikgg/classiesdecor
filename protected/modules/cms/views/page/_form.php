@@ -150,7 +150,8 @@
             <img src="<?=Yii::app()->baseUrl?>/images/page/<?=$banner->image?>" width="100px" />
         </div>
         <div class="banner-link-wrap">
-            <input type="text" class="banner-link" value="<?=$banner->link?>" data-value="<?=$banner->id?>" size="100" >
+            <label for="link" value="<?=$banner->link?>">Link</label>
+            <input type="text" class="banner-link" value="<?=$banner->link?>" data-value="<?=$banner->id?>" size="80" >
         </div>
         <div class="delete" data-value="<?=$banner->id?>"></div>
         <div class="clear"></div>
