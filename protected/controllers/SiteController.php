@@ -57,6 +57,7 @@ class SiteController extends Controller
 //            ->limit(12)
 //            ->order(array('RAND()'))
 //            ->queryAll();
+        $page  = Page::model()->findByPk(8);
 
         $criteria = new CDbCriteria();
         $criteria->limit = 12;
@@ -66,7 +67,7 @@ class SiteController extends Controller
 //        echo "<pre>";
 //        print_r($products);
 //        exit;
-        $this->render('index', array('products' => $products));
+        $this->render('index', array('products' => $products, 'page'=>$page ));
     }
 
     public function actionAboutus()
@@ -229,24 +230,27 @@ class SiteController extends Controller
 
     public function actionBrands()
     {
-//        $brands = Brands::model()->findAll();
-//
+        $brands = Brand::model()->findAll();
+        $page  = Page::model()->findByPk(4);
+
+
 //        if (empty($brands)) {
 //            Yii::app()->user->setFlash('brands', 'There is no available brands');
 //        }
-//        $this->render('brands', array('brands' => $brands));
-        $this->render('brands');
+       $this->render('brands', array('brands' => $brands, 'page'=>$page ));
+
     }
 
     public function actionProducts()
     {
-//        $products = Products::model()->findAll();
+        $products = Product::model()->findAll();
+        $page  = Page::model()->findByPk(5);
 //
 //        if (empty($products)) {
 //            Yii::app()->user->setFlash('products', 'There is no available products');
 //        }
-//        $this->render('products', array('products' => $products));
-        $this->render('products');
+        $this->render('products', array('products' => $products, 'page'=>$page ));
+
     }
 
     public function actionPartners()
@@ -263,35 +267,38 @@ class SiteController extends Controller
 
     public function actionCustomization()
     {
-//        $customization = Customization::model()->findAll();
+        $customization = Customization::model()->findAll();
+        $page  = Page::model()->findByPk(6);
 //
 //        if (empty($customization)) {
 //            Yii::app()->user->setFlash('customization', 'There is no available customization');
 //        }
-//        $this->render('customization', array('customization' => $customization));
-        $this->render('customization');
+        $this->render('customization', array('customization' => $customization, 'page'=>$page));
+
     }
 
     public function actionContacts()
     {
+        $page  = Page::model()->findByPk(9);
 //        $customization = Customization::model()->findAll();
 //
 //        if (empty($customization)) {
 //            Yii::app()->user->setFlash('customization', 'There is no available customization');
 //        }
 //        $this->render('customization', array('customization' => $customization));
-        $this->render('contacts');
+        $this->render('contacts', array('page'=>$page));
     }
 
     public function actionInspiration()
     {
-//        $customization = Customization::model()->findAll();
+        $customization = Customization::model()->findAll();
+        $page  = Page::model()->findByPk(7);
 //
 //        if (empty($customization)) {
 //            Yii::app()->user->setFlash('customization', 'There is no available customization');
 //        }
-//        $this->render('customization', array('customization' => $customization));
-        $this->render('inspiration');
+        $this->render('customization', array('customization' => $customization, 'page'=>$page ));
+
     }
 
     public function actionInteriorpage($id)

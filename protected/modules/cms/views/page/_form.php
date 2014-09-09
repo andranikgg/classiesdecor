@@ -155,7 +155,7 @@
             <label for="link" value="<?=$banner->link?>">Link</label>
             <input type="text" class="banner-link" value="<?=$banner->link?>" data-value="<?=$banner->id?>" size="80" >
         </div>
-        <div class="delete" data-value="<?=$banner->id?>"></div>
+        <div class="del" data-value="<?=$banner->id?>"></div>
         <div class="clear"></div>
     </div>
 

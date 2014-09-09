@@ -1,6 +1,7 @@
 <?php
 /* @var $this SiteController */
 /* @var $interior Partners[] */
+/* @var $page Page */
 
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
@@ -10,7 +11,7 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 //$freetext = FreeText::model()->findByAttributes(array('page' => $page));
 
 /*echo "<pre>";
-print_r($partners);
+print_r($page->bannerImages);
 exit;*/
 
 
@@ -22,18 +23,11 @@ exit;*/
 <div class="container_slider_block_content">
     <div class="banner">
         <ul id="banner_ul">
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg1.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg2.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg3.jpg" class="content_slid_img"/>
-            </li>
-            <li>
-                <img src="<?= Yii::app()->baseUrl ?>/images/bg4.jpg" class="content_slid_img"/>
-            </li>
+            <?php foreach($page->bannerImages as $banner): ?>
+                <li>
+                    <img src="<?= Yii::app()->baseUrl ?>/images/page/<?=$banner->image?>" class="content_slid_img"/>
+                </li>
+            <?php endforeach ?>
         </ul>
         <ol class="dots">
             <li class="dot" onclick="toslide(1)">1</li>
