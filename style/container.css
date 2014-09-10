@@ -637,3 +637,12 @@
 .contacts_social_pin:hover{
     /*color:#007bb6!important;*/
 }
+
+.map {
+
+    border: 2px solid #cfcfcf;
+    -webkit-box-shadow: 1px 1px 8px 0px rgba(50, 50, 50, 1);
+    -moz-box-shadow:    1px 1px 8px 0px rgba(50, 50, 50, 1);
+    box-shadow:         1px 1px 8px 0px rgba(50, 50, 50, 1);
+    border-radius: 5px;
+}

@@ -5,9 +5,12 @@
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
 Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/bootstrap.min.css');
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/contacts.css"/>
+
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 </script>
@@ -95,40 +98,45 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div class="container_contacts_block block_60per left">
             <div class="container_contacts_map_container">
                 <div class="container_contacts_map">
-                    <div id="googleMap" style="width:100%;height:340px;"></div>
+                    <div class="map" id="googleMap" style="width:862px; height:340px;"></div>
                 </div>
             </div>
         </div>
         <div class="clear"></div>
         <div class="container_contacts_form_block">
-            <div class="container_contacts_form">
-                <form action="#">
-                    <div class="container_contacts_form_left left">
-                        <div class="form_row">
-                            Phone*
+
+            <div class="container">
+                <div class="row">
+
+                    <form role="form" action="" method="post" >
+                        <div class="col-lg-4 pull-right">
+
+                            <div class="form-group">
+                                <label for="InputPhone"> Your Phone</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="InputPhone" name="InputPhone" placeholder="Enter Phone" required  >
+                                    <span class="input-group-addon"></span></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="InputEmail">Your Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+                                    <span class="input-group-addon"></span></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="InputMessage">Message</label>
+                                <div class="input-group"
+                                    >
+                                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required></textarea>
+                                    <span class="input-group-addon"></span></div>
+                            </div>
+                              <input type="submit" name="submit" id="submit" value="Send" class="btn btn-success pull-right">
                         </div>
-                        <div class="form_row">
-                            Email*
-                        </div>
-                        <div class="form_row">
-                            Message*
-                        </div>
-                    </div>
-                    <div class="container_contacts_form_right left">
-                        <div class="form_row">
-                            <input type="text" name="phone">
-                        </div>
-                        <div class="form_row">
-                            <input type="text" name="email">
-                        </div>
-                        <div class="">
-                            <textarea rows="4" cols="50">
-                            </textarea>
-                        </div>
-                        <input type="submit" value="Send" class="form_button">
-                    </div>
-                    <div class="clear"></div>
-                </form>
+                    </form>
+                </div>
+
             </div>
         </div>
         <div class="clear"></div>
