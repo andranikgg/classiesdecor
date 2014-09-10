@@ -80,6 +80,9 @@ class SiteController extends Controller
 
     public function actionContacts()
     {
+        /*print_r();
+        exit;
+        Yii::app()->end();*/
         $page  = Page::model()->findByPk(9);
         $contacts = Contacts::model()->findAll();
 
@@ -101,27 +104,19 @@ class SiteController extends Controller
 
     public function actionContact()
     {
-        $model = new ContactForm;
-        if (isset($_POST['ContactForm'])) {
-            $model->attributes = $_POST['ContactForm'];
-            if ($model->validate()) {
-                $firstname = '=?UTF-8?B?' . base64_encode($model->firstname) . '?=';
-                $lastname = '=?UTF-8?B?' . base64_encode($model->lastname) . '?=';
-                $middlename = '=?UTF-8?B?' . base64_encode($model->middlename) . '?=';
-                $subject = '=?UTF-8?B?' . base64_encode($model->subject) . '?=';
-                $headers = "From: $firstname $lastname $middlename <{$model->email}>\r\n" .
-                    "Reply-To: {$model->email}\r\n" .
-                    "MIME-Version: 1.0\r\n" .
-                    "Content-Type: text/plain; charset=UTF-8";
+        if(Yii::app()->request->isAjaxRequest) {
+            $contact = Contacts::model()->findByPk(1);
 
-                $model->body = 'phone: '. $model->phone . ' \n ' . $model->body;
+            $headers = "From: Site ClassiesDecor <{$_POST['email']}>\r\n" .
+                "Reply-To: {$_POST['email']}\r\n" .
+                "MIME-Version: 1.0\r\n" .
+                "Content-Type: text/plain; charset=UTF-8";
 
-                mail(Yii::app()->params['adminEmail'], $subject, $model->body, $headers);
-                Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
-                $this->refresh();
-            }
+            mail($contact->feedback_email, 'Mail From ClassiesDecor',"Phone -". $_POST['phone'] ."content" . $_POST['message'], $headers);
+
+            Yii:;app()->end();
         }
-        $this->render('contact', array('model' => $model));
+        $this->redirect('index');
     }
 
     /**
