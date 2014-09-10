@@ -4,8 +4,10 @@ $(document).ready(function () {
 function openGallery() {
     $.ajax({
         type: 'POST',
-        url: 'Inspiration',
+        url: 'inspiration',
         success: function (data) {
+            $('.black').show();
+            $('.popup_outer').show();
             $('.popup').html(data);
         }
     });

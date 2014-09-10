@@ -88,14 +88,15 @@ class SiteController extends Controller
 
     public function actionInspiration()
     {
-        $inspiration = Inspiration::model()->findAll();
-        $page  = Page::model()->findByPk(7);
-//
-//        if (empty($customization)) {
-//            Yii::app()->user->setFlash('customization', 'There is no available customization');
-//        }
-        $this->render('inspiration', array( 'inspirations' => $inspiration, 'page'=>$page ));
+        $gallery = Gallery::model()->findAllByAttributes(array('status'=>1));
 
+        /*echo "<pre>";
+        print_r($gallery);
+        exit;*/
+
+        $this->renderPartial('_gallery', array('gallery' => $gallery));
+
+        Yii::app()->end();
     }
 
     public function actionContact()

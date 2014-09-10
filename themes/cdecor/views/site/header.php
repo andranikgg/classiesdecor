@@ -115,12 +115,12 @@ $brands = Brand::model()->findAllByAttributes(array('status'=>1));
             <div class="clear">
             </div>
         </div>
-        <a href="<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/inspiration">
+
             <div class="header_menu_right">
-                <div class="header_menu_right_item">
+                <div class="header_menu_right_item" onclick="openGallery()">
                     <?=Yii::t("menu", "inspiration")?>
                 </div>
             </div>
-        </a>
+
     </div>
 </div>

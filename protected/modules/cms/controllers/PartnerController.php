@@ -90,7 +90,7 @@ class PartnerController extends SecureController
 		{
             $image =  $_POST['Partner']['image'];
 
-            if($image != "") {
+            if($image != $model->image) {
 
                 $model->attributes=$_POST['Partner'];
 

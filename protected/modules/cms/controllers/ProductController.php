@@ -84,7 +84,7 @@ class ProductController extends SecureController
 		{
             $image =  $_POST['Product']['image'];
 
-            if($image != "") {
+            if($image != $model->image) {
 
                 $model->attributes=$_POST['Product'];
 

@@ -7,6 +7,8 @@
  * @property integer $id
  * @property string $image
  * @property integer $status
+ * @property string $title_ru
+ * @property string $title_en
  */
 class Gallery extends CActiveRecord
 {
@@ -27,10 +29,10 @@ class Gallery extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('status', 'numerical', 'integerOnly'=>true),
-			array('image', 'length', 'max'=>255),
+			array('image, title_ru, title_en', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, image, status', 'safe', 'on'=>'search'),
+			array('id, image, status, title_ru, title_en', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +56,8 @@ class Gallery extends CActiveRecord
 			'id' => 'ID',
 			'image' => 'Image',
 			'status' => 'Status',
+			'title_ru' => 'Title Ru',
+			'title_en' => 'Title En',
 		);
 	}
 
@@ -78,6 +82,8 @@ class Gallery extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('status',$this->status);
+		$criteria->compare('title_ru',$this->title_ru,true);
+		$criteria->compare('title_en',$this->title_en,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

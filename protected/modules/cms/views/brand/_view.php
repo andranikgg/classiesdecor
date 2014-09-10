@@ -18,15 +18,14 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('desc_ru')); ?>:</b>
-	<?php echo CHtml::encode($data->desc_ru); ?>
+	<?php echo $data->desc_ru; ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('desc_en')); ?>:</b>
-	<?php echo CHtml::encode($data->desc_en); ?>
+	<?php echo $data->desc_en; ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
-	<?php echo CHtml::encode($data->image); ?>
+	<?php echo CHtml::image(Yii::app()->baseUrl .'/images/brand/' . $data->image, '',array('width'=>100)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>

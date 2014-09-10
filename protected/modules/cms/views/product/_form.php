@@ -45,7 +45,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model,'status', array('style'=>'float:left;')); ?>
-        <?php echo $form->checkBox($model,'status', array('style'=>'float:left;margin-left:10px;', 'checked'=>true)); ?>
+        <?php echo $form->checkBox($model,'status', array('style'=>'float:left;margin-left:10px;', 'checked'=>($model->isNewRecord)? true: $model->status)); ?>
         <?php echo $form->error($model,'status'); ?>
     </div>
     <div class="clear"></div>
