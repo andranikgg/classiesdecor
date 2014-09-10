@@ -291,13 +291,13 @@ class SiteController extends Controller
 
     public function actionInspiration()
     {
-       // $customization = Customization::model()->findAll();
+        $inspiration = Inspiration::model()->findAll();
         $page  = Page::model()->findByPk(7);
 //
 //        if (empty($customization)) {
 //            Yii::app()->user->setFlash('customization', 'There is no available customization');
 //        }
-        $this->render('customization', array('page'=>$page ));
+        $this->render('inspiration', array( 'inspirations' => $inspiration, 'page'=>$page ));
 
     }
 

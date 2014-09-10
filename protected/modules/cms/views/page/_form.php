@@ -225,17 +225,16 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
         $( "#cropDialog" ).dialog({
             autoOpen:false,
             close: function(event, ui) {
-                /*if(isCropped) {
-                    $(".image_container").attr('src', '<?=Yii::app()->baseUrl?>/images/partner/temp/'+crop_url);
-                    $("#Partner_image").val(crop_url);
-                }*/
+                if(isCropped) {
+                    location.reload();
+                }
 
             }
 
         });
 
 
-        $(".delete").click(function(){
+        $(".del").click(function(){
 
             var bannerid = $(this).attr("data-value");
 

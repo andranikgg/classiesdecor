@@ -13,8 +13,8 @@ $(document).ready(function () {
         var menu = $(curm).attr("menu");
         var grandparent = $(this).parent().parent();
         var block = $(this).parent().parent().attr("block");
-        console.log(block);
-        console.log(menu);
+        /*console.log(block);
+        console.log(menu);*/
         $(this).parent().find(".container_cust_submenu_item").each(function (index) {
             $(this).attr("class", "container_cust_submenu_item left");
             $(curm).attr("class", "container_cust_submenu_item container_cust_submenu_item_selected left");

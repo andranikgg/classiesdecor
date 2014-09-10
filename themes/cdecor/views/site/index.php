@@ -3,30 +3,15 @@
 /* @var $products Banner_Images[] */
 /* @var $products Product[] */
 
+
+
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
 Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
 ?>
 
 <div class="container_slider_block_home">
-    <div class="banner">
-        <ul id="banner_ul">
-
-            <?php foreach($page->bannerImages as $banner): ?>
-                <li>
-                    <img src="<?= Yii::app()->baseUrl ?>/images/page/<?=$banner->image?>" class="content_slid_img"/>
-                </li>
-            <?php endforeach ?>
-
-
-        </ul>
-        <ol class="dots">
-            <li class="dot" onclick="toslide(1)">1</li>
-            <li class="dot" onclick="toslide(2)">2</li>
-            <li class="dot" onclick="toslide(3)">3</li>
-            <li class="dot" onclick="toslide(4)">4</li>
-        </ol>
-    </div>
+    <?php $this->renderPartial('_banners', array('page' => $page)); ?>
 
     <div class="absolute whiteline" style="height: 15px;bottom: 0px;z-index: 2">
     </div>

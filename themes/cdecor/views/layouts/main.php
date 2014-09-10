@@ -73,9 +73,6 @@
         <?php echo $content; ?>
     </div>
     <?php $this->renderPartial('footer', false); ?>
-    <div id="inspiration_popup" class="popup">
-        <?php $this->renderPartial('inspiration', false); ?>
-    </div>
 </div>
 
 </body>
