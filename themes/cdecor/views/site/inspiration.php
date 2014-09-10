@@ -23,7 +23,29 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 </div>
 
 <div class="container_wrapper">
-    <div class="container_row">
-        INSPIRATION - There is no content!
-    </div>
+         <div class="container_block">
+            <div class="container_block_content">
+                <div class="hdr"><?=$page->ctitle ?></div>
+                <div>
+                    <?=$page->cdesc1 ?>
+                </div>
+            </div>
+        </div>
+        <div class="container_block">
+            <div class="container_block_content">
+                <div class="hdr">&nbsp;</div>
+                <div>
+                    <?=$page->cdesc2 ?>
+                </div>
+            </div>
+        </div>
+        <div class="container_block">
+            <div class="container_block_content">
+                <div class="hdr">&nbsp;</div>
+                <div>
+                    <?=$page->cdesc3 ?>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
 </div>
