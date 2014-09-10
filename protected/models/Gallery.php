@@ -20,6 +20,13 @@ class Gallery extends CActiveRecord
 		return 'gallery';
 	}
 
+    public function getctitle() {
+        if(Yii::app()->language == "en")
+            return $this->title_en;
+        elseif(Yii::app()->language == "ru")
+            return $this->title_ru;
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */

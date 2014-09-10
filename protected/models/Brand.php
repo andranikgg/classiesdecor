@@ -35,9 +35,9 @@ class Brand extends CActiveRecord
 
     public function getcdesc() {
         if(Yii::app()->language == "en")
-            return $this->$desc_en;
+            return $this->desc_ru;
         elseif(Yii::app()->language == "ru")
-            return $this->$desc_ru;
+            return $this->desc_ru;
     }
 
 	/**

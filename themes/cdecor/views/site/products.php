@@ -1,5 +1,6 @@
 <?php
 /* @var $this SiteController */
+/* @var $brand Brand */
 /* @var $product Products[] */
 
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
@@ -8,6 +9,17 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 
 
 ?>
+
+<style>
+    .container_block {
+        float: left;
+        width: 100%;
+    }
+</style>
+<script>
+    var baseUrl = "<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/";
+</script>
+
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/brands.css"/>
 <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/pinterest.js"></script>
@@ -30,149 +42,13 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 <div class="container_wrapper">
     <div class="container_block">
         <div class="container_block_content">
-            <div class="hdr"><?=$page->ctitle ?></div>
-            <div><div>
-                    <?=$page->cdesc1 ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container_block">
-        <div class="container_block_content">
-            <div class="hdr">&nbsp;</div>
-            <div><div>
-                    <?=$page->cdesc2 ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container_block">
-        <div class="container_block_content">
-            <div class="hdr">&nbsp;</div>
-            <div><div>
-                    <?=$page->cdesc3 ?>
-                </div>
+            <div class="hdr"><?= $brand->cname ?></div>
+            <div>
+                <?= $brand->cdesc ?>
             </div>
         </div>
     </div>
     <div class="clear"></div>
 
-    <div class="container_row">
-        <div class="container_grid_content">
-        </div>
-        <div class="container_grid" id="pinterest_here">
-
-            <div class="article_box">
-                <div class="article_image" id="1">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand1.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box" id="2">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand2.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box" id="3">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand3.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box" id="4">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand4.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box" id="5">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand5.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand1.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand2.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand3.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand4.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand5.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand1.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand2.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand3.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand4.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand5.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand1.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand2.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand3.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand4.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand5.png" style="width: 203px;">
-                </div>
-            </div>
-            <div class="article_box">
-                <div class="article_image">
-                    <img src="<?= Yii::app()->baseUrl ?>/images/brand1.png" style="width: 203px;">
-                </div>
-            </div>
-
-        </div>
-        <div class="container_grid_more_block">
-            <div class="container_grid_more">
-                <i class="container_grid_more_icon fa-li fa fa-angle-down"></i>
-            </div>
-        </div>
-    </div>
+   <?php $this->renderPartial('_products_part', array('products'=>$brand->products)); ?>
 </div>

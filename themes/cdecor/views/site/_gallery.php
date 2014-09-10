@@ -27,7 +27,7 @@
         <?php foreach($gallery as $item): ?>
             <li>
                 <img src="<?= Yii::app()->baseUrl ?>/images/gallery/<?=$item->image?>" class="content_slid_img"/>
-                <div class="slide-title">sadfhs</div>
+                <div class="slide-title"><?=$item->ctitle?></div>
             </li>
         <?php endforeach ?>
     </ul>

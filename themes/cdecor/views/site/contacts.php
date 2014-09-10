@@ -157,10 +157,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
             $.ajax({
                 type: 'POST',
                 url: '<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contact',
-                data: {email: email, name: phone, message: message},
+                data: {email: email, phone: phone, message: message},
                 success: function (data) {
                     console.log(data);
-                    alert(data);
                 }
             });
 
