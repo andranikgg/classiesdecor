@@ -4,7 +4,6 @@
 /* @var $products Product[] */
 
 
-
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
 Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
@@ -26,19 +25,10 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
 <div class="container_wrapper">
     <div class="container_block">
         <div class="container_block_content">
-            <div class="hdr"><?=$page->ctitle ?></div>
+            <div class="hdr"><?= $page->ctitle ?></div>
             <div>
                 <div>
-                    <?=$page->cdesc1 ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container_block">
-        <div class="container_block_content">
-            <div class="hdr">&nbsp;</div>
-            <div><div>
-                    <?=$page->cdesc2 ?>
+                    <?= $page->cdesc1 ?>
                 </div>
             </div>
         </div>
@@ -47,7 +37,17 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         <div class="container_block_content">
             <div class="hdr">&nbsp;</div>
             <div>
-                <?=$page->cdesc3 ?>
+                <div>
+                    <?= $page->cdesc2 ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_block">
+        <div class="container_block_content">
+            <div class="hdr">&nbsp;</div>
+            <div>
+                <?= $page->cdesc3 ?>
             </div>
         </div>
     </div>
