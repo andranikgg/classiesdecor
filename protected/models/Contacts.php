@@ -42,7 +42,6 @@ class Contacts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('feedback_email', 'required'),
 			array('address_coord_x, address_coord_y, worktime, contact_email, fb_link, in_link, pin_link, feedback_email', 'length', 'max'=>250),
 			array('address_ru, address_en, phone', 'safe'),
 			array('fb_link, in_link, pin_link', 'url'),

@@ -103,13 +103,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </div>
         </div>
         <div class="clear"></div>
-        <div class="container_contacts_form_block">
+        <div class="container_contacts_form_block col-lg-4 pull-right " >
 
-            <div class="container">
+            <div class="container" >
                 <div class="row">
 
                     <form role="form" action="" method="post" >
-                        <div class="col-lg-4 pull-right">
+                        <div class="pull-right">
 
                             <div class="form-group">
                                 <label for="InputPhone"> Your Phone</label>
