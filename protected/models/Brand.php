@@ -67,7 +67,7 @@ class Brand extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'products' => array(self::HAS_MANY, 'Product', 'brand_id'),
-            'brandCategoryXrefs' => array(self::MANY_MANY, 'Category', 'Product(brand_id, category_id)'),
+            'brandCategoryXrefs' => array(self::MANY_MANY, 'Category', 'product(brand_id, category_id)'),
 		);
 
 	}
