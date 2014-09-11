@@ -87,7 +87,7 @@ class BrandController extends SecureController
 		{
             $image =  $_POST['Brand']['image'];
 
-            if($image != "") {
+            if($image != $model->image) {
 
                 $model->attributes=$_POST['Brand'];
 

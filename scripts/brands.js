@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     $(".article_image").click(function () {
         var id = $(this).attr("id");
+
         openBrand(id);
     });
 });
@@ -9,7 +10,7 @@ $(document).ready(function () {
 function openBrand(id) {
     $.ajax({
         type: 'POST',
-        url: 'GetBrand',
+        url:  baseUrl + 'getproduct',
         data: {id: id},
         success: function (data) {
             $('.container_grid_content').html(data);

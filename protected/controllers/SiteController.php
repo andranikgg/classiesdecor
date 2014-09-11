@@ -16,43 +16,57 @@ class SiteController extends Controller
     }
 
 
-    public function actionGetBrand()
+    public function actionGetproduct()
     {
-       /* $id = $_POST['id'];
-        $brand = Brand::model()->findAll();
+        try{
+            $product = Product::model()->findByPk($_POST['id']);
 
-        if (empty($brand)) {
-            Yii::app()->user->setFlash('brand', 'There is no available brand');
+            $this->renderPartial('_product', array('product'=>$product));
         }
-        $this->render('brand', array('brand' => $brand));*/
+        catch(Exception $ex) {
+            echo $ex->getMessage();
+        }
 
-        $this->renderPartial('brand');
+        Yii::app()->end();
     }
 
-    public function actionBrands()
+    public function actionBrands($id = 0)
     {
-        $brands = Brand::model()->findAll();
         $page  = Page::model()->findByPk(4);
 
+       if($id == 0) {
+           $brands = Brand::model()->findAll();
+           $this->render('brands', array('brands' => $brands, 'page'=>$page ));
+       }
+       else {
+           $brand = Brand::model()->findByPk($id);
+           $this->render('products', array('brand' => $brand, 'page'=>$page ));
+       }
 
-//        if (empty($brands)) {
-//            Yii::app()->user->setFlash('brands', 'There is no available brands');
-//        }
-       $this->render('brands', array('brands' => $brands, 'page'=>$page ));
+
 
     }
 
-    public function actionProducts()
-    {
+    public function actionProducts() {
         $products = Product::model()->findAll();
         $page  = Page::model()->findByPk(5);
-//
-//        if (empty($products)) {
-//            Yii::app()->user->setFlash('products', 'There is no available products');
-//        }
-        $this->render('products', array('products' => $products, 'page'=>$page ));
 
+        $this->render('productsall', array('products' => $products, 'page'=>$page ));
     }
+
+    public function actionCategory($id = 0) {
+        if($id != 0) {
+            $category = Category::model()->findByPk($id);
+            //$products = Product::model()->findAll();
+            $page  = Page::model()->findByPk(5);
+
+            $this->render('productsall', array('products' => $category->products, 'page'=>$page ));
+        }
+        else {
+            $this->redirect('index');
+        }
+    }
+
 
     public function actionPartners()
     {
@@ -91,14 +105,15 @@ class SiteController extends Controller
 
     public function actionInspiration()
     {
-        $inspiration = Inspiration::model()->findAll();
-        $page  = Page::model()->findByPk(7);
-//
-//        if (empty($customization)) {
-//            Yii::app()->user->setFlash('customization', 'There is no available customization');
-//        }
-        $this->render('inspiration', array( 'inspirations' => $inspiration, 'page'=>$page ));
+        $gallery = Gallery::model()->findAllByAttributes(array('status'=>1));
 
+        /*echo "<pre>";
+        print_r($gallery);
+        exit;*/
+
+        $this->renderPartial('_gallery', array('gallery' => $gallery));
+
+        Yii::app()->end();
     }
 
     public function actionContact()
@@ -113,7 +128,7 @@ class SiteController extends Controller
 
             mail($contact->feedback_email, 'Mail From ClassiesDecor',"Phone -". $_POST['phone'] ."content" . $_POST['message'], $headers);
 
-            Yii:;app()->end();
+            Yii::app()->end();
         }
         $this->redirect('index');
     }

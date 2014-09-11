@@ -1,43 +1,30 @@
 <?php
 
 /**
- * This is the model class for table "brand".
+ * This is the model class for table "gallery".
  *
- * The followings are the available columns in table 'brand':
+ * The followings are the available columns in table 'gallery':
  * @property integer $id
- * @property string $name_ru
- * @property string $name_en
- * @property string $desc_ru
- * @property string $desc_en
  * @property string $image
  * @property integer $status
- *
- * The followings are the available model relations:
- * @property BrandCategoryXref[] $brandCategoryXrefs
- * @property Product[] $products
+ * @property string $title_ru
+ * @property string $title_en
  */
-class Brand extends CActiveRecord
+class Gallery extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'brand';
+		return 'gallery';
 	}
 
-    public function getcname() {
+    public function getctitle() {
         if(Yii::app()->language == "en")
-            return $this->name_en;
+            return $this->title_en;
         elseif(Yii::app()->language == "ru")
-            return $this->name_ru;
-    }
-
-    public function getcdesc() {
-        if(Yii::app()->language == "en")
-            return $this->desc_ru;
-        elseif(Yii::app()->language == "ru")
-            return $this->desc_ru;
+            return $this->title_ru;
     }
 
 	/**
@@ -48,13 +35,11 @@ class Brand extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('status', 'required'),
 			array('status', 'numerical', 'integerOnly'=>true),
-			array('name_ru, name_en, image', 'length', 'max'=>250),
-            array('desc_ru, desc_en', 'safe'),
+			array('image, title_ru, title_en', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name_ru, name_en, desc_ru, desc_en, image, status', 'safe', 'on'=>'search'),
+			array('id, image, status, title_ru, title_en', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,10 +51,7 @@ class Brand extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'products' => array(self::HAS_MANY, 'Product', 'brand_id'),
-            'brandCategoryXrefs' => array(self::MANY_MANY, 'Category', 'Product(brand_id, category_id)'),
 		);
-
 	}
 
 	/**
@@ -79,12 +61,10 @@ class Brand extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name_ru' => 'Name Russian',
-			'name_en' => 'Name English',
-			'desc_ru' => 'Description Russian',
-			'desc_en' => 'Description English',
 			'image' => 'Image',
 			'status' => 'Status',
+			'title_ru' => 'Title Ru',
+			'title_en' => 'Title En',
 		);
 	}
 
@@ -107,12 +87,10 @@ class Brand extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name_ru',$this->name_ru,true);
-		$criteria->compare('name_en',$this->name_en,true);
-		$criteria->compare('desc_ru',$this->desc_ru,true);
-		$criteria->compare('desc_en',$this->desc_en,true);
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('status',$this->status);
+		$criteria->compare('title_ru',$this->title_ru,true);
+		$criteria->compare('title_en',$this->title_en,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -123,7 +101,7 @@ class Brand extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Brand the static model class
+	 * @return Gallery the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

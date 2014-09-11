@@ -86,7 +86,7 @@ $brands = Brand::model()->findAllByAttributes(array('status'=>1));
                     <li class='has-sub'><a href='<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/brands'><span><?=Yii::t("menu", "brands")?></span></a>
                         <ul>
                             <?php foreach ($brands as $brand):?>
-                                <li><a href='<?=Yii::app()->baseUrl?>/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a></li>
+                                <li><a href='<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a></li>
                             <?php endforeach ?>
 
                             <li class='has-sub'><a href='#'><span>brand 2</span></a></li>
@@ -96,16 +96,17 @@ $brands = Brand::model()->findAllByAttributes(array('status'=>1));
                         <ul>
                             <?php foreach ($brands as $brand):?>
                                 <?php if($brand->brandCategoryXrefs != null):?>
-                                    <li class='has-sub'><a href='<?=Yii::app()->baseUrl?>/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a>
+                                    <li class='has-sub'><a href='<?=Yii::app()->baseUrl. "/" . Yii::app()->language ?>/site/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a>
                                         <ul>
                                         <?php foreach($brand->brandCategoryXrefs as $category):?>
-                                            <li><a href='<?=Yii::app()->baseUrl?>/category/<?=$category->id?>'><span><?=$category->cname?></span></a></li>
+                                            <li><a href='<?=Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/category/<?=$category->id?>'><span><?=$category->cname?></span></a></li>
                                         <?php endforeach ?>
                                         </ul>
-                                <?php else: ?>
-                                    <li><a href='<?=Yii::app()->baseUrl?>/brands/<?=$brand->id?>'><span><?=$brand->cname?></span></a>
-                                <?php endif ?>
                                     </li>
+                                <?php else: ?>
+                                    <!--<li><a href='<?/*=Yii::app()->baseUrl. "/" . Yii::app()->language */?>/site/brands/<?/*=$brand->id*/?>'><span><?/*=$brand->cname*/?></span></a>-->
+                                <?php endif ?>
+
                             <?php endforeach ?>
                         </ul>
                     </li>
@@ -115,12 +116,12 @@ $brands = Brand::model()->findAllByAttributes(array('status'=>1));
             <div class="clear">
             </div>
         </div>
-        <a href="<?= Yii::app()->baseUrl . "/" . Yii::app()->language ?>/site/inspiration">
+
             <div class="header_menu_right">
-                <div class="header_menu_right_item">
+                <div class="header_menu_right_item" onclick="openGallery()">
                     <?=Yii::t("menu", "inspiration")?>
                 </div>
             </div>
-        </a>
+
     </div>
 </div>

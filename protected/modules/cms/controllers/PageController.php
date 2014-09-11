@@ -151,6 +151,21 @@ class PageController extends SecureController
         }
     }
 
+    public function actionUpdatebanner() {
+        if(Yii::app()->request->isAjaxRequest) {
+
+            $model = BannerImages::model()->findByPk($_POST['bannerid']);
+
+            $model->link = $_POST['link'];
+
+            if($model->save())
+                echo "Link Saved Successfully!";
+            else
+                echo "Please try again";
+
+            Yii::app()->end();
+        }
+    }
 
     public function actionDeletebanner() {
         if(Yii::app()->request->isAjaxRequest) {

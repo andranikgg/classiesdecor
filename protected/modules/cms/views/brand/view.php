@@ -24,9 +24,14 @@ $this->menu=array(
 		'id',
 		'name_ru',
 		'name_en',
-		'desc_ru',
-		'desc_en',
-		'image',
+		'desc_ru:html',
+		'desc_en:html',
+        array(
+            'label'=>'CollegeLogo',
+            'type'=>'raw',
+            'value'=>CHtml::image(Yii::app()->baseUrl."/images/brand/".$model->image, "", array('width'=>100)),
+
+        ),
 		'status',
 	),
 )); ?>

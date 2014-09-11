@@ -154,6 +154,7 @@
         <div class="banner-link-wrap">
             <label for="link" value="<?=$banner->link?>">Link</label>
             <input type="text" class="banner-link" value="<?=$banner->link?>" data-value="<?=$banner->id?>" size="80" >
+            <button class="ui-button link_save" data-value="<?=$banner->id?>">Save</button>
         </div>
         <div class="del" data-value="<?=$banner->id?>"></div>
         <div class="clear"></div>
@@ -244,6 +245,21 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
                 data: {'bannerid':bannerid},
                 success: function(res) {
                     location.reload();
+                }
+            });
+
+        });
+
+        $(".link_save").click(function(){
+
+            var bannerid = $(this).attr("data-value");
+
+            $.ajax({
+                type: "post",
+                url: '<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/module/cms/page/updatebanner',
+                data: {'bannerid':bannerid, link: $(this).prev().val()},
+                success: function(res) {
+                   alert(res);
                 }
             });
 

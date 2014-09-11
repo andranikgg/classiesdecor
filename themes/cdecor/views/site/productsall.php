@@ -1,19 +1,31 @@
 <?php
 /* @var $this SiteController */
-/* @var $brands Brands[] */
+/* @var $interior Partners[] */
+/* @var $page Page */
 
 Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
 Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
+
+//$page = 'interiers_text';
+//$freetext = FreeText::model()->findByAttributes(array('page' => $page));
+
+/*echo "<pre>";
+print_r($page->bannerImages);
+exit;*/
+
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/brands.css"/>
 <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/pinterest.js"></script>
 <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/brands.js"></script>
-
+<script>
+    var baseUrl = "<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/";
+</script>
 
 <div class="container_slider_block_content">
-    <?php $this->renderPartial('_banners', array('page'=>$page)); ?>
+    <?php $this->renderPartial('_banners', array('page' => $page)); ?>
 
     <div class="absolute whiteline" style="height: 15px;bottom: 0px;z-index: 2">
     </div>
@@ -29,54 +41,30 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
     <div class="container_block">
         <div class="container_block_content">
             <div class="hdr"><?=$page->ctitle ?></div>
-            <div><div>
-                    <?=$page->cdesc1 ?>
-                </div>
+            <div>
+                <?=$page->cdesc1 ?>
             </div>
         </div>
     </div>
     <div class="container_block">
         <div class="container_block_content">
             <div class="hdr">&nbsp;</div>
-            <div><div>
-                    <?=$page->cdesc2 ?>
-                </div>
+            <div>
+                <?=$page->cdesc2 ?>
             </div>
         </div>
     </div>
     <div class="container_block">
         <div class="container_block_content">
             <div class="hdr">&nbsp;</div>
-            <div><div>
-                    <?=$page->cdesc3 ?>
-                </div>
+            <div>
+                <?=$page->cdesc3 ?>
             </div>
         </div>
     </div>
     <div class="clear"></div>
 
-    <div class="container_row">
-        <div class="container_grid_content">
-        </div>
-        <div class="container_grid" id="pinterest_here">
 
-            <?php foreach($brands as $brand): ?>
+    <?php $this->renderPartial('_products_part', array('products'=>$products)); ?>
 
-                <div class="article_box">
-                    <a href="<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/brands/<?=$brand->id?>">
-                        <div class="article_image" id="<?=$brand->id?>">
-                            <img src="<?= Yii::app()->baseUrl ?>/images/brand/<?=$brand->image?>" style="width: 203px;">
-                            </div>
-                    </a>
-                </div>
-            <?php endforeach ?>
-
-
-        </div>
-        <div class="container_grid_more_block">
-            <div class="container_grid_more">
-                <i class="container_grid_more_icon fa-li fa fa-angle-down"></i>
-            </div>
-        </div>
-    </div>
 </div>

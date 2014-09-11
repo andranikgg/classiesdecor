@@ -1,6 +1,6 @@
 <?php
 
-class PartnerController extends SecureController
+class GalleryController extends SecureController
 {
 
 	/**
@@ -13,7 +13,6 @@ class PartnerController extends SecureController
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
-
 
 	/**
 	 * Displays a particular model.
@@ -32,29 +31,25 @@ class PartnerController extends SecureController
 	 */
 	public function actionCreate()
 	{
-		$model=new Partner;
+		$model=new Gallery;
 
 		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Partner']))
+		if(isset($_POST['Gallery']))
 		{
-            /*echo "<pre>";
-            print_r($_POST);
-            exit;*/
-
-            $image =  $_POST['Partner']['image'];
+            $image =  $_POST['Gallery']['image'];
 
             if(isset($image) && $image != "") {
-                $model->attributes=$_POST['Partner'];
+                $model->attributes=$_POST['Gallery'];
                 if($model->save()) {
 
                     Yii::app()->ih
-                        ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/temp/'.$image)
-                        ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/' . $model->id . '.png');
+                        ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/'.$image)
+                        ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/' . $model->id . '.png');
                     $model->image = $model->id . '.png';
 
-                    $dir=Yii::app()->basePath.'/../images/partner/temp/';
+                    $dir=Yii::app()->basePath.'/../images/gallery/temp/';
 
                     foreach(glob($dir.'*.*') as $files){
                         unlink($files);
@@ -66,7 +61,6 @@ class PartnerController extends SecureController
 
                 }
             }
-
 		}
 
 		$this->render('create',array(
@@ -84,28 +78,32 @@ class PartnerController extends SecureController
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Partner']))
+		if(isset($_POST['Gallery']))
 		{
-            $image =  $_POST['Partner']['image'];
+            $image =  $_POST['Gallery']['image'];
+
+
 
             if($image != $model->image) {
 
-                $model->attributes=$_POST['Partner'];
+                $model->attributes=$_POST['Gallery'];
 
                 Yii::app()->ih
-                    ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/temp/'.$image)
-                    ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/' . $model->id . '.png');
+                    ->load($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/gallery/temp/' . $image)
+                    ->save($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/gallery/' . $model->id . '.png');
+
                 $model->image = $model->id . '.png';
 
-                $dir=Yii::app()->basePath.'/../images/partner/temp/';
+                $dir=Yii::app()->basePath . '/../images/gallery/temp/';
 
                 foreach(glob($dir.'*.*') as $files){
                     unlink($files);
                 }
 
             }
+            $model->status = $_POST['Gallery']['status'];
 
             if($model->save()) {
                 $this->redirect(array('view','id'=>$model->id));
@@ -136,7 +134,7 @@ class PartnerController extends SecureController
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Partner');
+		$dataProvider=new CActiveDataProvider('Gallery');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -147,10 +145,10 @@ class PartnerController extends SecureController
 	 */
 	public function actionAdmin()
 	{
-		$model=new Partner('search');
+		$model=new Gallery('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Partner']))
-			$model->attributes=$_GET['Partner'];
+		if(isset($_GET['Gallery']))
+			$model->attributes=$_GET['Gallery'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -161,12 +159,12 @@ class PartnerController extends SecureController
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Partner the loaded model
+	 * @return Gallery the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Partner::model()->findByPk($id);
+		$model=Gallery::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -174,11 +172,11 @@ class PartnerController extends SecureController
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Partner $model the model to be validated
+	 * @param Gallery $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='partner-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='gallery-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
@@ -190,33 +188,28 @@ class PartnerController extends SecureController
 
     public function actionUpload()
     {
-        try {
-            Yii::import("ext.EAjaxUpload.qqFileUploader");
-            $folder= 'images/partner/temp/';// folder for uploaded files
-            $allowedExtensions = array("jpg", "jpeg", "png");//array("jpg","jpeg","gif","exe","mov" and etc...
-            $sizeLimit = 2 * 1024 * 1024;// maximum file size in bytes
-            $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
-            $result = $uploader->handleUpload($folder);
-            $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+        Yii::import("ext.EAjaxUpload.qqFileUploader");
+        $folder= 'images/gallery/temp/';// folder for uploaded files
+        $allowedExtensions = array("jpg", "jpeg", "png");//array("jpg","jpeg","gif","exe","mov" and etc...
+        $sizeLimit = 2 * 1024 * 1024;// maximum file size in bytes
+        $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
+        $result = $uploader->handleUpload($folder);
+        $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
 
-            $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
-            $fileName=$result['filename'];//GETTING FILE NAME
-        }
-        catch(Exception $ex) {
-            echo 'Caught exception: ',  $ex->getMessage(), "\n";
-    }
-
+        $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
+        $fileName=$result['filename'];//GETTING FILE NAME
 
         echo $return;// it's array
         Yii::app()->end();
     }
+
 
     public function actionCropImg()
     {
         Yii::app()->clientScript->scriptMap=array(
             (YII_DEBUG ?  'jquery.js':'jquery.min.js')=>false,
         );
-        $imageUrl = Yii::app()->request->baseUrl . '/images/partner/temp/'. $_GET['fileName'];
+        $imageUrl = Yii::app()->request->baseUrl . '/images/gallery/temp/'. $_GET['fileName'];
         $this->renderPartial('cropImg', array('imageUrl'=>$imageUrl), false, true);
     }
 
@@ -230,7 +223,7 @@ class PartnerController extends SecureController
 
             Yii::import('ext.jcrop.EJCropper');
             $jcropper = new EJCropper();
-            $jcropper->thumbPath = '/images/items';
+            $jcropper->thumbPath = '/images/gallery/items';
 
             // some settings ...
             $jcropper->jpeg_quality = 100;
@@ -240,13 +233,13 @@ class PartnerController extends SecureController
             $coords = $jcropper->getCoordsFromPost('imageId');
 
             Yii::app()->ih
-                ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/temp/'.$image)
+                ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/'.$image)
                 ->crop($coords['w'],$coords['h'],$coords['x'],$coords['y'])
-                ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/temp/c_'.$image);
+                ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/c_'.$image);
 
-            if(file_exists($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/temp/' . $image))
+            if(file_exists($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/' . $image))
             {
-                unlink($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/partner/temp/' . $image);
+                unlink($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/' . $image);
             }
 
             $returnPath = 'c_' . $image;
@@ -258,5 +251,4 @@ class PartnerController extends SecureController
             //$thumbnail = $jcropper->crop('images/up/uploaded.png', $coords);
         }
     }
-
 }
