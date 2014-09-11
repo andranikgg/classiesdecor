@@ -108,7 +108,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <div class="container" >
                 <div class="row">
 
-                    <form role="form" action="" method="post" >
+                    <form role="form" action="<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contact" method="post" >
                         <div class="pull-right">
 
                             <div class="form-group">
@@ -142,3 +142,33 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div class="clear"></div>
     </div>
 </div>
+
+
+<script>
+    $(document).ready(function(){
+
+        $("input[type=submit]").click(function(e){
+            e.preventDefault();
+
+            var phone = $("#InputPhone").val();
+            var email = $("#InputEmail").val();
+            var message = $("#InputMessage").val();
+
+            $.ajax({
+                type: 'POST',
+                url: '<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contact',
+                data: {email: email, name: phone, message: message},
+                success: function (data) {
+                    console.log(data);
+                    alert(data);
+                }
+            });
+
+        });
+
+
+
+
+    });
+
+</script>

@@ -94,6 +94,13 @@
 		<?php echo $form->error($model,'pin_link'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'feedback_email'); ?>
+        <?php echo $form->textField($model,'feedback_email',array('size'=>60,'maxlength'=>250)); ?>
+        <?php echo $form->error($model,'feedback_email'); ?>
+    </div>
+
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
