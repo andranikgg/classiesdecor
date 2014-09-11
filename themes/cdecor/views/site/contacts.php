@@ -163,12 +163,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
                     alert(data);
                 }
             });
-
         });
-
-
-
-
     });
-
 </script>
