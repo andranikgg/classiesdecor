@@ -98,7 +98,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div class="container_contacts_block block_60per left">
             <div class="container_contacts_map_container">
                 <div class="container_contacts_map">
-                    <div id="googleMap" style="width:100%;height:340px;"></div>
+                    <div class="map" id="googleMap" style="width:862px; height:340px;"></div>
                 </div>
             </div>
         </div>
@@ -138,37 +138,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         <div class="clear"></div>
     </div>
