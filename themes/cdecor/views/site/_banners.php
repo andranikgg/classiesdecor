@@ -5,7 +5,7 @@ print_r($page);
 exit;*/
 ?>
 
-<div class="banner">
+<div class="banner" id="page_banner">
     <ul id="banner_ul">
         <?php foreach($page->bannerImages as $banner): ?>
             <li>

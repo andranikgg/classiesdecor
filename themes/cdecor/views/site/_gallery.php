@@ -7,23 +7,32 @@
 
 <script>
     $(function() {
-        $('.banner').unslider();
+        $('#ban').unslider();
     });
 
     $(document).ready(function(){
+
+        //console.log("my consol "+appId);
        $(".x_close").click(function(){
+
            $('.black').hide();
            $('.popup_outer').hide();
            $('.popup').html("");
+
+           $(function() {
+               $('#page_banner').unslider();
+           });
+
        });
 
     });
+
 
 </script>
 
 <div class="x_close"></div>
 
-<div class="banner">
+<div class="banner" id="ban">
     <ul id="banner_ul2">
         <?php foreach($gallery as $item): ?>
             <li>

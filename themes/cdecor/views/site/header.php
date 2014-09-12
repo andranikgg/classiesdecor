@@ -17,7 +17,7 @@ $brands = Brand::model()->findAllByAttributes(array('status'=>1));
 
 <script>
     $(function() {
-        $('.banner').unslider();
+        $('#page_banner').unslider();
     });
 </script>
 
