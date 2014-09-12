@@ -126,6 +126,7 @@ class SiteController extends Controller
                 "MIME-Version: 1.0\r\n" .
                 "Content-Type: text/plain; charset=UTF-8";
 
+
             mail($contact->feedback_email, 'Mail From ClassiesDecor',"Phone -". $_POST['phone'] ."content" . $_POST['message'], $headers);
 
             Yii::app()->end();

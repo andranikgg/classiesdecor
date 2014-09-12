@@ -10,7 +10,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('customization_id')); ?>:</b>
-	<?php echo CHtml::encode($data->customization_id); ?>
+	<?php echo CHtml::encode($data->customization->name_ru); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name_ru')); ?>:</b>
@@ -21,9 +21,8 @@
 	<?php echo CHtml::encode($data->name_en); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
-	<?php echo CHtml::encode($data->image); ?>
-	<br />
+    <?php echo CHtml::image(Yii::app()->baseUrl .'/images/customization/' . $data->image, '',array('width'=>100)); ?>
+    <br />
 
 
 </div>

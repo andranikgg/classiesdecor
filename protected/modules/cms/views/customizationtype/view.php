@@ -22,9 +22,18 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'customization_id',
+        array(
+            'label'=>'Customization',
+            'value'=> $model->customization->name_ru,
+
+        ),
 		'name_ru',
 		'name_en',
-		'image',
+        array(
+            'label'=>'Photo',
+            'type'=>'raw',
+            'value'=>CHtml::image(Yii::app()->baseUrl."/images/customization/".$model->image, "", array('width'=>100)),
+
+        ),
 	),
 )); ?>
