@@ -48,9 +48,25 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'title_ru',
 		'title_en',
-		'desc_ru',
-		'desc_en',
-		'brand_id',
+
+        array(
+            'name'=>'brand',
+            'type'=>'raw',
+            'value'=>'$data->brand->name_ru',
+
+        ),
+        array(
+            'name'=>'category',
+            'type'=>'raw',
+            'value'=>'$data->category->name_ru',
+
+        ),
+        array(
+            'name'=>'image',
+            'type'=>'html',
+            'value'=>'CHtml::image(Yii::app()->baseUrl . "/images/product/". $data->image, "", array("width"=>150))',
+
+        ),
 		/*
 		'category_id',
 		'status',

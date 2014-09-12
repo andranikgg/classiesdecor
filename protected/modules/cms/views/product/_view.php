@@ -26,12 +26,15 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('brand_id')); ?>:</b>
-	<?php echo CHtml::encode($data->brand_id); ?>
+	<?php echo CHtml::encode($data->brand->name_ru); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('category_id')); ?>:</b>
-	<?php echo CHtml::encode($data->category_id); ?>
+	<?php echo CHtml::encode($data->category->name_ru); ?>
 	<br />
+
+    <?php echo CHtml::image(Yii::app()->baseUrl .'/images/product/' . $data->image, '',array('width'=>100)); ?>
+    <br />
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>

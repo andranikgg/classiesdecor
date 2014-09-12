@@ -21,13 +21,27 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
+        array(
+            'label'=>'Photo',
+            'type'=>'raw',
+            'value'=>CHtml::image(Yii::app()->baseUrl."/images/product/".$model->image, "", array('width'=>100)),
+
+        ),
 		'id',
 		'title_ru',
 		'title_en',
 		'desc_ru',
 		'desc_en',
-		'brand_id',
-		'category_id',
+        array(
+            'label'=>'Brand',
+            'value'=> $model->brand->name_ru,
+
+        ),
+        array(
+            'label'=>'Category',
+            'value'=> $model->category->name_ru,
+
+        ),
 		'status',
 	),
 )); ?>
