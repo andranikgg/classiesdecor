@@ -20,7 +20,7 @@
 
 </script>
 
-<div class="x_close">x</div>
+<div class="x_close"></div>
 
 <div class="banner">
     <ul id="banner_ul2">

@@ -281,17 +281,11 @@ body {
 }
 
 .popup {
-    background: rgba(0,0,0,0.7);
-    /*width: 100%;
-    max-width: 800px;
-    cursor: default;*/
+
     position: relative;
     width: 1080px;
     left: -50%;
-    box-shadow: 0px 0px 5px #000;
-    -moz-box-shadow: 0px 0px 5px #000;
-    -webkit-box-shadow: 0px 0px 5px #000;
-    padding: 20px;
+
 }
 
 .slide-title {
@@ -305,20 +299,22 @@ body {
 }
 
 .x_close {
-    background: rgba(0,0,0,0.5);
-    padding: 0px 12px 4px 11px;
-    color: #fff;
-    /* width: 20px; */
-    /* height: 20px; */
-    position: absolute;
-    font-size: 15px;
-    font-weight: 900;
-    top: -30px;
-    right: -31px;
-    z-index: 100000;
+    background-image: url(../images/dialog_close_white.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 11px;
+    height: 11px;
+    float: right;
+    margin-bottom: 5px;
     cursor: pointer;
-    border: 1px solid #ccc;
 }
+
+.x_close:hover {
+    background-image: url(../images/dialog_close_white.png);
+    background-repeat: no-repeat;
+    background-position: -11px 0px;
+}
+
 
 .black {
     display: none;
