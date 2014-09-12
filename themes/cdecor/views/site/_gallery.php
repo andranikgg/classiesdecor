@@ -14,6 +14,7 @@
        $(".x_close").click(function(){
            $('.black').hide();
            $('.popup_outer').hide();
+           $('.popup').html("");
        });
 
     });
