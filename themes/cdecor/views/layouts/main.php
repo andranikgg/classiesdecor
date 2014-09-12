@@ -31,6 +31,9 @@
     <link href="<?= Yii::app()->request->baseUrl ?>/highslide/highslide.css" rel="stylesheet" type="text/css"/>
 
     <!--    Scripts    -->
+    <script>
+        var baseUrl = "<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/";
+    </script>
     <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/header_menu.js"></script>
     <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/cdecor.js"></script>
     <script src="<?= Yii::app()->request->baseUrl ?>/highslide/highslide-full.js" type="text/javascript"></script>

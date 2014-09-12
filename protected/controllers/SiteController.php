@@ -8,7 +8,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $page  = Page::model()->findByPk(8);
+        $page  = Page::model()->findByPk(1);
         /*echo "<pre>";
         print_r($page);
         exit;*/

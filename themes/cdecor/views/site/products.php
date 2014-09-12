@@ -16,9 +16,7 @@ Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('p
         width: 100%;
     }
 </style>
-<script>
-    var baseUrl = "<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/";
-</script>
+
 
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/brands.css"/>

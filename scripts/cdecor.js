@@ -4,7 +4,7 @@ $(document).ready(function () {
 function openGallery() {
     $.ajax({
         type: 'POST',
-        url: 'inspiration',
+        url: baseUrl + 'inspiration',
         success: function (data) {
             $('.black').show();
             $('.popup_outer').show();
