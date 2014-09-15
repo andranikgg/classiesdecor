@@ -10,7 +10,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/scripts/boots
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/contacts.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/style/contact.css"/>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
@@ -46,13 +46,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="container_slider_block_content">
     <?php $this->renderPartial('_banners', array('page' => $page)); ?>
 
-    <div class="absolute whiteline" style="height: 15px;bottom: 0px;z-index: 2">
+    <div class="absolute whiteline" style="height: 10px;bottom: 0px;z-index: 2">
     </div>
     <div class="absolute horizontal_line_1px" style="bottom: -2px;z-index: 2;background-color:gray">
     </div>
     <div class="absolute horizontal_line_1px" style="bottom: -1px;z-index: 2;background-color:white">
     </div>
-    <div class="absolute whiteline" style="height: 15px;bottom: -17px;z-index: 2">
+    <div class="absolute whiteline" style="height: 10px;bottom: -12px;z-index: 2">
     </div>
 </div>
 
@@ -158,10 +158,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span id="x" class="sr-only">Close</span></button>
-
             </div>
             <div class="modal-body alert-success" >
-
                 <span class="message"> <?=Yii::t("menu", "response")?> </span>
             </div>
             <div class="modal-footer">
@@ -182,7 +180,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
             $.ajax({
                 type: 'POST',
-                url: '<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contact',
+                url: '<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contacts',
                 data: {email: email, phone: phone, message: message},
                 success: function (data) {
                     console.log(data);
