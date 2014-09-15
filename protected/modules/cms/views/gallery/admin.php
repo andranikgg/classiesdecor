@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Gallery', 'url'=>array('index')),
-	array('label'=>'Create Gallery', 'url'=>array('create')),
+	array('label'=>'List Inspiration', 'url'=>array('index')),
+	array('label'=>'Create Inspiration', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Galleries</h1>
+<h1>Manage Inspiration</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -48,7 +48,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
         'title_ru',
         'title_en',
-		'image',
+        array(
+            'name'=>'image',
+            'type'=>'html',
+            'value'=>'CHtml::image(Yii::app()->baseUrl. "/images/gallery/". $data->image, "", array("width"=>"100"))',
+
+        ),
 		'status',
 		array(
 			'class'=>'CButtonColumn',

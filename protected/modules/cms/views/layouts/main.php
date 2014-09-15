@@ -34,19 +34,19 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/cms/main/index'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Pages', 'url'=>array('/cms/page'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Brands', 'url'=>array('/cms/brand'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Products', 'url'=>array('/cms/product'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Customization', 'url'=>array('/cms/customization'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'CustomizationType', 'url'=>array('/cms/customizationtype'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Partners', 'url'=>array('/cms/partner'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Category', 'url'=>array('/cms/category'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Gallery', 'url'=>array('/cms/gallery'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Contacts', 'url'=>array('/cms/contacts'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Главное', 'url'=>array('/cms/main/index'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Страница', 'url'=>array('/cms/page'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Бренди', 'url'=>array('/cms/brand'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Продукты', 'url'=>array('/cms/product'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Заказ', 'url'=>array('/cms/customization'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Тип_Заказ', 'url'=>array('/cms/customizationtype'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Партнери', 'url'=>array('/cms/partner'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Категория', 'url'=>array('/cms/category'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Инспирациа', 'url'=>array('/cms/gallery'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Контакти', 'url'=>array('/cms/contacts'), 'visible'=>!Yii::app()->user->isGuest),
 
-				array('label'=>'Login', 'url'=>array('/cms/main/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/cms/main/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Вход ', 'url'=>array('/cms/main/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Выход ('.Yii::app()->user->name.')', 'url'=>array('/cms/main/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

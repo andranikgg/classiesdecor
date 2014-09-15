@@ -40,8 +40,10 @@ class ProductController extends SecureController
 		{
             $image =  $_POST['Product']['image'];
 
+            $model->attributes=$_POST['Product'];
+
             if(isset($image) && $image != "") {
-                $model->attributes=$_POST['Product'];
+
                 if($model->save()) {
 
                     Yii::app()->ih
@@ -84,9 +86,13 @@ class ProductController extends SecureController
 		{
             $image =  $_POST['Product']['image'];
 
+            $model->attributes=$_POST['Product'];
+
+
+
             if($image != $model->image) {
 
-                $model->attributes=$_POST['Product'];
+
 
                 Yii::app()->ih
                     ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/product/temp/'.$image)

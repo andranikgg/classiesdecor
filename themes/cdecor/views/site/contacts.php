@@ -6,6 +6,7 @@ Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
 Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
 Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
 Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/bootstrap.min.css');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/scripts/bootstrap.min.js');
 
 ?>
 
@@ -95,6 +96,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <?php endforeach ?>
 
         </div>
+
+        <div class="">
         <div class="container_contacts_block block_60per left">
             <div class="container_contacts_map_container">
                 <div class="container_contacts_map">
@@ -103,12 +106,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </div>
         </div>
         <div class="clear"></div>
+        <br>
         <div class="container_contacts_form_block col-lg-4 pull-right " >
 
             <div class="container" >
                 <div class="row">
 
-                    <form role="form" action="<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contact" method="post" >
+                    <form role="form" action="<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contacts" method="post" id="form_susbmit" >
                         <div class="pull-right">
 
                             <div class="form-group">
@@ -132,7 +136,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                                     <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required></textarea>
                                     <span class="input-group-addon"></span></div>
                             </div>
-                              <input type="submit" name="submit" id="submit" value="Send" class="btn btn-success pull-right">
+                              <input type="submit" name="submit" id="submit" value="Send" class="btn btn-success pull-right" >
                         </div>
                     </form>
                 </div>
@@ -141,14 +145,34 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </div>
         <div class="clear"></div>
     </div>
+
+
+</div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span id="x" class="sr-only">Close</span></button>
+
+            </div>
+            <div class="modal-body alert-success" >
+
+                <span class="message"> <?=Yii::t("menu", "response")?> </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     $(document).ready(function(){
 
-        $("input[type=submit]").click(function(e){
-            e.preventDefault();
+        $("#form_susbmit").submit(function(e){
 
             var phone = $("#InputPhone").val();
             var email = $("#InputEmail").val();
@@ -160,8 +184,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 data: {email: email, phone: phone, message: message},
                 success: function (data) {
                     console.log(data);
+                    $('#response').modal('show');
+                    $("#InputPhone").val("");
+                    $("#InputEmail").val("");
+                    $("#InputMessage").val("");
                 }
             });
+
+            return false;
         });
     });
+
+
+
 </script>

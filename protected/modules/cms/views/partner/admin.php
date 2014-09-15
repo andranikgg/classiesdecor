@@ -53,6 +53,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
         ),
 		'link',
+        'name_ru',
+        'name_en',
 		array(
 			'class'=>'CButtonColumn',
 		),

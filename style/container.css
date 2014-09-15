@@ -602,7 +602,7 @@
     display:block;
     width:30px;
     height:30px;
-    color:#ffffff;
+    color:#ffffff!important;
     background-color:#3b5998;
     margin-right: 10px;
     text-align: center;}
@@ -615,7 +615,7 @@
     display:block;
     width:30px;
     height:30px;
-    color:#ffffff;
+    color:#ffffff!important;
     background-color:#007bb6;
     margin-right: 10px;
     text-align: center;
@@ -629,7 +629,7 @@
     display:block;
     width:30px;
     height:30px;
-    color:#ffffff;
+    color:#ffffff!important;
     background-color: #b61500;
     text-align: center;
 }

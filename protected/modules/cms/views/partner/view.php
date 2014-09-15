@@ -24,5 +24,7 @@ $this->menu=array(
 		'id',
 		'image',
 		'link',
+        'name_ru',
+        'name_en',
 	),
 )); ?>

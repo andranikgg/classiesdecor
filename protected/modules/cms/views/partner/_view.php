@@ -12,5 +12,14 @@
 	<?php echo CHtml::link($data->link, $data->link, array('target'=>'_blank')); ?>
 	<br />
 
+    <b><?php echo CHtml::encode($data->getAttributeLabel('name_ru')); ?>:</b>
+    <?php echo CHtml::encode($data->name_ru); ?>
+    <br />
+
+    <b><?php echo CHtml::encode($data->getAttributeLabel('name_en')); ?>:</b>
+    <?php echo CHtml::encode($data->name_en); ?>
+    <br />
+
+
 
 </div>

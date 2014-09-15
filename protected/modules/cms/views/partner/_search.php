@@ -26,7 +26,17 @@
 		<?php echo $form->textField($model,'link',array('size'=>60,'maxlength'=>250)); ?>
 	</div>
 
-	<div class="row buttons">
+    <div class="row">
+        <?php echo $form->label($model,'name_ru'); ?>
+        <?php echo $form->textField($model,'name_ru',array('size'=>60,'maxlength'=>255)); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->label($model,'name_en'); ?>
+        <?php echo $form->textField($model,'name_en',array('size'=>60,'maxlength'=>255)); ?>
+    </div>
+
+    <div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
 

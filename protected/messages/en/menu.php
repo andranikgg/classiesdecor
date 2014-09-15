@@ -33,6 +33,8 @@ return array (
     'partners'=>'PARTNERS',
     'inspiration'=>'INSPIRATION',
 
+    'response'=>'Thank You . Your message has been successfully sent !!!',
+
 
 
 

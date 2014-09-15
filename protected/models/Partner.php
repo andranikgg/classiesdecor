@@ -7,6 +7,8 @@
  * @property integer $id
  * @property string $image
  * @property string $link
+ * @property string $name_ru
+ * @property string $name_en
  */
 class Partner extends CActiveRecord
 {
@@ -19,6 +21,13 @@ class Partner extends CActiveRecord
 	}
 
 
+    public function getcname() {
+        if(Yii::app()->language == "en")
+            return $this->name_en;
+        elseif(Yii::app()->language == "ru")
+            return $this->name_ru;
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -28,11 +37,12 @@ class Partner extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('image, link', 'required'),
-			array('image, link', 'length', 'max'=>250),
+			array('image, link , name_ru, name_en ', 'length', 'max'=>250),
             array('link', 'url'),
+            array('name_ru, name_en', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, image, link', 'safe', 'on'=>'search'),
+			array('id, image, link name_ru, name_en', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +66,8 @@ class Partner extends CActiveRecord
 			'id' => 'ID',
 			'image' => 'Image',
 			'link' => 'Link',
+            'name_ru' => 'Name Ru',
+            'name_en' => 'Name En',
 		);
 	}
 
@@ -80,8 +92,11 @@ class Partner extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('link',$this->link,true);
+        $criteria->compare('name_ru',$this->name_ru,true);
+        $criteria->compare('name_en',$this->name_en,true);
 
-		return new CActiveDataProvider($this, array(
+
+        return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}

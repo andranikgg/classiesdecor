@@ -17,9 +17,8 @@
     <?php echo CHtml::encode($data->title_en); ?>
     <br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
-	<?php echo CHtml::encode($data->image); ?>
-	<br />
+    <img src = "<?=Yii::app()->baseUrl?>/images/gallery/<?=$data->image?>" width="250px" />
+    <br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>

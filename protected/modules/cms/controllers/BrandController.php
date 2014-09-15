@@ -40,9 +40,9 @@ class BrandController extends SecureController
 		if(isset($_POST['Brand']))
 		{
             $image =  $_POST['Brand']['image'];
-
+            $model->attributes=$_POST['Brand'];
             if(isset($image) && $image != "") {
-                $model->attributes=$_POST['Brand'];
+
 
                 if($model->save()) {
 

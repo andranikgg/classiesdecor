@@ -37,6 +37,18 @@
 		<?php echo $form->error($model,'link'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'name_ru'); ?>
+        <?php echo $form->textField($model,'name_ru',array('size'=>60,'maxlength'=>255)); ?>
+        <?php echo $form->error($model,'name_ru'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'name_en'); ?>
+        <?php echo $form->textField($model,'name_en',array('size'=>60,'maxlength'=>255)); ?>
+        <?php echo $form->error($model,'name_en'); ?>
+    </div>
+
 
     <?php $this->widget('ext.EAjaxUpload.EAjaxUpload',
         array(
