@@ -34,6 +34,11 @@ return array (
     'inspiration'=>'INSPIRATION',
 
     'response'=>'Thank You . Your message has been successfully sent !!!',
+    'tel'=>'Telephone',
+    'message'=>'Message',
+    'mail'=>'E-Mail',
+    'send'=>'SEND',
+
 
 
 

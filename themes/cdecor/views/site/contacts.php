@@ -98,6 +98,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </div>
 
         <div class="">
+            <div class="container_contacts_block block_30per left">
+
+            </div>
+
         <div class="container_contacts_block block_60per left">
             <div class="container_contacts_map_container">
                 <div class="container_contacts_map">
@@ -107,41 +111,39 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </div>
         <div class="clear"></div>
         <br>
-        <div class="container_contacts_form_block col-lg-4 pull-right " >
 
-            <div class="container" >
-                <div class="row">
+        <div class="container_contacts_block  col-lg-4 " style="max-width: 340px;">
+
+
 
                     <form role="form" action="<?=Yii::app()->baseUrl?>/<?=Yii::app()->language?>/site/contacts" method="post" id="form_susbmit" >
-                        <div class="pull-right">
+
 
                             <div class="form-group">
-                                <label for="InputPhone"> Your Phone</label>
+                                <label for="InputPhone"><?=Yii::t("menu", "tel")?></label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="InputPhone" name="InputPhone" placeholder="Enter Phone" required  >
+                                    <input type="text" class="form-control" id="InputPhone" name="InputPhone" placeholder="<?=Yii::t("menu", "tel")?>" required  >
                                     <span class="input-group-addon"></span></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="InputEmail">Your Email</label>
+                                <label for="InputEmail"><?=Yii::t("menu", "mail")?></label>
                                 <div class="input-group">
-                                    <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+                                    <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="<?=Yii::t("menu", "mail")?>" required  >
                                     <span class="input-group-addon"></span></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="InputMessage">Message</label>
+                                <label for="InputMessage"><?=Yii::t("menu", "message")?></label>
                                 <div class="input-group"
                                     >
-                                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required></textarea>
+                                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="<?=Yii::t("menu", "message")?>" required></textarea>
                                     <span class="input-group-addon"></span></div>
                             </div>
-                              <input type="submit" name="submit" id="submit" value="Send" class="btn btn-success pull-right" >
-                        </div>
-                    </form>
-                </div>
+                              <input type="submit" name="submit" id="submit" value="<?=Yii::t("menu", "send")?>" class="btn btn-success pull-right" >
 
-            </div>
+                    </form>
+
         </div>
         <div class="clear"></div>
     </div>
