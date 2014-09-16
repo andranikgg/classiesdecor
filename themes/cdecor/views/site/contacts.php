@@ -126,7 +126,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                                     <span class="input-group-addon"></span></div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group"> 
                                 <label for="InputEmail"><?=Yii::t("menu", "mail")?></label>
                                 <div class="input-group">
                                     <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="<?=Yii::t("menu", "mail")?>" required  >
