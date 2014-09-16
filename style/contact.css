@@ -125,3 +125,17 @@
 .contact_right_block {
     width: 85%;
 }
+
+.message {
+
+    font-size: 20px;
+
+}
+
+.modal-header .close {
+    margin-top: -8px;
+}
+
+.col-lg-4 {
+    padding-left: 0px !important;
+}
