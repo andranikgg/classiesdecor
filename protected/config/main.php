@@ -83,13 +83,13 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
 		// release database
-		/*'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=khach2_classies',
-			'emulatePrepare' => true,
-			'username' => 'khach2_classies',
-			'password' => 'Uranida060292',
-			'charset' => 'utf8',
-		),*/
+//		'db'=>array(
+//			'connectionString' => 'mysql:host=localhost;dbname=khach2_classies',
+//			'emulatePrepare' => true,
+//			'username' => 'khach2_classies',
+//			'password' => 'Uranida060292',
+//			'charset' => 'utf8',
+//		),
 
         // local database
         'db'=>array(
