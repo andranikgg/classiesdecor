@@ -193,7 +193,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 }
             });
 
-            return false;
+            return false; c
         });
     });
 
