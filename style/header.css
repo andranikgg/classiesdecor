@@ -153,7 +153,8 @@
 }
 
 .header_language_block .language-list li {
-    display: block;
+    display: block!important;
+    visibility: visible!important;
 }
 
 .header_language_block .language-selector .hidden {
