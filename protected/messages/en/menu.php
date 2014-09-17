@@ -1,6 +1,6 @@
 <?php
 return array (
-    'classiesdecor'=>'ClassiesDecor',
+    'classis'=>'Classis',
     'blog'=>'blog',
     'interior'=>'interiors',
     'catalog'=>'catalog',

@@ -2,9 +2,9 @@
 /* @var $this SiteController */
 /* @var $contacts Contacts[] */
 
-Yii::app()->clientScript->registerMetaTag('classies, decor', 'keywords');
-Yii::app()->clientScript->registerMetaTag('Classies Decor description', 'description');
-Yii::app()->clientScript->registerMetaTag('Classies Decor', null, null, array('property' => 'og:description'));
+Yii::app()->clientScript->registerMetaTag('classis', 'keywords');
+Yii::app()->clientScript->registerMetaTag('Classis description', 'description');
+Yii::app()->clientScript->registerMetaTag('Classis', null, null, array('property' => 'og:description'));
 Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/bootstrap.min.css');
 Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/scripts/bootstrap.min.js');
 

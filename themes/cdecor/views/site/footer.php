@@ -22,7 +22,10 @@ $contacts = Contacts::model()->findAll();
         <div class="footer_container">
             <div class="block">
                 <div class="section">
-                    <h3 class="hdr"><?= Yii::t("menu", "partners") ?></h3>
+                    <h3 class="hdr">
+                        <a href="<?php echo Yii::app()->request->baseUrl . "/" . Yii::app()->language; ?>/site/partners"><?= Yii::t("menu", "partners") ?>
+                        </a>
+                    </h3>
                     <ul>
 
                         <?php foreach ($partners as $partner): ?>
@@ -37,7 +40,10 @@ $contacts = Contacts::model()->findAll();
             </div>
             <div class="block">
                 <div class="section">
-                    <h3 class="hdr"><?= Yii::t("menu", "products") ?></h3>
+                    <h3 class="hdr">
+                        <a href="<?php echo Yii::app()->request->baseUrl . "/" . Yii::app()->language; ?>/site/products"><?= Yii::t("menu", "products") ?>
+                        </a>
+                    </h3>
                     <ul>
 
                         <?php foreach ($products as $product): ?>
@@ -55,8 +61,10 @@ $contacts = Contacts::model()->findAll();
                 <div class="block">
 
                     <div class="section">
-                        <h3 class="hdr"><?= ($i == 0)? Yii::t("menu", "contacts"):"&nbsp;" ?></h3>
-
+                        <h3 class="hdr">
+                            <a href="<?php echo Yii::app()->request->baseUrl . "/" . Yii::app()->language; ?>/site/contacts"><?= ($i == 0)? Yii::t("menu", "contacts"):"&nbsp;" ?>
+                            </a>
+                        </h3>
                         <ul>
                             <li>
                                 <p>
@@ -104,7 +112,7 @@ $contacts = Contacts::model()->findAll();
         </div>
 
         <div class="footer_copyright">
-            <span class="reserved">Classies &copy; 2014. Design by <a class="footer_ggref" href="http://www.varant.am"
+            <span class="reserved">Classis &copy; 2014. Design by <a class="footer_ggref" href="http://www.varant.am"
                                                                       target="_blank">varant.am</a> <br/>Development by <a
                     class="footer_ggref" href="http://www.gglaboratories.com" target="_blank">gglaboratories.</a></span>
         </div>
