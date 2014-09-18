@@ -78,9 +78,13 @@
     <?php $this->renderPartial('footer', false); ?>
 </div>
 
-    <div class="black"></div>
-    <div class="popup_outer">
-        <div class="popup"></div>
+<div class="black"></div>
+<div class="popup_outer">
+    <div class="popup">
+
+
+
     </div>
+</div>
 </body>
 </html>

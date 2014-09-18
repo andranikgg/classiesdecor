@@ -332,3 +332,42 @@ body {
     -khtml-opacity: 0.7;
     opacity: 0.8;
 }
+
+#next_slide {
+    background: greenyellow;
+    position: absolute;
+    right: -30px;
+    width: 15px;
+    height: 30px;
+    top: 42%;
+    background: url("../images/arrows.png");
+    background-position: -15px 0px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+
+#prev_slide {
+
+    background: greenyellow;
+    position: absolute;
+    left: -30px;
+    width: 15px;
+    height: 30px;
+    top: 42%;
+    background: url("../images/arrows.png");
+    background-position: 0px 0px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+
+#prev_slide:hover {
+    opacity: 0.6;
+}
+
+#next_slide:hover {
+    opacity: 0.6;
+}

@@ -45,7 +45,7 @@ Yii::app()->clientScript->registerMetaTag('Classis', null, null, array('property
     </div>
     <div class="container_block">
         <div class="container_block_content">
-            <div class="hdr">&nbsp;</div>
+            <div class="hdr"><?=Yii::t("menu", "ser")?></div>
             <div>
                 <?= $page->cdesc3 ?>
             </div>

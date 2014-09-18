@@ -196,3 +196,11 @@ var _;
 function toslide(item) {
     _.move(item-1);
 }
+
+function nextslide() {
+    _.next();
+}
+
+function prevslide() {
+    _.prev();
+}

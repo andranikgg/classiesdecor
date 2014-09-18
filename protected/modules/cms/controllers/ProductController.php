@@ -201,6 +201,26 @@ class ProductController extends SecureController
         $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
         $fileName=$result['filename'];//GETTING FILE NAME
 
+
+        $size = getimagesize($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/product/temp/' . $result['filename']);
+
+        if ($size[0] > 800) {
+            $newHeight = 800*$size[1]/$size[0];
+            Yii::app()->ih
+                ->load($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/product/temp/' . $result['filename'])
+                ->resize(800, $newHeight, false)
+                ->save($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/product/temp/' . $result['filename']);
+        }
+        $size = getimagesize($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/product/temp/' . $result['filename']);
+        if ($size[1] > 600) {
+            $newWidth = 600*$size[0]/$size[1];
+            Yii::app()->ih
+                ->load($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/product/temp/' . $result['filename'])
+                ->resize($newWidth, 600, false)
+                ->save($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/product/temp/' . $result['filename']);
+        }
+
+
         echo $return;// it's array
         Yii::app()->end();
     }

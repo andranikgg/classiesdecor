@@ -4,7 +4,6 @@
 
 
 ?>
-
 <script>
     $(function () {
         $('#ban').unslider();
@@ -27,6 +26,7 @@
 
         $(document).keyup(function (e) {
             if (e.keyCode == 27) {
+
                 $('.black').hide();
                 $('.popup_outer').hide();
                 $('.popup').html("");
@@ -36,11 +36,15 @@
                 });
             }   // esc
         });
- });
+
+});
+
 
 
 
 </script>
+<div id="prev_slide" onclick="prevslide()" ></div>
+<div id="next_slide" onclick="nextslide()" ></div>
 
 <div class="x_close"></div>
 
