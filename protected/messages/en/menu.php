@@ -86,6 +86,10 @@ return array (
     'list'=>'List',
 
 
+    'wel'=>'Welcome to',
+    'here'=>' Here you can change the content of',
+
+
 
 
 

@@ -66,7 +66,7 @@ $langs = $lmanager->getLanguageLinks();
                     array('label' => Yii::t("menu", "contacts"), 'url' => array('/cms/contacts'), 'visible' => !Yii::app()->user->isGuest),
 
                     array('label' => Yii::t("menu", "l_i"), 'url' => array('/cms/main/login'), 'visible' => Yii::app()->user->isGuest),
-                    array('label' => 'Выход (' . Yii::app()->user->name . ')', 'url' => array('/cms/main/logout'), 'visible' => !Yii::app()->user->isGuest)
+                    array('label' => Yii::t("menu", "l_o").' (' . Yii::app()->user->name . ')', 'url' => array('/cms/main/logout'), 'visible' => !Yii::app()->user->isGuest)
                 ),
             )); ?>
         </div>
