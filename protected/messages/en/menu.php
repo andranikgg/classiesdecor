@@ -13,8 +13,8 @@ return array (
     'selectlanguage'=>'select language',
     'order'=>'order',
 
-    'en'=>'ENGLISH',
-    'ru'=>'РУССКИЙ',
+    'en'=>'En',
+    'ru'=>'Ru',
 
     'body'=>'body',
     'firstname'=>'first name',
@@ -89,6 +89,9 @@ return array (
     'wel'=>'Welcome to',
     'here'=>' Here you can change the content of',
 
+    'login'=>'Username',
+    'pass'=>'Password',
+    'rem'=>'Remember me ',
 
 
 
