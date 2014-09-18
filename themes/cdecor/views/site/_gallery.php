@@ -27,8 +27,6 @@
 
         $(document).keyup(function (e) {
             if (e.keyCode == 27) {
-                $('.cancel').click();
-
                 $('.black').hide();
                 $('.popup_outer').hide();
                 $('.popup').html("");
