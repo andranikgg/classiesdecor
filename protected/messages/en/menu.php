@@ -93,7 +93,7 @@ return array (
     'pass'=>'Password',
     'rem'=>'Remember me ',
 
-
+    'ser'=>'Services',
 
 
 

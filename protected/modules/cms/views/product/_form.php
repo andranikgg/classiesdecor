@@ -134,7 +134,7 @@
                     'title'=>'Crop',
                     'modal'=>true,
                     'width'=>'80%',
-                    'height'=>600,
+                    'height'=>650,
                     //'buttons'=>array('OK'=>'js:function(){$(this).dialog("close")}'),
                     'autoOpen'=>false,
                 ),

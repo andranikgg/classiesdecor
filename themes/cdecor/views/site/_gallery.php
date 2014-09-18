@@ -37,13 +37,6 @@
             }   // esc
         });
 
-        $("#next_slide").click(function () {
-
-            $(function () {
-                $('#ban').next();
-            });
-
-        });
 });
 
 
