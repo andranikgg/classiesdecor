@@ -2,10 +2,6 @@
 /* @var $this BrandController */
 /* @var $model Brand */
 
-$this->breadcrumbs=array(
-	'Brands'=>array('index'),
-	'Create',
-);
 
 $this->menu=array(
 	array('label'=>'List Brand', 'url'=>array('index')),
@@ -13,6 +9,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Brand</h1>
+<h1><?=Yii::t("menu", "create")?> Brand</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

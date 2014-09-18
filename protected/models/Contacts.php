@@ -69,17 +69,17 @@ class Contacts extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'address_ru' => 'Address Russian',
-			'address_en' => 'Address English',
-			'address_coord_x' => 'Address Coordinates X',
-			'address_coord_y' => 'Address Coordinates Y',
-			'worktime' => 'Worktime',
-			'phone' => 'Phone',
-			'contact_email' => 'Contact Email',
-			'fb_link' => 'Facebook Link',
-			'in_link' => 'In Link',
-			'pin_link' => 'Pin Link',
-			'feedback_email' => 'Feedback Email',
+			'address_ru' => Yii::t("menu", "address_ru"),
+			'address_en' => Yii::t("menu", "address_en"),
+			'address_coord_x' => Yii::t("menu", "address_cord_x"),
+			'address_coord_y' => Yii::t("menu", "address_cord_y"),
+			'worktime' => Yii::t("menu", "wt"),
+			'phone' => Yii::t("menu", "ph"),
+			'contact_email' => Yii::t("menu", "mail"),
+			'fb_link' => Yii::t("menu", "fb"),
+			'in_link' => Yii::t("menu", "in"),
+			'pin_link' => Yii::t("menu", "pin"),
+			'feedback_email' => Yii::t("menu", "feed"),
 		);
 	}
 

@@ -88,5 +88,17 @@
 }
 
 
+.lang {
 
+    padding: 10px 10px 10px 10px;
+    float: right;
+    font-size: 15px;
+    color: #5bc0de;
+    font-weight: bold;
+    text-decoration: none!important;
+}
 
+.lang a {
+
+    text-decoration: none!important;
+}

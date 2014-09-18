@@ -2,9 +2,6 @@
 /* @var $this BrandController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Brands',
-);
 
 $this->menu=array(
 	array('label'=>'Create Brand', 'url'=>array('create')),

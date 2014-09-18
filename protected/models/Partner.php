@@ -64,10 +64,10 @@ class Partner extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'image' => 'Image',
-			'link' => 'Link',
-            'name_ru' => 'Name Ru',
-            'name_en' => 'Name En',
+			'image' => Yii::t("menu", "image"),
+			'link' => Yii::t("menu", "link"),
+            'name_ru' => Yii::t("menu", "name_ru"),
+            'name_en' => Yii::t("menu", "name_en"),
 		);
 	}
 

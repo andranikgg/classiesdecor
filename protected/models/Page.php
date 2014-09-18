@@ -100,12 +100,13 @@ class Page extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-            'title_ru' => 'Title Ru',
-			'desc1_ru' => 'Desc1 Ru',
-			'title_3_ru' => 'Desc2 3 Ru',
-            'desc1_en' => 'Desc1 En',
-            'desc2_en' => 'Desc2 En',
-            'desc3_en' => 'Desc3 En',
+            'title_ru' => Yii::t("menu", "title_ru"),
+			'desc1_ru' => Yii::t("menu", "desc_ru"),
+			'desc2_ru' => Yii::t("menu", "desc_ru"),
+			'desc3_ru' => Yii::t("menu", "desc_ru"),
+            'desc1_en' => Yii::t("menu", "desc_en"),
+            'desc2_en' => Yii::t("menu", "desc_en"),
+            'desc3_en' => Yii::t("menu", "desc_en"),
 		);
 	}
 

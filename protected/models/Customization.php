@@ -74,10 +74,10 @@ class Customization extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name_ru' => 'Name Russian',
-			'name_en' => 'Name English',
-			'desc_ru' => 'Description Russian',
-			'desc_en' => 'Description English',
+			'name_ru' => Yii::t("menu", "name_ru"),
+			'name_en' => Yii::t("menu", "name_en"),
+			'desc_ru' => Yii::t("menu", "desc_ru"),
+			'desc_en' => Yii::t("menu", "desc_ru"),
 		);
 	}
 

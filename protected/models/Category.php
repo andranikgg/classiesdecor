@@ -66,8 +66,8 @@ class Category extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name_ru' => 'Name Russian',
-			'name_en' => 'Name English',
+			'name_ru' => Yii::t("menu", "name_ru"),
+			'name_en' => Yii::t("menu", "name_en"),
 		);
 	}
 

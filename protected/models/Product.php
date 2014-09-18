@@ -82,14 +82,14 @@ class Product extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title_ru' => 'Title Russian',
-			'title_en' => 'Title English',
-			'desc_ru' => 'Description Russian',
-			'desc_en' => 'Description English',
-			'brand_id' => 'Brand',
-			'category_id' => 'Category',
-			'status' => 'Status',
-            'image' => 'Image',
+			'title_ru' => Yii::t("menu", "title_ru"),
+			'title_en' => Yii::t("menu", "title_en"),
+			'desc_ru' => Yii::t("menu", "desc_ru"),
+			'desc_en' => Yii::t("menu", "desc_en"),
+			'brand_id' => Yii::t("menu", "brands"),
+			'category_id' => Yii::t("menu", "category"),
+			'status' => Yii::t("menu", "st"),
+            'image' => Yii::t("menu", "image"),
 		);
 	}
 

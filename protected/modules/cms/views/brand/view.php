@@ -2,10 +2,6 @@
 /* @var $this BrandController */
 /* @var $model Brand */
 
-$this->breadcrumbs=array(
-	'Brands'=>array('index'),
-	$model->id,
-);
 
 $this->menu=array(
 	array('label'=>'List Brand', 'url'=>array('index')),

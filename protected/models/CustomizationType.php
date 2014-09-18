@@ -69,10 +69,10 @@ class CustomizationType extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'customization_id' => 'Customization',
-			'name_ru' => 'Name Russian',
-			'name_en' => 'Name English',
-			'image' => 'Image',
+			'customization_id' => Yii::t("menu", "customization"),
+			'name_ru' => Yii::t("menu", "name_ru"),
+			'name_en' => Yii::t("menu", "name_en"),
+			'image' => Yii::t("menu", "image"),
 		);
 	}
 

@@ -94,7 +94,7 @@ class CListView extends CBaseListView
 	/**
 	 * @var string the CSS class name that will be assigned to the widget container element
 	 * when the widget is updating its content via AJAX. Defaults to 'list-view-loading'.
-	 * @since 1.1.1
+     * @since 1.1.1
 	 */
 	public $loadingCssClass='list-view-loading';
 	/**

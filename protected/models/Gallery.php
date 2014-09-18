@@ -61,10 +61,10 @@ class Gallery extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'image' => 'Image',
-			'status' => 'Status',
-			'title_ru' => 'Title Ru',
-			'title_en' => 'Title En',
+			'image' => Yii::t("menu", "image"),
+			'status' => Yii::t("menu", "st"),
+			'title_ru' => Yii::t("menu", "title_ru"),
+			'title_en' => Yii::t("menu", "title_en"),
 		);
 	}
 
