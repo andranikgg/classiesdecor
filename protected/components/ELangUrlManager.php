@@ -136,8 +136,8 @@ class ELangUrlManager extends CUrlManager
      * '<languageParam:(lang1|lang2|...)>/<route:[\w\/]+>'=>'<route>'
      *
      * Called in method init()
-     *
-     */
+     **/
+
     public function addLanguageUrlRules()
     {
         if (!$this->_languagesRuleAdded && $this->languagesEnabled())
