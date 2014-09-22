@@ -101,6 +101,7 @@ class Page extends CActiveRecord
 		return array(
 			'id' => 'ID',
             'title_ru' => Yii::t("menu", "title_ru"),
+            'title_en' => Yii::t("menu", "title_en"),
 			'desc1_ru' => Yii::t("menu", "desc_ru"),
 			'desc2_ru' => Yii::t("menu", "desc_ru"),
 			'desc3_ru' => Yii::t("menu", "desc_ru"),

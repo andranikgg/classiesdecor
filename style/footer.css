@@ -158,6 +158,9 @@
 
 .footer_container .section ul li p{
     cursor: default;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 22px;
 }
 
 .footer_social_block{
