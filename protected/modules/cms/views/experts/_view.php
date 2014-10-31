@@ -25,15 +25,19 @@
 	<?php echo CHtml::encode($data->title); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('work_experience')); ?>:</b>
+	<?php echo CHtml::encode($data->work_experience); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cv')); ?>:</b>
 	<?php echo CHtml::encode($data->cv); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
 	<?php echo CHtml::encode($data->password); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('createdate')); ?>:</b>
 	<?php echo CHtml::encode($data->createdate); ?>
 	<br />

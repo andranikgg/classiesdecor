@@ -26,17 +26,28 @@ $criteria=new CDbCriteria;
 $criteria->addInCondition('id',$list_ids);
 $countries = Countries::model()->findAll($criteria);
 
+
+$work_experience = "";
+if ($data->work_experience == 0)
+    $work_experience = "No need experience";
+elseif ($data->work_experience == 1)
+    $work_experience = "1-5 years";
+elseif ($data->work_experience == 2)
+    $work_experience = "6-10 years";
+elseif ($data->work_experience == 3)
+    $work_experience = "11-30 years";
+
 ?>
 <div class="grid_row">
-    <div class="desc item left block_10per right_margin_20 textcenter">
+    <div class="desc item left block_10per right_margin_20">
         <?= Yii::app()->dateFormatter->formatDateTime(CDateTimeParser::parse($data->createdate, 'yyyy-MM-dd'), 'medium', null); ?>
     </div>
 
-    <div class="desc bold item left block_25per right_margin_20">
+    <div class="desc bold item left block_20per right_margin_20">
         <?= $title ?> <?= $data->firstname ?> <?= $data->lastname ?>
     </div>
 
-    <div class="desc item left block_23per right_margin_20">
+    <div class="desc item left block_15per right_margin_20">
         <?= $data->email ?>
     </div>
 
@@ -53,8 +64,11 @@ $countries = Countries::model()->findAll($criteria);
         <div class="clear">
         </div>
     </div>
+    <div class="item left block_14per right_margin_20">
+        <?= $work_experience ?>
+    </div>
 
-    <div class="desc item left block_5per right_margin_20">
+    <div class="desc item left block_5per">
         <a href="<?= Yii::app()->baseUrl ?>/cv/<?= $data->cv ?>">cv</a>
     </div>
 

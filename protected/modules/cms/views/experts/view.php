@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Experts', 'url'=>array('index')),
-	array('label'=>'Create Experts', 'url'=>array('create')),
+//	array('label'=>'Create Experts', 'url'=>array('create')),
 	array('label'=>'Update Experts', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Experts', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Experts', 'url'=>array('admin')),
@@ -26,6 +26,7 @@ $this->menu=array(
 		'lastname',
 		'email',
 		'title',
+		'work_experience',
 		'cv',
 		'password',
 		'createdate',

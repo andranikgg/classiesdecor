@@ -24,6 +24,7 @@ $this->menu=array(
 		'id',
 		'title',
 		'description',
+		'work_experience',
 		'createdate',
 		'posted',
 		'deadline',

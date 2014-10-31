@@ -353,10 +353,19 @@
 
 .container_block_row .content .grid_header {
     display: block;
+    color: #b61500;
 }
 
 .container_block_row .content .grid_row {
     display: block;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.container_block_row .content .grid_row:hover {
+    background-color: rgb(234, 234, 234);
 }
 
 .container_block_row .content .grid_header .item {
@@ -896,8 +905,8 @@
 
 .left_menu .hdr {
     padding-bottom: 10px;
-    font-size: 15px;
-    color: cornflowerblue;
+    font-size: 20px;
+    color: #b61500;
     cursor: default;
 }
 

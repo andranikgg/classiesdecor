@@ -37,6 +37,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'work_experience'); ?>
+		<?php echo $form->textField($model,'work_experience'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'cv'); ?>
 		<?php echo $form->textField($model,'cv',array('size'=>60,'maxlength'=>255)); ?>
 	</div>

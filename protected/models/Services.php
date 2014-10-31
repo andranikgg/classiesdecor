@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'services':
  * @property integer $id
+ * @property string $title
  * @property string $content
  */
 class Services extends CActiveRecord
@@ -25,10 +26,11 @@ class Services extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('title', 'length', 'max'=>255),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, content', 'safe', 'on'=>'search'),
+			array('id, title, content', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,6 +52,7 @@ class Services extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'title' => 'Title',
 			'content' => 'Content',
 		);
 	}
@@ -73,6 +76,7 @@ class Services extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);
 
 		return new CActiveDataProvider($this, array(

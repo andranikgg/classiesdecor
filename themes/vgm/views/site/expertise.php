@@ -4,6 +4,7 @@
 Yii::app()->clientScript->registerMetaTag('vgm', 'keywords');
 Yii::app()->clientScript->registerMetaTag('vgm description', 'description');
 Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' => 'og:description'));
+
 ?>
 
 <script type="text/javascript" src="<?= Yii::app()->request->baseUrl ?>/scripts/urlmanager.js"></script>
@@ -19,7 +20,7 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
         else {
             showTab(par_block);
             if (par_id != "" && par_id != null && par_id != undefined) {
-                openItem(par_block,par_id);
+                openItem(par_block, par_id);
             }
         }
     });
@@ -33,7 +34,7 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
 
     function showdeskription(item) {
         var object = $(item).next();
-        $(".text").each(function() {
+        $(".text").each(function () {
             var t = $(this);
             if (t.is(':visible')) {
                 t.css("display", "none");
@@ -78,8 +79,11 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
                 <div class="container_block_row">
                     <div class="content">
                         <?php foreach ($services as $service): ?>
-                            <div class="desc">
-                                <?= substr($service->content,0,100) ?>
+                            <div class="title pointer" onclick="showdeskription(this)">
+                                <?= $service->title ?>
+                            </div>
+                            <div class="text">
+                                <?= substr($service->content, 0, 100) ?>
                             </div>
                             <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
                             </div>
@@ -95,7 +99,7 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
                                 <?= $sector->title ?>
                             </div>
                             <div class="text">
-                                <?= substr($sector->content,0,100) ?>
+                                <?= substr($sector->content, 0, 100) ?>
                             </div>
                             <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
                             </div>
@@ -108,17 +112,17 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
                     <div class="content">
 
                         <div class="grid_header">
-                            <div class="item left block_15per right_margin_20 textcenter">
-                                Posted
+                            <div class="item left block_20per right_margin_20">
+                                Sector
                             </div>
                             <div class="item left block_35per right_margin_20">
                                 Title
                             </div>
-                            <div class="item left block_22per right_margin_20">
+                            <div class="item left block_20per right_margin_20">
                                 Location
                             </div>
-                            <div class="item left block_15per right_margin_20">
-                                Deadline
+                            <div class="item left block_15per">
+                                Date
                             </div>
 
                             <div class="clear">
@@ -132,7 +136,7 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
                             'dataProvider' => Projects::model()->search(),
                             'itemView' => '_project',
                             'enableHistory' => true,
-                            'summaryText'=>false,
+                            'summaryText' => false,
                         ));
                         ?>
                     </div>
@@ -146,7 +150,7 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
                             'dataProvider' => Frameworks::model()->search(),
                             'itemView' => '_framework',
                             'enableHistory' => true,
-                            'summaryText'=>false,
+                            'summaryText' => false,
                         ));
                         ?>
                     </div>
@@ -155,6 +159,37 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
 
 
             <?php foreach ($projects as $project): ?>
+                <?php
+                    $location_ids = Yii::app()->db->createCommand()
+                        ->select('locationid')
+                        ->from('project_location_xref')
+                        ->where('projectid=:id', array(':id' => $project->id))
+                        ->queryAll();
+
+                    $list_ids = array();
+                    foreach ($location_ids as $item) {
+                        $list_ids[] = $item ['locationid'];
+                    }
+
+                    $criteria = new CDbCriteria;
+                    $criteria->addInCondition('id', $list_ids);
+                    $countries = Countries::model()->findAll($criteria);
+
+                $sector_ids = Yii::app()->db->createCommand()
+                    ->select('sectorid')
+                    ->from('project_sector_xref')
+                    ->where('projectid=:id', array(':id' => $project->id))
+                    ->queryAll();
+
+                $list_ids = array();
+                foreach ($sector_ids as $item) {
+                    $list_ids[] = $item ['sectorid'];
+                }
+
+                $criteriasector = new CDbCriteria;
+                $criteriasector->addInCondition('id', $list_ids);
+                $sectors = Sectors::model()->findAll($criteriasector);
+                ?>
                 <div id="projects_<?= $project->id ?>" class="container_block itemblock projects_itemblock">
                     <div class="container_block_row">
                         <div class="content">
@@ -164,19 +199,37 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
                             <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
                             </div>
                             <div class="desc">
-                                <span class="subtitle">Country:</span> <?//= $project->location ?>
+                                <span class="subtitle">Country:</span>
+
+                                <?php $i=0; $numItems = count($countries); foreach ($countries as $country): ?>
+                                    <span>
+                                        <?= $country->name ?>
+                                        <?php if(++$i != $numItems) {
+                                            echo "- ";
+                                        } ?>
+                                    </span>
+                                <?php endforeach ?>
+
                             </div>
                             <div class="desc">
-                                <span class="subtitle">Sector(s):</span> <?//= $project->sectors ?>
+                                <span class="subtitle">Sector(s):</span>
+
+                                <?php $i=0; $numItemsc = count($sectors); foreach ($sectors as $sector): ?>
+                                    <span>
+                                        <?= $sector->title ?>
+                                        <?php if(++$i != $numItemsc) {
+                                            echo "- ";
+                                        } ?>
+                                    </span>
+                                <?php endforeach ?>
                             </div>
                             <div class="desc">
-                                <span class="subtitle">Date:</span> <?= $project->startdate ?> - <?= $project->enddate ?>
+                                <span class="subtitle">Date:</span>
+                                <?= Yii::app()->dateFormatter->format( 'MMM dd, yyyy', $project->startdate ) ?> -
+                                <?= Yii::app()->dateFormatter->format( 'MMM dd, yyyy', $project->enddate ) ?>
                             </div>
                             <div class="desc">
-                                <span class="subtitle">Client/Beneficiary:</span> <?= $project->client_beneficiary ?>
-                            </div>
-                            <div class="desc">
-                                <span class="subtitle">Financing Agency:</span> <?= $project->financing_agency ?>
+                                <span class="subtitle">Client:</span> <?= $project->client ?>
                             </div>
                             <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
                             </div>

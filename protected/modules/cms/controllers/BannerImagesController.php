@@ -208,6 +208,10 @@ class BannerImagesController extends SecureController
         $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
         $fileName=$result['filename'];//GETTING FILE NAME
 
+//        echo "<pre>";
+//        print_r($fileName);
+//        exit;
+
         echo $return;// it's array
         Yii::app()->end();
     }

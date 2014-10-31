@@ -45,7 +45,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/scripts/boo
     <div class="left_menu_block block_25per left">
         <div class="left_menu">
             <a href="#registerexperts" onclick="showTab('registerexperts')">
-                <div id="btn_registerexperts" class="left_menu_item mselected">Register experts</div>
+                <div id="btn_registerexperts" class="left_menu_item mselected">Register as an expert</div>
             </a>
             <a href="#policy" onclick="showTab('policy')">
                 <div id="btn_policy" class="left_menu_item">Policy</div>
@@ -55,7 +55,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/scripts/boo
 
             if (!Yii::app()->user->isGuest) {
                 echo '
-            <a href="#expertsboard" onclick="showTab("expertsboard")">
+            <a href="#expertsboard" onclick="showTab(\'expertsboard\')">
                 <div id="btn_expertsboard" class="left_menu_item">Experts board</div>
             </a>
           ';
@@ -70,12 +70,12 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/scripts/boo
             <div id="registerexperts" class="container_block subblock">
                 <div class="container_block_row">
                     <div class="content">
-                        <form style="width: 50%" role="form" action="<?= Yii::app()->baseUrl ?>/site/registr"
+                        <form style="width: 50%" role="form" action="<?= Yii::app()->baseUrl ?>/site/Registerexpert"
                               method="post" id="form_susbmit">
 
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <select class="form-control">
+                                <select id="title" name="title" class="form-control">
                                     <option value="1">Mr.</option>
                                     <option value="2">Ms.</option>
                                     <option value="3">Mrs.</option>
@@ -104,9 +104,19 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/scripts/boo
                                 <label for="InputEmail">E-mail</label>
 
                                 <div class="input-group">
-                                    <input type="email" class="form-control" id="InputEmail" name="InputEmail"
+                                    <input type="email" class="form-control" id="email" name="email"
                                            placeholder="Enter your E-mail" required>
                                     <span class="input-group-addon"></span></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="title">Work experience</label>
+                                <select id="work_experience" name="work_experience" class="form-control">
+                                    <option value="0">No experience</option>
+                                    <option value="1">1-5 years</option>
+                                    <option value="2">6-10 years</option>
+                                    <option value="3">11-30 years</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -127,7 +137,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/scripts/boo
 
                             <div class="form-group">
                                 <label for="citizenship">CV</label>
-                                <input type="file" class="filestyle " data-input="false">
+                                <input id="cv" name="cv" type="file" class="filestyle " data-input="false">
 
                             </div>
                             <input type="submit" name="submit" id="submit" value="Register"
@@ -161,27 +171,23 @@ $('.search-form form').submit(function(){
 ");
                         ?>
 
-                        <?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
-                        <div class="search-form" style="display:none">
-                            <?php  $this->renderPartial('_searchexperts', array(
-                                'experts' => $experts,
-                            )); ?>
-                        </div>
-
                         <div class="grid_header">
-                            <div class="item left block_10per right_margin_20 textcenter">
+                            <div class="item left block_10per right_margin_20">
                                 Modified
                             </div>
-                            <div class="item left block_25per right_margin_20">
+                            <div class="item left block_20per right_margin_20">
                                 Name
                             </div>
-                            <div class="item left block_23per right_margin_20">
+                            <div class="item left block_15per right_margin_20">
                                 Email
                             </div>
                             <div class="item left block_20per right_margin_20">
                                 Citizenship
                             </div>
-                            <div class="item left block_5per right_margin_20">
+                            <div class="item left block_14per right_margin_20">
+                                Experience
+                            </div>
+                            <div class="item left block_5per ">
                                 CV
                             </div>
 
@@ -196,9 +202,12 @@ $('.search-form form').submit(function(){
                             'dataProvider' => Experts::model()->search(),
                             'itemView' => '_experts',
                             'id' => 'expertslistview', // must have id corresponding to js above
-//                                'sortableAttributes' => array(
-//                                    'title',
-//                                ),
+                                'sortableAttributes' => array(
+                                    'createdate',
+                                    'firstname',
+                                    'lastname',
+                                    'email',
+                                ),
                             'summaryText' => false,
 
                         ));
@@ -211,7 +220,6 @@ $('.search-form form').submit(function(){
                 <div class="container_block_row">
                     <div class="content">
                         <div class="desc">
-                            policy text
                             <?= $policy->content ?>
                         </div>
                     </div>

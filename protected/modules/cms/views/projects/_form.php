@@ -4,6 +4,22 @@
 /* @var $form CActiveForm */
 ?>
 
+<?php $this->widget('application.extensions.tinymce.SladekTinyMce'); ?>
+<script>
+    tinymce.init({selector:'textarea', width: 700,
+        height: 300,
+        plugins: [
+            "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+            "searchreplace wordcount visualblocks visualchars code fullscreen",
+            "insertdatetime media nonbreaking save table contextmenu directionality",
+            "textcolor"
+        ],
+        toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+        toolbar2: "print preview media | forecolor backcolor emoticons",
+        image_advtab: true
+    });
+</script>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -32,9 +48,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'client_beneficiary'); ?>
-		<?php echo $form->textField($model,'client_beneficiary',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'client_beneficiary'); ?>
+		<?php echo $form->labelEx($model,'client'); ?>
+		<?php echo $form->textField($model,'client',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'client'); ?>
 	</div>
 
 	<div class="row">
@@ -47,12 +63,6 @@
 		<?php echo $form->labelEx($model,'enddate'); ?>
 		<?php echo $form->textField($model,'enddate'); ?>
 		<?php echo $form->error($model,'enddate'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'financing_agency'); ?>
-		<?php echo $form->textField($model,'financing_agency',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'financing_agency'); ?>
 	</div>
 
 	<div class="row buttons">

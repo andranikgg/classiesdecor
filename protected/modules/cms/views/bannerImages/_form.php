@@ -96,7 +96,7 @@
 	</div>
 
 <?php $this->endWidget(); ?>
-
+maximum upload file size 2 Mb
 </div><!-- form -->
 
 
@@ -106,6 +106,7 @@
             autoOpen:false,
             close: function(event, ui) {
                 if(isCropped) {
+                    console.log(crop_url);
                     $(".image_container").attr('src', '<?=Yii::app()->baseUrl?>/images/gallery/temp/'+crop_url);
                     $("#BannerImages_image").val(crop_url);
                 }

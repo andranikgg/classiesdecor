@@ -24,9 +24,8 @@ $this->menu=array(
 		'id',
 		'title',
 		'content',
-		'client_beneficiary',
+		'client',
 		'startdate',
 		'enddate',
-		'financing_agency',
 	),
 )); ?>

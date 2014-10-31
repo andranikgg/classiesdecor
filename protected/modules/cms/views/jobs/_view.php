@@ -17,6 +17,10 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('work_experience')); ?>:</b>
+	<?php echo CHtml::encode($data->work_experience); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('createdate')); ?>:</b>
 	<?php echo CHtml::encode($data->createdate); ?>
 	<br />
@@ -29,9 +33,11 @@
 	<?php echo CHtml::encode($data->deadline); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>
 	<br />
 
+	*/ ?>
 
 </div>

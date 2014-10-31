@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Experts', 'url'=>array('index')),
-	array('label'=>'Create Experts', 'url'=>array('create')),
+//	array('label'=>'Create Experts', 'url'=>array('create')),
 	array('label'=>'View Experts', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Experts', 'url'=>array('admin')),
 );

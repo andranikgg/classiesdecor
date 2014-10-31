@@ -169,6 +169,14 @@ body {
     width: 10% !important;
 }
 
+.block_13per {
+    width: 13% !important;
+}
+
+.block_14per {
+    width: 14% !important;
+}
+
 .block_15per {
     width: 15% !important;
 }
@@ -468,4 +476,16 @@ body {
 
 .pad {
     margin: 20px 20px 20px 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #b61500;
+}
+
+.list-view .sorter {
+    font-size: 0.9em!important;
+    position: absolute!important;
+    top: -10px!important;
+    right: 10px!important;
 }

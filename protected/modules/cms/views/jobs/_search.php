@@ -27,6 +27,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'work_experience'); ?>
+		<?php echo $form->textField($model,'work_experience'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'createdate'); ?>
 		<?php echo $form->textField($model,'createdate'); ?>
 	</div>

@@ -27,8 +27,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'client_beneficiary'); ?>
-		<?php echo $form->textField($model,'client_beneficiary',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'client'); ?>
+		<?php echo $form->textField($model,'client',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -39,11 +39,6 @@
 	<div class="row">
 		<?php echo $form->label($model,'enddate'); ?>
 		<?php echo $form->textField($model,'enddate'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'financing_agency'); ?>
-		<?php echo $form->textField($model,'financing_agency',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row buttons">

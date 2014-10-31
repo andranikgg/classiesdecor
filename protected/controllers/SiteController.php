@@ -121,6 +121,26 @@ class SiteController extends Controller
         $this->render('experts', array('experts' => $experts));
     }
 
+    public function actionRegisterexpert()
+    {
+        $expert = new Experts;
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if (isset($_POST) && !empty($_POST)) {
+            $expert->createdate = new CDbExpression('NOW()');
+            $expert->attributes = $_POST;
+
+//            echo "<pre>";
+//            print_r($expert);
+//            exit;
+            if ($expert->save())
+                $this->redirect(array('experts'));
+        }
+
+        $this->redirect(array('experts'));
+    }
+
     public function actionNews()
     {
 

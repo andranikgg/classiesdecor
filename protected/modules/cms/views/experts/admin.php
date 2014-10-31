@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Experts', 'url'=>array('index')),
-	array('label'=>'Create Experts', 'url'=>array('create')),
+//	array('label'=>'Create Experts', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -50,8 +50,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'lastname',
 		'email',
 		'title',
-		'cv',
+		'work_experience',
 		/*
+		'cv',
 		'password',
 		'createdate',
 		*/

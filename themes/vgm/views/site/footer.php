@@ -38,7 +38,7 @@ $contact = Contacts::model()->findByPk(1);
 
         <div class="footer_copyright">
             <span class="reserved">
-                VGM Partners &copy; 2014.<br/>
+                VGM Partners Ltd &copy; 2014.<br/>
                 Design & development by <a class="footer_ggref" href="http://www.gglaboratories.com" target="_blank">gglaboratories.</a></span>
         </div>
     </div>

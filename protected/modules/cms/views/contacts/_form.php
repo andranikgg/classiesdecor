@@ -45,7 +45,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'phone'); ?>
-		<?php echo $form->textArea($model,'phone',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'phone',array('size'=>60,'maxlength'=>250)); ?>
 		<?php echo $form->error($model,'phone'); ?>
 	</div>
 

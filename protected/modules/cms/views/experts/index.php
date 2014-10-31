@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Experts', 'url'=>array('create')),
+//	array('label'=>'Create Experts', 'url'=>array('create')),
 	array('label'=>'Manage Experts', 'url'=>array('admin')),
 );
 ?>

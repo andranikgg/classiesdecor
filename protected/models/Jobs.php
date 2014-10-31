@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $title
  * @property string $description
+ * @property integer $work_experience
  * @property string $createdate
  * @property string $posted
  * @property string $deadline
@@ -30,13 +31,12 @@ class Jobs extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('deadline, status', 'required'),
-			array('status', 'numerical', 'integerOnly'=>true),
+			array('title, description, work_experience, createdate, posted, deadline, status', 'required'),
+			array('work_experience, status', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
-			array('description, createdate, posted', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, description, createdate, posted, deadline, status', 'safe', 'on'=>'search'),
+			array('id, title, description, work_experience, createdate, posted, deadline, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,6 +60,7 @@ class Jobs extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'description' => 'Description',
+			'work_experience' => 'Work Experience',
 			'createdate' => 'Createdate',
 			'posted' => 'Posted',
 			'deadline' => 'Deadline',
@@ -88,6 +89,7 @@ class Jobs extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('description',$this->description,true);
+		$criteria->compare('work_experience',$this->work_experience);
 		$criteria->compare('createdate',$this->createdate,true);
 		$criteria->compare('posted',$this->posted,true);
 		$criteria->compare('deadline',$this->deadline,true);

@@ -48,10 +48,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'title',
 		'description',
+		'work_experience',
 		'createdate',
 		'posted',
-		'deadline',
 		/*
+		'deadline',
 		'status',
 		*/
 		array(

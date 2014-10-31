@@ -17,8 +17,8 @@
 	<?php echo CHtml::encode($data->content); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('client_beneficiary')); ?>:</b>
-	<?php echo CHtml::encode($data->client_beneficiary); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('client')); ?>:</b>
+	<?php echo CHtml::encode($data->client); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('startdate')); ?>:</b>
@@ -27,10 +27,6 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('enddate')); ?>:</b>
 	<?php echo CHtml::encode($data->enddate); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('financing_agency')); ?>:</b>
-	<?php echo CHtml::encode($data->financing_agency); ?>
 	<br />
 
 

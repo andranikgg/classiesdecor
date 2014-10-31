@@ -77,7 +77,7 @@ Yii::app()->clientScript->registerMetaTag('vgm', null, null, array('property' =>
             <div class="job_button">
                 <a href="<?= Yii::app()->baseUrl ?>/jobs?block=subscribe">
                     <div class="button">
-                        Subscribe to our job reports
+                        Subscribe to a job announcements
                     </div>
                 </a>
             </div>

@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Services'=>array('index'),
-	$model->id,
+	$model->title,
 );
 
 $this->menu=array(
@@ -22,6 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
+		'title',
 		'content',
 	),
 )); ?>

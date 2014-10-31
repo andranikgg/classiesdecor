@@ -44,12 +44,20 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'work_experience'); ?>
+		<?php echo $form->textField($model,'work_experience'); ?>
+		<?php echo $form->error($model,'work_experience'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'cv'); ?>
 		<?php echo $form->textField($model,'cv',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'cv'); ?>
 	</div>
 
-	<div class="row">
+
+    <?php /*
+ <div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'password'); ?>
@@ -60,6 +68,9 @@
 		<?php echo $form->textField($model,'createdate'); ?>
 		<?php echo $form->error($model,'createdate'); ?>
 	</div>
+
+	*/ ?>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
