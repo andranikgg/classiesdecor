@@ -1,7 +1,7 @@
 <?php
 echo CHtml::beginForm(CHtml::normalizeUrl(array('searchjob')), 'get', array('id' => 'filter-form'))
-    . CHtml::textField('string', (isset($_GET['string'])) ? $_GET['string'] : '', array('id' => 'string'))
-    . CHtml::submitButton('Search', array('name' => ''))
+    . CHtml::textField('string', (isset($_GET['string'])) ? $_GET['string'] : '', array('id' => 'string', 'class'=>'form-control'))
+    . CHtml::submitButton('Search', array('name' => '', 'class'=>'btn btn-default'))
     . CHtml::endForm();
 
 

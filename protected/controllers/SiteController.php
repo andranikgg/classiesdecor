@@ -96,9 +96,9 @@ class SiteController extends Controller
             $subscriber->createdate = new CDbExpression('NOW()');
             $subscriber->status = 1;
 
-//            echo "<pre>";
-//            print_r($subscriber);
-//            exit;
+            /*echo "<pre>";
+            print_r($subscriber->attributes);
+            exit;*/
 
             if ($subscriber->save())
                 $this->redirect(array('jobs', 'block' => 'jobsboard'));
@@ -217,6 +217,36 @@ class SiteController extends Controller
 ////        $jobs = new CActiveDataProvider( 'Jobs', array( 'criteria' => $criteria, ) );
 //        $this->render( 'jobs', array( 'jobs' => $jobs ) );
     }
+
+    public function actionLogin()
+    {
+        $model=new LoginForm;
+
+        // if it is ajax validation request
+        if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+
+        // collect user input data
+        if(isset($_POST['LoginForm']))
+        {
+            $model->attributes=$_POST['LoginForm'];
+            // validate user input and redirect to the previous page if valid
+            if($model->validate() && $model->login())
+                $this->redirect(Yii::app()->user->returnUrl);
+        }
+        // display the login form
+        $this->render('login',array('model'=>$model));
+    }
+
+    public function actionLogout()
+    {
+        Yii::app()->user->logout();
+        $this->redirect(Yii::app()->homeUrl);
+    }
+
 
 
 }

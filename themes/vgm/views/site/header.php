@@ -49,7 +49,8 @@ $banners = BannerImages::model()->findAll();
                         array('label' => 'Experts', 'url' => array('site/experts')),
                         array('label' => 'News', 'url' => array('site/news')),
                         array('label' => 'Contact us', 'url' => array('site/contactus')),
-                        array('label' => 'Login', 'url' => array('site/login')),
+                        array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                        array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
                     ),
                 )); ?>
             </div>

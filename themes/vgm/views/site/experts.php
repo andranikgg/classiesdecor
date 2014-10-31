@@ -50,9 +50,19 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/scripts/boo
             <a href="#policy" onclick="showTab('policy')">
                 <div id="btn_policy" class="left_menu_item">Policy</div>
             </a>
-            <a href="#expertsboard" onclick="showTab('expertsboard')">
+
+            <?php
+
+            if (!Yii::app()->user->isGuest) {
+                echo '
+            <a href="#expertsboard" onclick="showTab("expertsboard")">
                 <div id="btn_expertsboard" class="left_menu_item">Experts board</div>
             </a>
+          ';
+            }
+            ?>
+
+
         </div>
     </div>
     <div class="block_75per left">

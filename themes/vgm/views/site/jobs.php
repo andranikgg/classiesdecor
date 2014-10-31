@@ -82,28 +82,37 @@ $countrylist = Countries::model()->findAll();
 </script>
 
 <div class="container_wrapper">
-<div class="left_menu_block block_25per left">
-    <div class="left_menu">
-        <a href="?block=jobsboard">
-            <div id="btn_jobsboard" class="left_menu_item">Jobs board</div>
-        </a>
-        <a href="?block=subscribe">
-            <div id="btn_subscribe" class="left_menu_item">Subscribe</div>
-        </a>
-        <a href="?block=addjob">
+    <div class="left_menu_block block_25per left">
+        <div class="left_menu">
+            <a href="?block=jobsboard">
+                <div id="btn_jobsboard" class="left_menu_item">Jobs board</div>
+            </a>
+            <a href="?block=subscribe">
+                <div id="btn_subscribe" class="left_menu_item">Subscribe</div>
+            </a>
+            <?php
+
+            if (!Yii::app()->user->isGuest) {
+                echo '
+                  <a href="?block=addjob">
             <div id="btn_addjob" class="left_menu_item">Add job</div>
         </a>
+
+          ';
+            }
+            ?>
+
+        </div>
     </div>
-</div>
-<div class="block_75per left">
-    <div class="right_block">
-        <div id="jobsboard" class="container_block subblock">
-            <div class="container_block_row">
-                <div class="content">
+    <div class="block_75per left">
+        <div class="right_block">
+            <div id="jobsboard" class="container_block subblock">
+                <div class="container_block_row">
+                    <div class="content">
 
-                    <?php
+                        <?php
 
-                    Yii::app()->clientScript->registerScript('search', "
+                        Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
     $('.search-form').toggle();
     return false;
@@ -116,152 +125,152 @@ $('.search-form form').submit(function(){
     return false;
 });
 ");
-                    ?>
+                        ?>
 
-                    <?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
-                    <div class="search-form" style="display:none">
-                        <?php  $this->renderPartial('_searchjobs', array(
-                            'jobs' => $jobs,
-                        )); ?>
-                    </div>
-
-                    <div class="grid_header">
-                        <div class="item left block_15per right_margin_20 textcenter">
-                            Posted
-                        </div>
-                        <div class="item left block_35per right_margin_20">
-                            Title
-                        </div>
-                        <div class="item left block_22per right_margin_20">
-                            Location
-                        </div>
-                        <div class="item left block_15per right_margin_20">
-                            Deadline
+                        <?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
+                        <div class="search-form" style="display:none">
+                            <?php  $this->renderPartial('_searchjobs', array(
+                                'jobs' => $jobs,
+                            )); ?>
                         </div>
 
-                        <div class="clear">
-                        </div>
-                        <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
-                        </div>
-                    </div>
+                        <div class="grid_header">
+                            <div class="item left block_15per right_margin_20 textcenter">
+                                Posted
+                            </div>
+                            <div class="item left block_35per right_margin_20">
+                                Title
+                            </div>
+                            <div class="item left block_22per right_margin_20">
+                                Location
+                            </div>
+                            <div class="item left block_15per right_margin_20">
+                                Deadline
+                            </div>
 
-                    <?php $this->widget('zii.widgets.CListView', array(
-                        'dataProvider' => Jobs::model()->search(),
-                        'itemView' => '_jobs',
-                        'id' => 'jobslistview', // must have id corresponding to js above
+                            <div class="clear">
+                            </div>
+                            <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
+                            </div>
+                        </div>
+
+                        <?php $this->widget('zii.widgets.CListView', array(
+                            'dataProvider' => Jobs::model()->search(),
+                            'itemView' => '_jobs',
+                            'id' => 'jobslistview', // must have id corresponding to js above
 //                                'sortableAttributes' => array(
 //                                    'title',
 //                                ),
-                        'summaryText' => false,
-                    ));
-                    ?>
+                            'summaryText' => false,
+                        ));
+                        ?>
 
-                </div>
-            </div>
-        </div>
-        <div id="subscribe" class="container_block subblock">
-            <div class="container_block_row">
-                <div class="content">
-                    <form style="width: 60%" role="form"
-                          action="<?= Yii::app()->baseUrl ?>/site/subscribe" method="post" id="form_subscribe"
-                          name="subscribe-form">
-
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-
-                            <div class="input-group">
-                                <input type="email" class="form-control" id="email" name="email"
-                                       placeholder="E-mail" required>
-                                <span class="input-group-addon"></span></div>
-                        </div>
-                        <input type="submit" name="submit" id="subscribe" value="Subscribe"
-                               class="btn btn-success pull-right">
-
-                        <div class="clear">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div id="addjob" class="container_block subblock">
-            <div class="container_block_row">
-                <div class="content">
-                    <form name="job-form" style="width: 100%" role="form"
-                          action="<?= Yii::app()->baseUrl ?>/site/Addjob" method="post" id="form_addjob">
-
-                        <div class="form-group">
-                            <label for="title">Title</label>
-
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="title" name="title"
-                                       placeholder="Title" required>
-                                <span class="input-group-addon"></span></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="desc">Description</label>
-
-                            <div class="input-group">
-                                <textarea name="description" id="desc" class="form-control" rows="5"
-                                          placeholder="Please enter jobs description" required
-                                          style="resize: none"></textarea>
-                                <span class="input-group-addon"></span></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="citizenship">Citizenship</label><br/>
-
-                            <select class="selectpicker" multiple data-selected-text-format="count>2">
-                                <?php foreach ( $countrylist as $country ): ?>
-                                <option><?=$country->name?></option>
-                                <?php endforeach; ?>
-                            </select>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="startdate">Start date</label><br/>
-                            <input type="text" id="startdate" class="datepicker form-control" style="width: 50%"
-                                   placeholder="Start date"
-                                   name="posted">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="enddate">End date</label><br/>
-                            <input type="text" id="enddate" class="datepicker form-control" style="width: 50%"
-                                   placeholder="End date"
-                                   name="deadline">
-                        </div>
-
-                        <input type="submit" name="submit" id="addjob" value="Add job"
-                               class="btn btn-success pull-right">
-
-                        <div class="clear">
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-        <?php foreach ($jobs as $job): ?>
-            <div id="jobsboard_<?= $job->id ?>" class="container_block itemblock jobsboard_itemblock">
-                <div class="container_block_row">
-                    <div class="content">
-                        <div class="title">
-                            <?= $job->title ?>
-                        </div>
-                        <div class="desc">
-                            <?= $job->description ?>
-                        </div>
                     </div>
                 </div>
             </div>
-        <?php endforeach ?>
+            <div id="subscribe" class="container_block subblock">
+                <div class="container_block_row">
+                    <div class="content">
+                        <form style="width: 60%" role="form"
+                              action="<?= Yii::app()->baseUrl ?>/site/subscribe" method="post" id="form_subscribe"
+                              name="subscribe-form">
 
-        <div class="clear"></div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                           placeholder="E-mail" required>
+                                    <span class="input-group-addon"></span></div>
+                            </div>
+                            <input type="submit" name="submit" id="subscribe" value="Subscribe"
+                                   class="btn btn-success pull-right">
+
+                            <div class="clear">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="addjob" class="container_block subblock">
+                <div class="container_block_row">
+                    <div class="content">
+                        <form name="job-form" style="width: 100%" role="form"
+                              action="<?= Yii::app()->baseUrl ?>/site/Addjob" method="post" id="form_addjob">
+
+                            <div class="form-group">
+                                <label for="title">Title</label>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="title" name="title"
+                                           placeholder="Title" required>
+                                    <span class="input-group-addon"></span></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="desc">Description</label>
+
+                                <div class="input-group">
+                                    <textarea name="description" id="desc" class="form-control" rows="5"
+                                              placeholder="Please enter jobs description" required
+                                              style="resize: none"></textarea>
+                                    <span class="input-group-addon"></span></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="citizenship">Citizenship</label><br/>
+
+                                <select class="selectpicker" multiple data-selected-text-format="count>2">
+                                    <?php foreach ($countrylist as $country): ?>
+                                        <option><?= $country->name ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="startdate">Start date</label><br/>
+                                <input type="text" id="startdate" class="datepicker form-control" style="width: 50%"
+                                       placeholder="Start date"
+                                       name="posted">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="enddate">End date</label><br/>
+                                <input type="text" id="enddate" class="datepicker form-control" style="width: 50%"
+                                       placeholder="End date"
+                                       name="deadline">
+                            </div>
+
+                            <input type="submit" name="submit" id="addjob" value="Add job"
+                                   class="btn btn-success pull-right">
+
+                            <div class="clear">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <?php foreach ($jobs as $job): ?>
+                <div id="jobsboard_<?= $job->id ?>" class="container_block itemblock jobsboard_itemblock">
+                    <div class="container_block_row">
+                        <div class="content">
+                            <div class="title">
+                                <?= $job->title ?>
+                            </div>
+                            <div class="desc">
+                                <?= $job->description ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+
+            <div class="clear"></div>
+        </div>
     </div>
-</div>
-<div class="clear"></div>
+    <div class="clear"></div>
 </div>

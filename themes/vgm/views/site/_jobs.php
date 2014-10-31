@@ -1,6 +1,7 @@
 <div class="grid_row">
     <div class="desc item left block_15per right_margin_20 textcenter">
-        <?= Yii::app()->dateFormatter->formatDateTime(CDateTimeParser::parse($data->posted, 'yyyy-MM-dd'), 'medium', null); ?>
+
+        <?= $data->posted ?>
     </div>
 
     <a href="<?= Yii::app()->request->url ?>&id=<?= $data->id ?>">
@@ -17,7 +18,7 @@
     </div>
 
     <div class="desc item left block_15per right_margin_20">
-        <?= Yii::app()->dateFormatter->formatDateTime(CDateTimeParser::parse($data->deadline, 'yyyy-MM-dd'), 'medium', null); ?>
+        <?= Yii::app()->dateFormatter->format( 'MMM dd, yyyy', $data->deadline ) ?>
     </div>
 
     <div class="clear">

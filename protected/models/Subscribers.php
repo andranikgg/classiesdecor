@@ -27,7 +27,7 @@ class Subscribers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, email', 'required'),
+			array('email', 'required'),
 			array('id, status', 'numerical', 'integerOnly'=>true),
 			array('email', 'length', 'max'=>255),
 			array('createdate', 'safe'),
