@@ -12,7 +12,7 @@
         </div>
     </a>
 
-    <div class="desc item left block_23per right_margin_20">
+    <div class="desc item left block_22per right_margin_20">
         <?= $data->title ?>
     </div>
 

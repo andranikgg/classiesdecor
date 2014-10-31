@@ -9,6 +9,7 @@
  * @property string $lastname
  * @property string $email
  * @property integer $title
+ * @property integer $work_experience
  * @property string $cv
  * @property string $password
  * @property string $createdate
@@ -31,13 +32,13 @@ class Experts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('firstname, lastname, email, title, cv', 'required'),
-			array('title', 'numerical', 'integerOnly'=>true),
+			array('firstname, lastname, email, title, work_experience, cv', 'required'),
+			array('title, work_experience', 'numerical', 'integerOnly'=>true),
 			array('firstname, lastname, email, cv, password', 'length', 'max'=>255),
 			array('createdate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, firstname, lastname, email, title, cv, password, createdate', 'safe', 'on'=>'search'),
+			array('id, firstname, lastname, email, title, work_experience, cv, password, createdate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +64,7 @@ class Experts extends CActiveRecord
 			'lastname' => 'Lastname',
 			'email' => 'Email',
 			'title' => 'Title',
+			'work_experience' => 'Work Experience',
 			'cv' => 'Cv',
 			'password' => 'Password',
 			'createdate' => 'Createdate',
@@ -92,6 +94,7 @@ class Experts extends CActiveRecord
 		$criteria->compare('lastname',$this->lastname,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('title',$this->title);
+		$criteria->compare('work_experience',$this->work_experience);
 		$criteria->compare('cv',$this->cv,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('createdate',$this->createdate,true);

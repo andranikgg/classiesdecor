@@ -7,10 +7,9 @@
  * @property integer $id
  * @property string $title
  * @property string $content
- * @property string $client_beneficiary
+ * @property string $client
  * @property string $startdate
  * @property string $enddate
- * @property string $financing_agency
  */
 class Projects extends CActiveRecord
 {
@@ -30,11 +29,11 @@ class Projects extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, client_beneficiary, financing_agency', 'length', 'max'=>255),
+			array('title, client', 'length', 'max'=>255),
 			array('content, startdate, enddate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, content, client_beneficiary, startdate, enddate, financing_agency', 'safe', 'on'=>'search'),
+			array('id, title, content, client, startdate, enddate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,10 +57,9 @@ class Projects extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'content' => 'Content',
-			'client_beneficiary' => 'Client Beneficiary',
+			'client' => 'Client',
 			'startdate' => 'Startdate',
 			'enddate' => 'Enddate',
-			'financing_agency' => 'Financing Agency',
 		);
 	}
 
@@ -86,10 +84,9 @@ class Projects extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('client_beneficiary',$this->client_beneficiary,true);
+		$criteria->compare('client',$this->client,true);
 		$criteria->compare('startdate',$this->startdate,true);
 		$criteria->compare('enddate',$this->enddate,true);
-		$criteria->compare('financing_agency',$this->financing_agency,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
