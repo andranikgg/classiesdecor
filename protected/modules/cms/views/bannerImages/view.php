@@ -2,6 +2,11 @@
 /* @var $this BannerImagesController */
 /* @var $model BannerImages */
 
+$this->breadcrumbs=array(
+	'Banner Images'=>array('index'),
+	$model->id,
+);
+
 $this->menu=array(
 	array('label'=>'List BannerImages', 'url'=>array('index')),
 	array('label'=>'Create BannerImages', 'url'=>array('create')),
@@ -17,8 +22,11 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'page_id',
-		'image',
-		'link',
+        array(
+            'label'=>'Photo',
+            'type'=>'raw',
+            'value'=>CHtml::image(Yii::app()->baseUrl."/images/gallery/".$model->image, "", array('width'=>200)),
+
+        ),
 	),
 )); ?>

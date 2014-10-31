@@ -7,9 +7,10 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'classis',
-    'theme'=>'cdecor',
-    'language'=>'ru',
+	'name'=>'vgm',
+    'theme'=>'vgm',
+    'language'=>'en',
+    'sourceLanguage'=>'en',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -33,6 +34,8 @@ return array(
         'cms',
 	),
 
+
+
 	// application components
 	'components'=>array(
 
@@ -48,52 +51,42 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 
-		'urlManager'=>array(
-            'class'=>'ELangUrlManager',
-            'languages'=>array('en'=>'en', 'ru'=>'ru'), //assoziative array language => label
-            'cookieDays'=>30, //keep language 30 days
-            //'languageParam'=>'lang', //=default
-
-           /* 'class' => 'ext.language.XUrlManager',
-            'appendParams'=>false,
-            'supportedLanguages'=>array('am','ru', 'en'),*/
-
+        'urlManager'=>array(
+            'urlFormat'=>'path',
             'showScriptName'=>false,
-            'useStrictParsing'=>true,
             'caseSensitive'=>false,
-			'urlFormat'=>'path',
+            'rules'=>array(
 
-			'rules'=>array(
-                ''=>'site/index',
-               //'<controller:\w+><action:[\w\-]+><id:\d+>' => 'site/<action>',
-                //'<lang:\w+>/<action:[\w\-]+>' => '<lang>/site/<action>',
+                '<action:\w+>'=>'site/<action>',
+                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 
-                //'<controller:\w+>/<action:\w+>/<alias:\w+>'=>'<controller>/<action>',
 
-               // '<controller:\w+>/<action:\w+>'=>'<controller>',
 
-                'cms'=>'cms/main/index',
-                '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>/<id>',
-                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
-			),
+                '<module>/<controller:\w+>'=>'<module>/<controller>/index',
+                '<module>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
+                '<module>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
 
-		),
+
+            ),
+        ),
 
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
 		// release database
 //		'db'=>array(
-//			'connectionString' => 'mysql:host=localhost;dbname=khach2_classies',
+//			'connectionString' => 'mysql:host=localhost;dbname=khach2_vgm',
 //			'emulatePrepare' => true,
-//			'username' => 'khach2_classies',
+//			'username' => 'khach2_vgm',
 //			'password' => 'Uranida060292',
 //			'charset' => 'utf8',
 //		),
 
         // local database
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=classies',
+            'connectionString' => 'mysql:host=localhost;dbname=vgm',
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '',

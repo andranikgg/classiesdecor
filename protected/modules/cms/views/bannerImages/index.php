@@ -2,6 +2,9 @@
 /* @var $this BannerImagesController */
 /* @var $dataProvider CActiveDataProvider */
 
+$this->breadcrumbs=array(
+	'Banner Images',
+);
 
 $this->menu=array(
 	array('label'=>'Create BannerImages', 'url'=>array('create')),

@@ -5,8 +5,7 @@
  *
  * The followings are the available columns in table 'contacts':
  * @property integer $id
- * @property string $address_ru
- * @property string $address_en
+ * @property string $address
  * @property string $address_coord_x
  * @property string $address_coord_y
  * @property string $worktime
@@ -14,7 +13,7 @@
  * @property string $contact_email
  * @property string $fb_link
  * @property string $in_link
- * @property string $pin_link
+ * @property string $tw_link
  * @property string $feedback_email
  */
 class Contacts extends CActiveRecord
@@ -27,13 +26,6 @@ class Contacts extends CActiveRecord
 		return 'contacts';
 	}
 
-    public function getcaddress() {
-        if(Yii::app()->language == "en")
-            return $this->address_en;
-        elseif(Yii::app()->language == "ru")
-            return $this->address_ru;
-    }
-
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -42,12 +34,12 @@ class Contacts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('address_coord_x, address_coord_y, worktime, contact_email, fb_link, in_link, pin_link, feedback_email', 'length', 'max'=>250),
-			array('address_ru, address_en, phone', 'safe'),
-			array('fb_link, in_link, pin_link', 'url'),
+			array('feedback_email', 'required'),
+			array('address_coord_x, address_coord_y, worktime, contact_email, fb_link, in_link, tw_link, feedback_email', 'length', 'max'=>250),
+			array('address, phone', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, address_ru, address_en, address_coord_x, address_coord_y, worktime, phone, contact_email, fb_link, in_link, pin_link, feedback_email', 'safe', 'on'=>'search'),
+			array('id, address, address_coord_x, address_coord_y, worktime, phone, contact_email, fb_link, in_link, tw_link, feedback_email', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,17 +61,16 @@ class Contacts extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'address_ru' => Yii::t("menu", "address_ru"),
-			'address_en' => Yii::t("menu", "address_en"),
-			'address_coord_x' => Yii::t("menu", "address_cord_x"),
-			'address_coord_y' => Yii::t("menu", "address_cord_y"),
-			'worktime' => Yii::t("menu", "wt"),
-			'phone' => Yii::t("menu", "ph"),
-			'contact_email' => Yii::t("menu", "mail"),
-			'fb_link' => Yii::t("menu", "fb"),
-			'in_link' => Yii::t("menu", "in"),
-			'pin_link' => Yii::t("menu", "pin"),
-			'feedback_email' => Yii::t("menu", "feed"),
+			'address' => 'Address',
+			'address_coord_x' => 'Address Coord X',
+			'address_coord_y' => 'Address Coord Y',
+			'worktime' => 'Worktime',
+			'phone' => 'Phone',
+			'contact_email' => 'Contact Email',
+			'fb_link' => 'Fb Link',
+			'in_link' => 'In Link',
+			'tw_link' => 'Tw Link',
+			'feedback_email' => 'Feedback Email',
 		);
 	}
 
@@ -102,8 +93,7 @@ class Contacts extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('address_ru',$this->address_ru,true);
-		$criteria->compare('address_en',$this->address_en,true);
+		$criteria->compare('address',$this->address,true);
 		$criteria->compare('address_coord_x',$this->address_coord_x,true);
 		$criteria->compare('address_coord_y',$this->address_coord_y,true);
 		$criteria->compare('worktime',$this->worktime,true);
@@ -111,7 +101,7 @@ class Contacts extends CActiveRecord
 		$criteria->compare('contact_email',$this->contact_email,true);
 		$criteria->compare('fb_link',$this->fb_link,true);
 		$criteria->compare('in_link',$this->in_link,true);
-		$criteria->compare('pin_link',$this->pin_link,true);
+		$criteria->compare('tw_link',$this->tw_link,true);
 		$criteria->compare('feedback_email',$this->feedback_email,true);
 
 		return new CActiveDataProvider($this, array(

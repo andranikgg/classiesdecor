@@ -3,6 +3,7 @@
 class ContactsController extends SecureController
 {
 
+
 	/**
 	 * @return array action filters
 	 */
@@ -34,7 +35,7 @@ class ContactsController extends SecureController
 		$model=new Contacts;
 
 		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Contacts']))
 		{
@@ -58,7 +59,7 @@ class ContactsController extends SecureController
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Contacts']))
 		{
@@ -79,8 +80,7 @@ class ContactsController extends SecureController
 	 */
 	public function actionDelete($id)
 	{
-        if($id != 1)
-		    $this->loadModel($id)->delete();
+		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

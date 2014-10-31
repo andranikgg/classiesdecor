@@ -38,7 +38,8 @@ foreach($links as $link)
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+                array('label'=>'Contact', 'url'=>array('/site/contact')),
+                array('label'=>'Page', 'url'=>array('/site/page')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

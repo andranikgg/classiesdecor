@@ -17,11 +17,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'page_id'); ?>
-		<?php echo $form->textField($model,'page_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'image'); ?>
 		<?php echo $form->textField($model,'image',array('size'=>60,'maxlength'=>250)); ?>
 	</div>

@@ -1,0 +1,27 @@
+<div class="grid_row">
+    <div class="desc item left block_15per right_margin_20 textcenter">
+        <?= Yii::app()->dateFormatter->formatDateTime(CDateTimeParser::parse($data->posted, 'yyyy-MM-dd'), 'medium', null); ?>
+    </div>
+
+    <a href="<?= Yii::app()->request->url ?>&id=<?= $data->id ?>">
+        <div class="title item left block_35per right_margin_20">
+            <?= $data->title ?>
+            <div class="desc">
+                <?= substr($data->description, 0, 100) ?>
+            </div>
+        </div>
+    </a>
+
+    <div class="desc item left block_23per right_margin_20">
+        <?= $data->title ?>
+    </div>
+
+    <div class="desc item left block_15per right_margin_20">
+        <?= Yii::app()->dateFormatter->formatDateTime(CDateTimeParser::parse($data->deadline, 'yyyy-MM-dd'), 'medium', null); ?>
+    </div>
+
+    <div class="clear">
+    </div>
+    <div class="horizontal_line_1px" style="background-color: #c7c7c7;">
+    </div>
+</div>

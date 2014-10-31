@@ -5,12 +5,8 @@
  *
  * The followings are the available columns in table 'banner_images':
  * @property integer $id
- * @property integer $page_id
  * @property string $image
  * @property string $link
- *
- * The followings are the available model relations:
- * @property Page $page
  */
 class BannerImages extends CActiveRecord
 {
@@ -30,12 +26,10 @@ class BannerImages extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('page_id', 'required'),
-			array('page_id', 'numerical', 'integerOnly'=>true),
 			array('image, link', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, page_id, image, link', 'safe', 'on'=>'search'),
+			array('id, image, link', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,7 +41,6 @@ class BannerImages extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'page' => array(self::BELONGS_TO, 'Page', 'page_id'),
 		);
 	}
 
@@ -58,7 +51,6 @@ class BannerImages extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'page_id' => 'Page',
 			'image' => 'Image',
 			'link' => 'Link',
 		);
@@ -83,7 +75,6 @@ class BannerImages extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('page_id',$this->page_id);
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('link',$this->link,true);
 

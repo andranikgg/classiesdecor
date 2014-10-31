@@ -12,35 +12,18 @@
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-    <?php if(!$model->isNewRecord && $model->id == 1): ?>
-        <div class="row">
-            <?php echo $form->labelEx($model,'feedback_email'); ?>
-            <?php echo $form->textField($model,'feedback_email',array('size'=>60,'maxlength'=>250)); ?>
-            <?php echo $form->error($model,'feedback_email'); ?>
-        </div>
-    <?php endif ?>
-
-
 	<div class="row">
-		<?php echo $form->labelEx($model,'address_ru'); ?>
-		<?php echo $form->textArea($model,'address_ru',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'address_ru'); ?>
+		<?php echo $form->labelEx($model,'address'); ?>
+		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'address'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'address_en'); ?>
-		<?php echo $form->textArea($model,'address_en',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'address_en'); ?>
-	</div>
-
-    <hr/>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'address_coord_x'); ?>
@@ -54,8 +37,6 @@
 		<?php echo $form->error($model,'address_coord_y'); ?>
 	</div>
 
-    <hr/>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'worktime'); ?>
 		<?php echo $form->textField($model,'worktime',array('size'=>60,'maxlength'=>250)); ?>
@@ -64,7 +45,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'phone'); ?>
-		<?php echo $form->textField($model,'phone',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->textArea($model,'phone',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'phone'); ?>
 	</div>
 
@@ -73,8 +54,6 @@
 		<?php echo $form->textField($model,'contact_email',array('size'=>60,'maxlength'=>250)); ?>
 		<?php echo $form->error($model,'contact_email'); ?>
 	</div>
-
-    <hr/>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fb_link'); ?>
@@ -89,17 +68,16 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pin_link'); ?>
-		<?php echo $form->textField($model,'pin_link',array('size'=>60,'maxlength'=>250)); ?>
-		<?php echo $form->error($model,'pin_link'); ?>
+		<?php echo $form->labelEx($model,'tw_link'); ?>
+		<?php echo $form->textField($model,'tw_link',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->error($model,'tw_link'); ?>
 	</div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model,'feedback_email'); ?>
-        <?php echo $form->textField($model,'feedback_email',array('size'=>60,'maxlength'=>250)); ?>
-        <?php echo $form->error($model,'feedback_email'); ?>
-    </div>
-
+	<div class="row">
+		<?php echo $form->labelEx($model,'feedback_email'); ?>
+		<?php echo $form->textField($model,'feedback_email',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->error($model,'feedback_email'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

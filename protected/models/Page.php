@@ -5,26 +5,12 @@
  *
  * The followings are the available columns in table 'page':
  * @property integer $id
- * @property string $title_ru
- * @property string $title_en
- * @property string $desc1_ru
- * @property string $desc2_ru
- * @property string $desc3_ru
- * @property string $desc1_en
- * @property string $desc2_en
- * @property string $desc3_en
- *
- * The followings are the available model relations:
- * @property BannerImages[] $bannerImages
+ * @property string $key
+ * @property string $name
+ * @property integer $parent_id
  */
 class Page extends CActiveRecord
 {
-    const MAIN = 1;
-    const PARTNER = 3;
-    const CUSTOMIZATION = 4;
-    const INSPIRATION = 5;
-    const PRODUCT = 6;
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -32,37 +18,6 @@ class Page extends CActiveRecord
 	{
 		return 'page';
 	}
-
-    public function getctitle() {
-        if(Yii::app()->language == "en")
-            return $this->title_en;
-        elseif(Yii::app()->language == "ru")
-            return $this->title_ru;
-    }
-
-    public function getcdesc1() {
-        if(Yii::app()->language == "en")
-            return $this->desc1_en;
-        elseif(Yii::app()->language == "ru")
-            return $this->desc1_ru;
-
-    }
-
-    public function getcdesc2() {
-        if(Yii::app()->language == "en")
-            return $this->desc2_en;
-        elseif(Yii::app()->language == "ru")
-            return $this->desc2_ru;
-
-    }
-
-    public function getcdesc3() {
-        if(Yii::app()->language == "en")
-            return $this->desc3_en;
-        elseif(Yii::app()->language == "ru")
-            return $this->desc3_ru;
-
-    }
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -72,12 +27,12 @@ class Page extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title_ru, title_en', 'required'),
-			array('title_ru, title_en', 'length', 'max'=>250),
-            array('desc1_ru, desc2_ru, desc3_ru, desc1_en, desc2_en, desc3_en', 'safe'),
+			array('key, name', 'required'),
+			array('parent_id', 'numerical', 'integerOnly'=>true),
+			array('key, name', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title_ru, title_en, desc_ru, desc_en', 'safe', 'on'=>'search'),
+			array('id, key, name, parent_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -89,7 +44,6 @@ class Page extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'bannerImages' => array(self::HAS_MANY, 'BannerImages', 'page_id'),
 		);
 	}
 
@@ -100,14 +54,9 @@ class Page extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-            'title_ru' => Yii::t("menu", "title_ru"),
-            'title_en' => Yii::t("menu", "title_en"),
-			'desc1_ru' => Yii::t("menu", "desc_ru"),
-			'desc2_ru' => Yii::t("menu", "desc_ru"),
-			'desc3_ru' => Yii::t("menu", "desc_ru"),
-            'desc1_en' => Yii::t("menu", "desc_en"),
-            'desc2_en' => Yii::t("menu", "desc_en"),
-            'desc3_en' => Yii::t("menu", "desc_en"),
+			'key' => 'Key',
+			'name' => 'Name',
+			'parent_id' => 'Parent',
 		);
 	}
 
@@ -130,10 +79,9 @@ class Page extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('title_ru',$this->title_ru,true);
-		$criteria->compare('title_en',$this->title_en,true);
-		$criteria->compare('desc_ru',$this->desc_ru,true);
-		$criteria->compare('desc_en',$this->desc_en,true);
+		$criteria->compare('key',$this->key,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('parent_id',$this->parent_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

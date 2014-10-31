@@ -8,126 +8,158 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $page  = Page::model()->findByPk(1);
+        $critjob = new CDbCriteria();
+        $critjob->limit = 3;
+        $critjob->order = 'posted desc';
+        $jobs = Jobs::model()->findAll($critjob);
+
+        $critnews = new CDbCriteria();
+        $critnews->limit = 3;
+        $critnews->order = 'startdate desc';
+        $news = News::model()->findAll($critnews);
+
+        $critframeworks = new CDbCriteria();
+        $critframeworks->limit = 3;
+        $critframeworks->order = 'id desc';
+        $frameworks = Frameworks::model()->findAll($critframeworks);
+
+        $this->render('index', array('jobs' => $jobs, 'news' => $news, 'frameworks' => $frameworks));
+    }
+
+    public function actionAboutus()
+    {
+        $aboutus = About::model()->findByPk(1);
         /*echo "<pre>";
-        print_r($page);
+        print_r($aboutus);
         exit;*/
-        $this->render('index', array( 'page'=>$page ));
+        $this->render('aboutus', array('aboutus' => $aboutus));
     }
 
-
-    public function actionGetproduct()
+    public function actionExpertise()
     {
-        try{
-            $product = Product::model()->findByPk($_POST['id']);
+        $services = Services::model()->findAll();
+        $sectors = Sectors::model()->findAll();
+        $frameworks = Frameworks::model()->findAll();
 
-            $this->renderPartial('_product', array('product'=>$product));
-        }
-        catch(Exception $ex) {
-            echo $ex->getMessage();
-        }
 
-        Yii::app()->end();
+        $criteria = new CDbCriteria();
+        $count = Projects::model()->count($criteria);
+        $pages = new CPagination($count);
+
+        $pages->pageSize = 5;
+        $pages->applyLimit($criteria);
+
+        $projects = Projects::model()->findAll();
+        /* echo "<pre>";
+         print_r($services);
+         exit;*/
+
+        $this->render('expertise', array('services' => $services, 'sectors' => $sectors, 'projects' => $projects, 'frameworks' => $frameworks));
     }
 
-    public function actionBrands($id = 0)
+    public function actionJobs()
     {
-        $page  = Page::model()->findByPk(4);
-
-       if($id == 0) {
-           $brands = Brand::model()->findAll();
-           $this->render('brands', array('brands' => $brands, 'page'=>$page ));
-       }
-       else {
-           $brand = Brand::model()->findByPk($id);
-           $this->render('products', array('brand' => $brand, 'page'=>$page ));
-       }
-
-
-
+        $jobs = Jobs::model()->findAll();
+        $this->render('jobs', array('jobs' => $jobs));
     }
 
-    public function actionProducts() {
-        $products = Product::model()->findAll();
-        $page  = Page::model()->findByPk(5);
-
-        $this->render('productsall', array('products' => $products, 'page'=>$page ));
-    }
-
-    public function actionCategory($id = 0) {
-        if($id != 0) {
-            $category = Category::model()->findByPk($id);
-            //$products = Product::model()->findAll();
-            $page  = Page::model()->findByPk(5);
-
-            $this->render('productsall', array('products' => $category->products, 'page'=>$page ));
-        }
-        else {
-            $this->redirect('index');
-        }
-    }
-
-
-    public function actionPartners()
+    public function actionAddjob()
     {
-        $partners = Partner::model()->findAll();
 
-        $page  = Page::model()->findByPk(3);
+        $jobs = new Jobs;
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
 
-//        if (empty($partners)) {
-//            Yii::app()->user->setFlash('partners', 'There is no available partners');
-//        }
-        $this->render('partners', array('partners' => $partners, 'page'=>$page));
+        if (isset($_POST) && !empty($_POST)) {
+            $jobs->createdate = new CDbExpression('NOW()');
+            $jobs->status = 1;
+            $jobs->attributes = $_POST;
+
+//            echo "<pre>";
+//            print_r($jobs);
+//            exit;
+            if ($jobs->save())
+                $this->redirect(array('jobs', 'block' => 'jobsboard'));
+        }
+
+        $this->redirect(array('jobs', 'block' => 'jobsboard'));
     }
 
-    public function actionCustomization()
+    public function actionSubscribe()
     {
-        $customization = Customization::model()->findAll();
-        $page  = Page::model()->findByPk(6);
+        $subscriber = new Subscribers;
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if (isset($_POST) && !empty($_POST)) {
+            $subscriber->attributes = $_POST;
+            $subscriber->createdate = new CDbExpression('NOW()');
+            $subscriber->status = 1;
+
+//            echo "<pre>";
+//            print_r($subscriber);
+//            exit;
+
+            if ($subscriber->save())
+                $this->redirect(array('jobs', 'block' => 'jobsboard'));
+        }
+
+
+        $this->redirect(array('jobs', 'block' => 'jobsboard'));
+
 //
-//        if (empty($customization)) {
-//            Yii::app()->user->setFlash('customization', 'There is no available customization');
-//        }
-        $this->render('customization', array('customizations' => $customization, 'page'=>$page));
-
+//        $jobs = Jobs::model()->findAll();
+//        $this->render('jobs', array( 'jobs'=>$jobs ));
     }
 
-    public function actionContacts()
+    public function actionExperts()
     {
-        /*print_r();
-        exit;
-        Yii::app()->end();*/
-        $page  = Page::model()->findByPk(9);
+        $experts = Experts::model()->findAll();
+        /*echo "<pre>";
+        print_r($experts);
+        exit;*/
+        $this->render('experts', array('experts' => $experts));
+    }
+
+    public function actionNews()
+    {
+
+        $criteria = new CDbCriteria();
+        $count = News::model()->count($criteria);
+        $pages = new CPagination($count);
+
+        $pages->pageSize = 5;
+        $pages->applyLimit($criteria);
+
+        $news = News::model()->findAll($criteria);
+        $this->render('news', array('news' => $news, 'pages' => $pages));
+    }
+
+    public function actionContactus()
+    {
         $contacts = Contacts::model()->findAll();
 
-        $this->render('contacts', array('page'=>$page, 'contacts'=>$contacts));
+        $this->render('contactus', array('contacts' => $contacts));
     }
 
-    public function actionInspiration()
+    public function actionTermsofuse()
     {
-        $gallery = Gallery::model()->findAllByAttributes(array('status'=>1));
-
-        /*echo "<pre>";
-        print_r($gallery);
-        exit;*/
-
-        $this->renderPartial('_gallery', array('gallery' => $gallery));
-
-        Yii::app()->end();
+        $terms = Terms::model()->findByPk(1);
+        $this->render('termsofuse', array('terms' => $terms));
     }
 
     public function actionContact()
     {
-        if(Yii::app()->request->isAjaxRequest) {
+        if (Yii::app()->request->isAjaxRequest) {
             $contact = Contacts::model()->findByPk(1);
 
-            $headers = "From: Site Classis <{$_POST['email']}>\r\n" .
+            $headers = "From: Site VGM Partners <{$_POST['email']}>\r\n" .
                 "Reply-To: {$_POST['email']}\r\n" .
                 "MIME-Version: 1.0\r\n" .
                 "Content-Type: text/plain; charset=UTF-8";
 
 
-            mail($contact->feedback_email, 'Mail From Classis',"Phone -". $_POST['phone'] ."content" . $_POST['message'], $headers);
+            mail($contact->feedback_email, 'Mail From VGM Partners', "Phone -" . $_POST['phone'] . "content" . $_POST['message'], $headers);
 
             Yii::app()->end();
         }
@@ -147,27 +179,6 @@ class SiteController extends Controller
         }
     }
 
-
-    public function actionFromWhere()
-    {
-        $objects = MapObjects::model()->findAll();
-        $this->render("fromwhere", array("objects" => $objects));
-    }
-
-    /*
-     *  Single product action
-     */
-    public function actionSubItem($id)
-    {
-        $item = Items::model()->findByPk($id);
-
-        $this->pageTitle = Yii::app()->name . '-' . $item->cname;
-
-        $this->render("subItem",
-            array("item" => $item));
-    }
-
-
     public function actionSendMail()
     {
         $email = $_POST['email'];
@@ -184,6 +195,27 @@ class SiteController extends Controller
         } else {
             echo Yii::t("language", "mail_failure");
         }
+    }
+
+    public function actionSearchjob()
+    {
+        $model = new Jobs('search');
+        $model->unsetAttributes(); // clear any default values
+        if (isset($_GET['Jobs']))
+            $model->attributes = $_GET['Jobs'];
+
+        //send model object for search
+        $this->render('jobs', array(
+                'dataProvider' => $model->search(),
+                'jobs' => $model)
+        );
+
+//        $criteria = new CDbCriteria();
+//        if( strlen( $string ) > 0 )
+//            $criteria->addSearchCondition( 'title', $string, true, 'OR' );
+//        $jobs = Jobs::model()->findAll($criteria);
+////        $jobs = new CActiveDataProvider( 'Jobs', array( 'criteria' => $criteria, ) );
+//        $this->render( 'jobs', array( 'jobs' => $jobs ) );
     }
 
 

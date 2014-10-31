@@ -17,13 +17,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'address_ru'); ?>
-		<?php echo $form->textArea($model,'address_ru',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'address_en'); ?>
-		<?php echo $form->textArea($model,'address_en',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->label($model,'address'); ?>
+		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
@@ -62,8 +57,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'pin_link'); ?>
-		<?php echo $form->textField($model,'pin_link',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->label($model,'tw_link'); ?>
+		<?php echo $form->textField($model,'tw_link',array('size'=>60,'maxlength'=>250)); ?>
 	</div>
 
 	<div class="row">

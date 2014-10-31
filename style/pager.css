@@ -1,0 +1,87 @@
+/**
+ * CSS styles for CLinkPager.
+ *
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @link http://www.yiiframework.com/
+ * @copyright 2008-2010 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ * @since 1.0
+ */
+
+#mypager.yiiPager
+{
+    font-size:11px;
+    border:0;
+    margin:0;
+    padding:0;
+    line-height:100%;
+    display:inline;
+}
+
+#mypager.yiiPager li
+{
+    display:inline;
+}
+
+#mypager.yiiPager a:link,
+#mypager.yiiPager a:visited
+{
+    border: solid 1px #9aafe5;
+    font-weight: bold;
+    color: #0e509e;
+    padding: 0px 5px;
+    text-decoration: none;
+}
+
+#mypager.yiiPager .page a
+{
+    font-weight:normal;
+}
+
+#mypager.yiiPager a:hover
+{
+    border:solid 1px #0e509e;
+}
+
+#mypager.yiiPager .selected a
+{
+    background:#8BC0FF;
+    color:#FFFFFF;
+    font-weight:bold;
+}
+
+#mypager.yiiPager .hidden a
+{
+    border:solid 1px #DEDEDE;
+    color:#888888;
+}
+
+/**
+ * Hide first and last buttons by defa#mypagert.
+ */
+#mypager.yiiPager .first,
+#mypager.yiiPager .last,
+#mypager.yiiPager .next,
+#mypager.yiiPager .previous
+#mypager.yiiPager
+{
+    display:none;
+}
+
+.pagingblock li a {
+    color: #383838!important;
+    font-size: 10px!important;
+    line-height: 20px!important;
+    font-weight: bold!important;
+}
+
+.pagingblock .selected {
+    color: #ffffff!important;
+    font-size: 10px!important;
+    line-height: 20px!important;
+    font-weight: bold!important;
+    padding: 0px!important;
+    border-bottom: 1px solid #AAAAAA!important;
+    background-color: rgb(112, 181, 209)!important;
+    cursor: pointer;
+}

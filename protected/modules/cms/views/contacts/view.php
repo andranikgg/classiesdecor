@@ -22,8 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'address_ru',
-		'address_en',
+		'address',
 		'address_coord_x',
 		'address_coord_y',
 		'worktime',
@@ -31,7 +30,7 @@ $this->menu=array(
 		'contact_email',
 		'fb_link',
 		'in_link',
-		'pin_link',
+		'tw_link',
 		'feedback_email',
 	),
 )); ?>

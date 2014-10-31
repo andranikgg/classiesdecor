@@ -1,6 +1,6 @@
 <?php
 return array (
-    'classis'=>'Classis',
+    'vgm'=>'VGM',
     'blog'=>'blog',
     'interior'=>'interiors',
     'catalog'=>'catalog',
@@ -13,8 +13,19 @@ return array (
     'selectlanguage'=>'select language',
     'order'=>'order',
 
+    'home'=>'home',
+    'aboutus'=>'about us',
+    'expertise'=>'expertise',
+    'jobs'=>'jobs',
+    'experts'=>'experts',
+    'news'=>'news',
+    'contactus'=>'contact us',
+
+    'apply'=>'apply',
+
     'en'=>'En',
     'ru'=>'Ru',
+    'am'=>'Am',
 
     'body'=>'body',
     'firstname'=>'first name',
@@ -50,14 +61,17 @@ return array (
     'title'=>'Title',
     'title_ru'=>'Title - Russian ',
     'title_en'=>'Title - English',
+    'title_am'=>'Title - Armenian',
 
     'name'=>'Name',
     'name_ru'=>'Name - Russian ',
     'name_en'=>'Name - English',
+    'name_am'=>'Name - Armenian',
 
     'desc'=>'Description',
     'desc_ru'=>'Description - Russian',
     'desc_en'=>'Description - English',
+    'desc_am'=>'Description - Armenian',
 
     'save'=>'Save',
     'link'=>'Link',
@@ -68,6 +82,7 @@ return array (
     'address'=>'Address',
     'address_ru'=>'Address - Russian ',
     'address_en'=>'Address - English',
+    'address_am'=>'Address - Armenian',
 
     'address_cord_x'=>'Address Coordinates X',
     'address_cord_y'=>'Address Coordinates Y',
@@ -76,9 +91,9 @@ return array (
 
     'fb'=>'Facebook Link',
     'pin'=>'Pin Link',
+    'in'=>'In Link',
     'feed'=>'Feedback E-Mail',
 
-    'in'=>'In Link',
 
     'create'=>'Create',
     'del'=>'Delete ',

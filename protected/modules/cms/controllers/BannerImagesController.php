@@ -2,6 +2,16 @@
 
 class BannerImagesController extends SecureController
 {
+	/**
+	 * @return array action filters
+	 */
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
+	}
 
 	/**
 	 * Displays a particular model.
@@ -23,23 +33,26 @@ class BannerImagesController extends SecureController
 		$model=new BannerImages;
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['BannerImages']))
-		{
-
+        if(isset($_POST['BannerImages']))
+        {
             $image =  $_POST['BannerImages']['image'];
-
             if(isset($image) && $image != "") {
                 $model->attributes=$_POST['BannerImages'];
-                if($model->save()) {
+
+
+
+                if($model->save(false)) {
 
                     Yii::app()->ih
-                        ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/bannerimages/temp/'.$image)
-                        ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/bannerimages/' . $model->id . '.png');
+                        ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/'.$image)
+                        ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/' . $model->id . '.png');
                     $model->image = $model->id . '.png';
 
-                    $dir=Yii::app()->basePath.'/../images/bannerimages/temp/';
+                    $dir=Yii::app()->basePath.'/../images/gallery/temp/';
+
+
 
                     foreach(glob($dir.'*.*') as $files){
                         unlink($files);
@@ -51,7 +64,7 @@ class BannerImagesController extends SecureController
 
                 }
             }
-		}
+        }
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -68,23 +81,30 @@ class BannerImagesController extends SecureController
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['BannerImages']))
 		{
+			$model->attributes=$_POST['BannerImages'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+		}
 
+        if(isset($_POST['BannerImages']))
+        {
             $image =  $_POST['BannerImages']['image'];
 
-            if($model->image != $image) {
+            if($image != $model->image) {
 
                 $model->attributes=$_POST['BannerImages'];
 
                 Yii::app()->ih
-                    ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/bannerimages/temp/'.$image)
-                    ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/bannerimages/' . $model->id . '.png');
+                    ->load($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/gallery/temp/' . $image)
+                    ->save($_SERVER['DOCUMENT_ROOT'] . Yii::app()->baseUrl . '/images/gallery/' . $model->id . '.png');
+
                 $model->image = $model->id . '.png';
 
-                $dir=Yii::app()->basePath.'/../images/bannerimages/temp/';
+                $dir=Yii::app()->basePath . '/../images/gallery/temp/';
 
                 foreach(glob($dir.'*.*') as $files){
                     unlink($files);
@@ -95,11 +115,7 @@ class BannerImagesController extends SecureController
             if($model->save()) {
                 $this->redirect(array('view','id'=>$model->id));
             }
-
-			$model->attributes=$_POST['BannerImages'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
+        }
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -173,4 +189,75 @@ class BannerImagesController extends SecureController
 			Yii::app()->end();
 		}
 	}
+
+
+
+
+    /* ajax calls */
+
+    public function actionUpload()
+    {
+        Yii::import("ext.EAjaxUpload.qqFileUploader");
+        $folder= 'images/gallery/temp/';// folder for uploaded files
+        $allowedExtensions = array("jpg", "jpeg", "png");//array("jpg","jpeg","gif","exe","mov" and etc...
+        $sizeLimit = 2 * 1024 * 1024;// maximum file size in bytes
+        $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
+        $result = $uploader->handleUpload($folder);
+        $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+
+        $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
+        $fileName=$result['filename'];//GETTING FILE NAME
+
+        echo $return;// it's array
+        Yii::app()->end();
+    }
+
+
+    public function actionCropImg()
+    {
+        Yii::app()->clientScript->scriptMap=array(
+            (YII_DEBUG ?  'jquery.js':'jquery.min.js')=>false,
+        );
+        $imageUrl = Yii::app()->request->baseUrl . '/images/gallery/temp/'. $_GET['fileName'];
+        $this->renderPartial('cropImg', array('imageUrl'=>$imageUrl), false, true);
+    }
+
+    public function actionAjaxcrop()
+    {
+        if(Yii::app()->request->isAjaxRequest)
+        {
+            $url = $_POST['imageUrl'];
+            $image = $id = substr( $url, strrpos( $url, '/' )+1 );
+
+
+            Yii::import('ext.jcrop.EJCropper');
+            $jcropper = new EJCropper();
+            $jcropper->thumbPath = '/images/gallery/items';
+
+            // some settings ...
+            $jcropper->jpeg_quality = 100;
+            $jcropper->png_compression = 0;
+
+            // get the image cropping coordinates (or implement your own method)
+            $coords = $jcropper->getCoordsFromPost('imageId');
+
+            Yii::app()->ih
+                ->load($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/'.$image)
+                ->crop($coords['w'],$coords['h'],$coords['x'],$coords['y'])
+                ->save($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/c_'.$image);
+
+            if(file_exists($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/' . $image))
+            {
+                unlink($_SERVER['DOCUMENT_ROOT'] .Yii::app()->baseUrl . '/images/gallery/temp/' . $image);
+            }
+
+            $returnPath = 'c_' . $image;
+
+            echo $returnPath;
+
+            Yii::app()->end();
+            // returns the path of the cropped image, source must be an absolute path.
+            //$thumbnail = $jcropper->crop('images/up/uploaded.png', $coords);
+        }
+    }
 }

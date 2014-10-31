@@ -46,17 +46,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'address_ru',
-		'address_en',
+		'address',
 		'address_coord_x',
 		'address_coord_y',
 		'worktime',
-		/*
 		'phone',
+		/*
 		'contact_email',
 		'fb_link',
 		'in_link',
-		'pin_link',
+		'tw_link',
 		'feedback_email',
 		*/
 		array(

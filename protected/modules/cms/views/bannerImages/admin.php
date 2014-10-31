@@ -2,6 +2,11 @@
 /* @var $this BannerImagesController */
 /* @var $model BannerImages */
 
+$this->breadcrumbs=array(
+	'Banner Images'=>array('index'),
+	'Manage',
+);
+
 $this->menu=array(
 	array('label'=>'List BannerImages', 'url'=>array('index')),
 	array('label'=>'Create BannerImages', 'url'=>array('create')),
@@ -21,7 +26,12 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1><?=Yii::t("menu", "man")?> Banner Images</h1>
+<h1>Manage Banner Images</h1>
+
+<p>
+You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+</p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -36,9 +46,12 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'page_id',
-		'image',
-		'link',
+        array(
+            'name'=>'image',
+            'type'=>'html',
+            'value'=>'CHtml::image(Yii::app()->baseUrl. "/images/gallery/". $data->image, "", array("width"=>"100"))',
+
+        ),
 		array(
 			'class'=>'CButtonColumn',
 		),

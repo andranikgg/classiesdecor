@@ -2,6 +2,10 @@
 /* @var $this BannerImagesController */
 /* @var $model BannerImages */
 
+$this->breadcrumbs=array(
+	'Banner Images'=>array('index'),
+	'Create',
+);
 
 $this->menu=array(
 	array('label'=>'List BannerImages', 'url'=>array('index')),
@@ -9,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1><?=Yii::t("menu", "create")?> BannerImages</h1>
+<h1>Create BannerImages</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
